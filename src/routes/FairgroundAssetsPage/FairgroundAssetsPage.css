@@ -1,52 +1,126 @@
-nav{
-    background-color: #2a2829;
-    color: white;
-    width: 100%;
-    height:8vh;
-    line-height:8vh;
+.heroBanner{
+    z-index: 1;
+    position:relative;
+    height:75vh;
 }
 
-nav h1{
-    margin:0px;
+.heroImage{
+    z-index:2;
+    background: url('../../images/fairground.jpg') no-repeat bottom center;
+    background-size: 100% auto;
+    position:absolute;
+    width:100%;
+    height:100%;
 }
 
-.hero{
+.heroOverlay{
+    z-index:3;
     background-color: #2a2829;
-    color: white;
-    height:92vh;
+    opacity:0.91;
+    width:100%;
+    position: relative;
+    height:100%;
+}
+
+.heroText{
+   z-index:4;
+   height:100%;
+   width:100%;
+   position:absolute;
+   padding-left:35px;
+    padding-right:35px;
+    padding-top:25px;
+    font-family: 'Playfair Display', serif;
+    color:white;
+}
+
+.heroText nav{
     display:flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title h1{
+    margin:0px;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.title h2{
+    font-size: 12px;
+    line-height: 30px;
+    margin-left:120px;
+}
+
+.socialMediaIcons a{
+    color:white;
+    margin-left:10px;
+}
+
+.socialMediaIcons a:hover{
+    color:grey;
+}
+
+.heroMessage{
+    font-size: 75px;
+    line-height: 100px;
+    height:60%;
+    position:absolute;
+    bottom:25px;
 }
 
 .aboutFairground{
     background-color: #ebebe6;
-    height:75vh;
+    padding:35px;
+}
+
+.aboutFairground h3{
+    font-family: 'Playfair Display', serif;
+    margin-bottom:20px;
+    font-size: 26px;
+}
+
+.aboutFairground p{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
 }
 
 .aboutFairground button{
     background-color:#3367c2;
     padding:15px;
     color:white;
+    opacity:0.8;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .aboutFairground button:hover{
-    background-color:#2d5caf;
+    /*background-color:#2d5caf;*/
+    opacity:1;
 }
 
 .resourcesSection{
-    background-color: #2a2829;
+    /*background-color: #2d2c2d;*/
+    background-color: #31363b;
     color: white;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding:35px;
 }
 
-.airtableContainer{
-    width:86%;
-    margin-left:7%;
+.resourcesSection h3{
+    font-family: 'Playfair Display', serif;
+    margin-bottom:20px;
+    font-size: 26px;
+    line-height: 26px;
+}
+
+.resourcesSection p{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom:35px;
 }
 
 footer{
     height:15vh;
     background-color: #ebebe6;
+    padding:35px;
+    font-family: 'Open Sans', sans-serif;
 }
+
