@@ -2,7 +2,7 @@ const PostsApiService = {
     
     getPosts(){
         return fetch(
-        "http://public-api.wordpress.com/rest/v1/sites/arushatest725870187.wordpress.com/posts"
+        "https://public-api.wordpress.com/rest/v1/sites/arushatest725870187.wordpress.com/posts"
         )
             .then(res=>
                 (!res.ok)
@@ -12,7 +12,7 @@ const PostsApiService = {
     }, 
     getPostById(id){
         return fetch(
-            `http://public-api.wordpress.com/rest/v1/sites/arushatest725870187.wordpress.com/posts/${id}`
+            `https://public-api.wordpress.com/rest/v1/sites/arushatest725870187.wordpress.com/posts/${id}`
             )
                 .then(res=>
                     (!res.ok)
