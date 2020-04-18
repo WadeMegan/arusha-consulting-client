@@ -1,0 +1,46 @@
+.socialBar {
+    position: fixed;
+    top:50%;
+    right:0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color:black;
+    z-index: 10;
+  }
+  
+  /* Style the icon bar links */
+  .socialBar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+    width:50px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  /* Style the social media icons with color, if you want */
+  .socialBar a:hover {
+    background-color: #000;
+  }
+
+  .facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .instagram {
+    background: #9c2095;
+    color: white;
+  }
+  

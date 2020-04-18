@@ -1,0 +1,14 @@
+.navLinks{    
+    display:flex;
+}
+
+.indivNavLink{
+    margin-left:15px;
+    color:white;
+    text-decoration: none;
+}
+
+.indivNavLink:hover{
+    cursor:pointer;
+    color:grey;
+}

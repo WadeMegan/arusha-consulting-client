@@ -1,0 +1,13 @@
+.heroImageNav{
+    z-index:2;
+    background: url('../../images/blogHero.jpg') no-repeat bottom center;
+    background-size: 100% auto;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color: white;
+}
+
+.postsListSection{
+    margin-top:30px;
+}
