@@ -1,7 +1,7 @@
 const CommentsApiService = {
     getCommentsByPostId(id){
         return fetch(
-            `http://box5462.temp.domains/~arushain/wp-json/wp/v2/comments?post=${id}`
+            `https://box5462.temp.domains/~arushain/wp-json/wp/v2/comments?post=${id}`
             )
                 .then(res=>
                     (!res.ok)
@@ -11,7 +11,7 @@ const CommentsApiService = {
     },
     postComment(postId){
     
-        return fetch(`http://box5462.temp.domains/~arushain/wp-json/wp/v2/comments`,{
+        return fetch(`https://box5462.temp.domains/~arushain/wp-json/wp/v2/comments`,{
             method: 'POST',
             body: JSON.stringify({
                 'post':1,
