@@ -4,32 +4,59 @@ import { Link } from 'react-router-dom'
 import PostsListContext from '../../contexts/PostsListContext'
 import PostsApiService from '../../services/posts-api-service'
 import NavLinks from '../../components/NavLinks/NavLinks'
+import CommentsList from '../../components/CommentsList/CommentsList'
 
 export default class IndividualPostPage extends Component{
 
     static contextType = PostsListContext
+
+    state={
+        mediaUrl: null
+    }
 
     componentWillMount() {
 
         window.scrollTo(0, 0)
 
         PostsApiService.getPostById(this.props.match.params.id)
-            .then(this.context.setCurrentPost)
+            .then(res=>{
+                this.context.setCurrentPost(res)
+            
+                PostsApiService.getPostFeaturedImage(res.featured_media)
+                    .then(res=>{
+                        this.setState({
+                            mediaUrl: res.guid.rendered
+                        })
+                    })
+                    .catch()
+            
+            })
             .catch(/*set error*/)
         
     }
+
+     renderImage=()=>{
+ 
+             return(
+                <img src={this.state.mediaUrl} className='featuredImgPost' alt='featured image'></img>
+             )
+ 
+         }        
 
     componentWillUnmount() {
         this.context.setCurrentPost([])
     }
 
     createMarkup=()=>{
-        return {__html: `${this.context.currentPost.content}`}
+        if(this.context.currentPost.content){
+            return {__html: `${this.context.currentPost.content.rendered}`}
+        }
     }
 
     renderContent = () => {
         let html = this.createMarkup()
-        if(this.context.currentPost.length!==0){
+
+        if(this.context.currentPost.content){
             return(
                 <div className='postContent' dangerouslySetInnerHTML={html}/>
             )
@@ -88,6 +115,26 @@ export default class IndividualPostPage extends Component{
         )
 
     }
+
+    renderTitle=()=>{
+
+        if(this.context.currentPost.title){
+            return (
+                <>
+                <h1>{this.context.currentPost.title.rendered}</h1>
+                </>
+            )
+        }
+    }
+
+    renderComments = () => {
+        
+        if(this.context.currentPost.length!==0){
+            return(
+                <CommentsList postId={this.context.currentPost.id}/>
+            )
+        }
+    }
         
     render(){
         let content = this.context.currentPost.content
@@ -118,11 +165,15 @@ export default class IndividualPostPage extends Component{
             </div>
 
             <section className='postContentSection'>
-                <h1>{this.context.currentPost.title}</h1>
+                {this.renderTitle()}
                 {this.renderDate()}
-                <img src={this.context.currentPost.featured_image} className='featuredImgPost' alt='featured image'></img>
+                {this.renderImage()}
                 {this.renderContent()}
+                
+                {this.renderComments()}
             </section>
+
+            
             
             <footer >
                 <p>Footer with whatever you want in it.</p>

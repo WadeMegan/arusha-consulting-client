@@ -14,18 +14,22 @@ export default class PostsList extends Component{
         PostsApiService.getPosts()
             .then(this.context.setPostsList)
             .catch(/*catch error*/)
+
         
     }
 
     renderPosts=()=>{
 
+        console.log(this.context.postsList)
+
         if(this.context.postsList.length !== 0){
             
-            let posts = this.context.postsList.posts
+            let posts = this.context.postsList
 
             let postItems = posts.map(post=>{
                 return (
-                    <PostItem key={post.ID} post={post}/>
+
+                    <PostItem key={post.id} post={post}/>
                     
                 )
             })
