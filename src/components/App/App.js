@@ -13,7 +13,7 @@ class App extends Component {
         <SocialMedia/>
         <Switch>
           <Route path={'/fairground/assets'} component={FairgroundAssetsPage}/>
-          <Route path={'/fairground'} component={BlogPage}/>
+          <Route exact path={'/fairground'} component={BlogPage}/>
           <Route path={'/fairground/posts/:id'} render={(props)=> <IndividualPostPage {...props}/>}/>
         </Switch>
       </main>      
