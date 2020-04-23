@@ -49,9 +49,7 @@
     width:90%;
     position:absolute;
     left:5%;
-    border:1px solid red;
     display:flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -73,14 +71,12 @@
     font-size: 50px;
     line-height: 50px;
     font-family: brushwell;
-    border:1px solid blue;
 }
 
 .title h2{
     font-size: 20px;
     line-height: 20px;
-    margin-top:20px;
-    border:1px solid green;
+    margin-top:15px;
     font-family: brushwell;
 }
 
@@ -228,16 +224,11 @@ footer a{
         line-height: 70px;
         font-family: brushwell;
     }
-    
-    /*.title p{
-        font-size: 34px;
-        line-height: 34px;
-        margin-top:10px;
-        position:relative;
-        top:10px;
-        right:-180px;
-        display:block;
-    }*/
+    .title h2{
+        font-size: 30px;
+        line-height: 30px;
+        margin-top:20px;
+    }
 }
 
 
