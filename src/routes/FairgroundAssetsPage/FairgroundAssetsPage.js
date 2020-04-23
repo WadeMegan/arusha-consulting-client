@@ -26,8 +26,8 @@ export default class FairgroundAssetsPage extends Component{
                     </nav>
                     
                     <div className='title'>
-                        <h1>Fairground Assets<p>By Arusha Consulting</p></h1>
-                        
+                        <h1>Fairground Assets</h1>
+                        <h2>By Arusha Consulting</h2>
                     </div>
 
                     {/*<div className='heroMessage'>
