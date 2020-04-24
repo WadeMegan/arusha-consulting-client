@@ -18,7 +18,7 @@ export default class IndividualPostPage extends Component{
 
         window.scrollTo(0, 0)
 
-        PostsApiService.getPostById(this.props.match.params.id)
+        /*PostsApiService.getPostById(this.props.match.params.id)
             .then(res=>{
                 this.context.setCurrentPost(res)
             
@@ -31,7 +31,7 @@ export default class IndividualPostPage extends Component{
                     .catch()
             
             })
-            .catch(/*set error*/)
+            .catch())*/
         
     }
 
@@ -164,14 +164,14 @@ export default class IndividualPostPage extends Component{
                 </div>
             </div>
 
-            <section className='postContentSection'>
+            {/*<section className='postContentSection'>
                 {this.renderTitle()}
                 {this.renderDate()}
                 {this.renderImage()}
                 {this.renderContent()}
                 
                 {this.renderComments()}
-            </section>
+                    </section>*/}
 
             
             

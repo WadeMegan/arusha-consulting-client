@@ -13,9 +13,9 @@ class App extends Component {
         <SocialMedia/>
         <Switch>
           <Route path={'/fairground-assets'} component={FairgroundAssetsPage}/>
-          {/*<Route exact path={'/fairground'} component={BlogPage}/>
-          <Route path={'/fairground/posts/:id'} render={(props)=> <IndividualPostPage {...props}/>}/>*/}
-          <Route path={"*"} component={FairgroundAssetsPage} />
+          <Route exact path={'/fairground'} component={BlogPage}/>
+          <Route path={'/fairground/posts/:id'} render={(props)=> <IndividualPostPage {...props}/>}/>
+          {/*<Route path={"*"} component={FairgroundAssetsPage} />*/}
         </Switch>
       </main>      
     )

@@ -9,7 +9,10 @@ const PostsListContext = React.createContext({
     setCurrentPost: ()=>{},
 
     commentsList: [],
-    setCommentsList: ()=>{}
+    setCommentsList: ()=>{},
+
+    assetsList: [],
+    setAssetsList: ()=>{}
 })
 
 export default PostsListContext
@@ -42,6 +45,12 @@ export class PostsListProvider extends Component {
         })
     }
 
+    setAssetsList = assetsList => {
+        this.setState({
+            assetsList: assetsList,
+        })
+    }
+
     render(){
         const value={
             postsList: this.state.postsList,
@@ -51,6 +60,8 @@ export class PostsListProvider extends Component {
             setCurrentPost: this.setCurrentPost,
             commentsList: this.state.commentsList,
             setCommentsList: this.setCommentsList,
+            assetsList: this.state.assetsList,
+            setAssetsList: this.setAssetsList,
         }
 
         return (

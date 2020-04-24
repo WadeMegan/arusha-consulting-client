@@ -1,20 +1,30 @@
+import { createClient } from "contentful"
+
+var client = createClient({
+    space: "cvysyefe75et",
+    accessToken:
+      "sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM"
+  });
+  
+
 const PostsApiService = {
     
     getPosts(){
-        return fetch(
-            "https://box5462.temp.domains/~arushain/wp-json/wp/v2/posts"
-        /*"https://public-api.wordpress.com/rest/v1/sites/arushatest725870187.wordpress.com/posts"*/
-        )
-            .then(res=>
-                (!res.ok)
+        return fetch(`https://cdn.contentful.com/spaces/cvysyefe75et/environments/master/entries?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM&content_type=post`
+        /*spaces/cvysyefe75et/environments/master/content_types/post?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM*/)
+            .then(res=> res.json()
+                /*(!res.ok)
                     ? res.json().then(e=>Promise.reject(e))
-                    : res.json()
+                    : res.json()*/
             )
     }, 
     getPostById(id){
-        return fetch(
-            `https://box5462.temp.domains/~arushain/wp-json/wp/v2/posts/${id}`
-            )
+        return fetch(`https://api.contentful.com`,{
+            headers: {
+                "content-type":"application/json",
+                "authorization": "Bearer sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM"
+            }
+        })
                 .then(res=>
                     (!res.ok)
                         ? res.json().then(e=>Promise.reject(e))

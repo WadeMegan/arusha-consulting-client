@@ -12,8 +12,11 @@ export default class PostsList extends Component{
     componentWillMount() {
 
         PostsApiService.getPosts()
-            .then(this.context.setPostsList)
-            .catch(/*catch error*/)
+            .then(res=>{
+                this.context.setPostsList(res.items)
+                this.context.setAssetsList(res.includes.Asset)
+            })
+            .catch()
 
         
     }
@@ -29,7 +32,7 @@ export default class PostsList extends Component{
             let postItems = posts.map(post=>{
                 return (
 
-                    <PostItem key={post.id} post={post}/>
+                    <PostItem key={post.sys.id} post={post}/>
                     
                 )
             })
@@ -48,12 +51,7 @@ export default class PostsList extends Component{
             <>
             <div className='postsContainer'>
                 {this.renderPosts()} 
-            </div>
-            
-                       
-
-            
-            
+            </div>            
             </>
         )
     }

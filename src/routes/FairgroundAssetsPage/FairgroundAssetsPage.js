@@ -50,10 +50,10 @@ export default class FairgroundAssetsPage extends Component{
             <section className='aboutFairground'>
                 <h2>About Fairground Assets</h2>
                 <p>Fairground is a place that welcomes anyone who belongs to a dominant in-group, and frankly, that should be just about every human. With very few exceptions, each of us, no matter the injustices we face, belongs to at least one dominant in-group.</p>
-                <p>Fairground has one huge tent with an open door to everyone. Come one, come all to explore our own role in perpetuating out-groups despite even our best intentions. Even better, through Fairground Assets, we can rely on each other to equip ourselves for being the change we would like to see when it comes to diversity, inclusion, equity, and social justice.</p>
+                <p>So, Fairground has one huge tent with an open door to everyone. Come one, come all to explore our own role in perpetuating out-groups despite even our best intentions. Through Fairground Assets we can rely on each other to equip ourselves for being the change we would like to see when it comes to diversity, inclusion, equity, and social justice.</p>
                 <p>Fairground Assets addresses the biggest obstacles to achieving inclusion, equity, and social justice for diverse people. Until members of the dominant in-groups care about, understand, and address the issues members of out-groups face, we will not gain any ground. We must not shy away from poignant conversations with and about people who are different from us due to a fear of saying or doing the wrong thing. This kind of inaction is as dangerous as overt prejudice. We must educate ourselves so that we can stand up for our values with confidence and truly make a difference.</p>
                 <p>We believe that peer-to-peer recommendations are an incredible way to support each other with a wide net of proven resources to meet our specific learning needs and interests in one organized place.</p>
-                <p>Please join us in making a concerted effort to learn more so we can do more. We encourage you to</p>
+                <p>Please join us in making a concerted effort to learn more so we can do more. We encourage you to:</p>
                 <ul>
                     <li className='listItem'>submit resources and include a comment for each as to why you believe others would find it helpful;</li>
                     <li className='listItem'>explore the available assets, which will deepen your understanding, introduce you to the unfamiliar, and challenge you to stretch the limits of your level of comfort; and</li>
@@ -76,9 +76,9 @@ export default class FairgroundAssetsPage extends Component{
             </section>
             <footer>
                 <h3>Copyright 2020 - Arusha Consulting</h3>
-                <p>Fairground and Fairground Assets are powered by Arusha Consulting, a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good. On the consulting side, we focus on leadership, people management, and diversity and inclusion. On the coaching side, we specialize in helping people gain clarity about their strengths, desires, resources, relationships, and obstacles to help them pursue their best lives. Our ability to help individuals explore their own relationship to issues of diversity, inclusion, and equity helps distinguish us from other consulting/coaching groups. Reach out to learn more about our 1:1 coaching, workshops, and consulting offerings.</p>
+                <p>Fairground and Fairground Assets are powered by Arusha Consulting, a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good. On the consulting side, we focus on leadership, people management, and diversity and inclusion. On the coaching side, we specialize in helping people gain clarity about their values, strengths, desires, resources, relationships, fears, and obstacles to help them pursue their best lives. Our ability to help individuals explore their own relationship to issues of diversity, inclusion, and equity helps distinguish us from other consulting/coaching groups. Reach out to learn more about our 1:1 coaching, workshops, and consulting offerings.</p>
                 <p>Very special thanks to Molly, Megan, and Sophia whose genius and hard work brought this passion project to fruition in record time.</p>
-                <p>For any questions or comments, please contact Heather Sattler at <a href={"mailto:Heather@arushainc"}> Heather@arushainc.com</a></p>
+                <p>For any questions or comments, please contact Heather at <a href={"mailto:Heather@arushainc"}> Heather@arushainc.com</a></p>
             </footer>
             </>
         )
