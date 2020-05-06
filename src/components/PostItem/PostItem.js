@@ -38,21 +38,18 @@ export default class PostItem extends Component{
             
             let assetList = this.context.assetsList
 
-            console.log(assetList)
 
             let featuredImgId = this.props.post.fields.featuredImage.sys.id
 
-            console.log(featuredImgId)
 
             const featuredImg = assetList.find(asset=>
                 asset.sys.id === featuredImgId
             )
 
-            console.log(featuredImg.fields.file.url)
 
             let myStyle = {
                 background: `url(${featuredImg.fields.file.url}) no-repeat center center`,
-                backgroundSize: "100% auto"
+                backgroundSize: "cover"
               };
 
             return(
@@ -77,8 +74,6 @@ export default class PostItem extends Component{
 
     render(){
 
-        console.log(this.props.post)
-        console.log(this.context.assetsList)
 
         let date = new Date(this.props.post.fields.date)
         let dateString = date.toString()

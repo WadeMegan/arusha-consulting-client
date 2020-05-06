@@ -1,7 +1,7 @@
 const CommentsApiService = {
-    getCommentsByPostId(id){
+    getAllComments(id){
         return fetch(
-            `https://box5462.temp.domains/~arushain/wp-json/wp/v2/comments?post=${id}`
+            `https://cdn.contentful.com/spaces/cvysyefe75et/environments/master/entries?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM&content_type=comment`
             )
                 .then(res=>
                     (!res.ok)
@@ -9,19 +9,35 @@ const CommentsApiService = {
                         : res.json()
                 )
     },
-    postComment(postId){
+    postComment(postId, username, content, date, profileImg, replyingTo){
     
-        return fetch(`https://box5462.temp.domains/~arushain/wp-json/wp/v2/comments`,{
+        return fetch(`https://api.contentful.com/spaces/cvysyefe75et/environments/master/entries?access_token=CFPAT-pctkH02k_uCe2IikxDgNTmweo9EbnoiW4pszNFTyEFw`,{
             method: 'POST',
             body: JSON.stringify({
-                'post':1,
-                'author_name':'Sophie',
-                'author_email':'sophie.summers13@gmail.com',
-                'content':'A second test'
+                "fields": {
+                    "username": {
+                        "en-US": username
+                      },
+                    "date": {
+                        "en-US": date
+                      },
+                    "content": {
+                        "en-US": content
+                      },
+                    "postId": {
+                        "en-US": postId
+                      },
+                    'profileImg': {
+                        "en-US": profileImg
+                    },
+                    'replyingTo': {
+                        "en-US": replyingTo
+                    }
+                }
             }),
             headers: {
-                "content-type":"application/json"/*,
-                "authorization": "Bearer 723Ly7DAFwBNBMztCfLvje7PetR5s6rA9ulICYji"*/
+                "Content-Type":"application/vnd.contentful.management.v1+json",
+                "X-Contentful-Content-Type":"comment"
             }
         })
             .then(res => 
@@ -30,10 +46,15 @@ const CommentsApiService = {
                     : res.json()
             )
     },
-    validateToken(){
+    publishComment(commentId){
         return fetch(
-            `https://public-api.wordpress.com/rest/v1/sites/arushatest725870187.wordpress.com/oauth2/token-info?client_id=68717&token=zELGjjj9q8ZGZJVoyRkGOgX0K4PqJQdEpyLbOsqPThOPpKgfdKZGrT8BwLkELTxy`
-            )
+            `https://api.contentful.com/spaces/cvysyefe75et/environments/master/entries/${commentId}/published`,{
+                method: 'PUT',
+                headers: {
+                    "Authorization": "Bearer CFPAT-pctkH02k_uCe2IikxDgNTmweo9EbnoiW4pszNFTyEFw",
+                    "X-Contentful-Version": 1
+                }
+            })
                 .then(res=>
                     (!res.ok)
                         ? res.json().then(e=>Promise.reject(e))
@@ -45,3 +66,5 @@ const CommentsApiService = {
 export default CommentsApiService
 
 /*https://public-api.wordpress.com/rest/v1/sites/arushatest725870187.wordpress.com/posts/${postId}/replies/new*/
+
+//

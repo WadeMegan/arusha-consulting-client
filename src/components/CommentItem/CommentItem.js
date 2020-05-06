@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
-import './CommentsList.css'
+import './CommentItem.css'
 import CommentsApiService from '../../services/comments-api-service'
 import PostsListContext from '../../contexts/PostsListContext'
 import CommentForm from '../../components/CommentForm/CommentForm'
 import CommentReplyThread from '../CommentReplyThread/CommentReplyThread'
-import CommentItem from '../CommentItem/CommentItem'
-import Facebook from '../Facebook/Facebook'
-import Google from '../Google/Google'
 
 
-export default class CommentsList extends Component{
+export default class CommentItem extends Component{
     
     static contextType = PostsListContext
 
@@ -18,7 +15,7 @@ export default class CommentsList extends Component{
         replyOpen: false,
     }
 
-    componentWillMount() {
+    /*componentWillMount() {
 
        CommentsApiService.getAllComments(this.context.currentPost.id)
             .then(res=>{
@@ -32,14 +29,14 @@ export default class CommentsList extends Component{
             })
             .catch()
 
-        /*CommentsApiService.postComment(this.context.currentPost.id)
+        CommentsApiService.postComment(this.context.currentPost.id)
             .then(res=>console.log(res))
-            .catch()*/
+        .catch()
         
-    }
+    }*/
 
 
-    renderComments=()=>{
+    /*renderComments=()=>{
 
         //console.log(this.context.commentsList)
 
@@ -50,16 +47,16 @@ export default class CommentsList extends Component{
             let commentsItems = comments.map(comment=>{
                 
                 if(!comment.fields.replyingTo){
-                    /*let date = new Date(comment.fields.date)
+                    let date = new Date(comment.fields.date)
                     let dateString = date.toString()
                     let splitDate = dateString.split(' ')
                     let month = splitDate[1]
                     let day = splitDate[2]
                     let year = splitDate[3]
-                    let fullDate=`${month} ${day}, ${year}`.toUpperCase()*/
+                    let fullDate=`${month} ${day}, ${year}`.toUpperCase()
                     
                     return (
-                        /*<div key={comment.sys.id}>
+                        <div key={comment.sys.id}>
                             <div className='commentItem'>
                                 <p>{comment.fields.username.toUpperCase()}</p>
                                 <p>{fullDate}</p>
@@ -67,8 +64,7 @@ export default class CommentsList extends Component{
                                 <button onClick={this.openReply} className='replyButton'>Reply</button>
                             </div>
                             <CommentReplyThread replyOpen={this.state.replyOpen} replyingId={comment.sys.id}/>
-                        </div>*/
-                        <CommentItem key={comment.sys.id} comment={comment}/>
+                        </div>
                         
                     )
                 }
@@ -82,15 +78,22 @@ export default class CommentsList extends Component{
             )
         }
 
-    }
+    }*/
 
     openReply=()=>{
-        this.setState({
-            replyOpen:true
-        })
+        if(this.state.replyOpen==false){
+            this.setState({
+                replyOpen:true
+            })
+        } else{
+            this.setState({
+                replyOpen:false
+            })
+        }
+        
     }
 
-
+/*
     commentAdded=()=>{
         console.log('commentAdded ran')
         CommentsApiService.getAllComments(this.context.currentPost.id)
@@ -106,19 +109,65 @@ export default class CommentsList extends Component{
                 })
             })
             .catch()
+    }*/
+
+    renderUserProfileImg=()=>{
+        if(this.props.comment.fields.profileImg){
+            return(
+                <img className='userImg' src={this.props.comment.fields.profileImg}/> 
+            )
+        }
+        else{
+            return(
+                <div className='userImg customIcon'><p>{this.props.comment.fields.username.charAt(0).toUpperCase()}</p></div>
+            )
+        }
+    }
+
+    renderReplyButton=()=>{
+        if(!this.props.comment.fields.replyingTo){
+            return(
+                <>
+                <button onClick={this.openReply} className='replyButton'>Reply</button>
+                <p>•</p>
+                </>
+            )
+        }
     }
 
 
     render(){
-        return(    
-            <section className='commentsSection'>
-                <div className='commentIntroBox'>
-                    <h2>The Discussion</h2>
-                    <p>Always with curiosity, never with judgment.</p>
+
+        let date = new Date(this.props.comment.fields.date)
+        let dateString = date.toString()
+        let splitDate = dateString.split(' ')
+        let month = splitDate[1]
+        let day = splitDate[2]
+        let year = splitDate[3]
+        let fullDate=`${month} ${day}, ${year}`.toUpperCase()
+        
+        return(  
+            <>  
+            <div className='commentItem'>
+                <div className='commentImg'>
+                   {this.renderUserProfileImg()}
                 </div>
-                <CommentForm commentAdded={this.commentAdded}/>
-                {this.renderComments()}
-            </section>     
+                
+                <div className='commentContent'>
+                    <p>{this.props.comment.fields.username.toUpperCase()}<span> • {fullDate}</span></p>
+                    <p>{this.props.comment.fields.content}</p>
+                    <div className='commentInteractionBox'>
+                        {this.renderReplyButton()}
+                        <em>1 Like</em>
+                        <p>•</p>
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                </div>
+                
+
+            </div>    
+            <CommentReplyThread replyOpen={this.state.replyOpen} replyingId={this.props.comment.sys.id}/>
+            </>
         )
     }
 }

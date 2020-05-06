@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import './FairgroundAssetsPage.css'
 /*import { Link } from 'react-router-dom'*/
 import NavLinks from '../../components/NavLinks/NavLinks'
-
-///TESTING
+import NavBar from '../../components/NavBar/NavBar'
 
 export default class FairgroundAssetsPage extends Component{
     
@@ -20,6 +19,7 @@ export default class FairgroundAssetsPage extends Component{
 
         return(
             <>
+        
             <div className='heroBanner'>
                 <div className='heroText'>
                     <nav>

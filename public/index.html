@@ -31,8 +31,37 @@
     <script src="https://kit.fontawesome.com/1fd945470a.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display
     =swap" rel="stylesheet">
+    <meta name="google-signin-client_id" content="376742085814-of2ob321fhiprllfiephu05cm3s1qram.apps.googleusercontent.com">
+
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
   </head>
   <body>
+
+
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '285368999287154',
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v6.0'
+        });
+          
+        FB.AppEvents.logPageView();   
+          
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

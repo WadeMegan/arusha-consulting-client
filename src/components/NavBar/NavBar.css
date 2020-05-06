@@ -1,0 +1,36 @@
+.navBar{
+    color:white;
+    background-color: black;
+    margin:0px;
+    padding:0px;
+    height:60px;
+    /*box-shadow: 0 10px 10px -10px rgba(0,0,0,.8); //use if fixed*/
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.navLogoLink{
+    height:80%;
+}
+
+.navLogoImg{
+    height:100%;
+}
+
+.navBarLinks{
+    font-size: 16px;
+}
+
+.indivNavLink{
+    margin-left:15px;
+    color:white;
+    text-decoration: none;
+}
+
+.indivNavLink:hover{
+    cursor:pointer;
+    color:grey;
+}

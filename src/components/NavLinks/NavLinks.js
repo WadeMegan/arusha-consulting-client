@@ -7,10 +7,10 @@ export default class NavLinks extends Component{
     render(){
         return(    
             <div className='navLinks'>
-                {/*<p className='indivNavLink'>HOME</p>
-                <p className='indivNavLink'>ABOUT</p>*/}
+                {/*<p className='indivNavLink'>HOME</p>*/}
+                <Link to='/about' className='indivNavLink'>ABOUT</Link>
                 <Link className='indivNavLink' to='/fairground'>BLOG</Link>
-                <Link className='indivNavLink' to='/fairground/assets'>FAIRGROUND</Link>
+                <Link className='indivNavLink' to='/fairground-assets'>FAIRGROUND</Link>
                 <p className='indivNavLink'>REACH OUT</p>
             </div>   
         )

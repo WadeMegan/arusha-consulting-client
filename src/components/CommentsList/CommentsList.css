@@ -1,5 +1,11 @@
-.commentItem{
-    border:1px solid #bdbdbd;
-    margin-top:10px;
-    padding:10px;
+.commentsSection{
+    padding-top:25px;
+}
+
+.commentIntroBox{
+    border-bottom:1px solid grey;
+}
+
+.commentIntroBox p{
+    padding-bottom:10px;
 }

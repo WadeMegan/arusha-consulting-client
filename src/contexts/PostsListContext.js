@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 const PostsListContext = React.createContext({
     postsList: [],
     setPostsList: ()=>{},
-    hello: ()=>{},
 
     currentPost: [],
     setCurrentPost: ()=>{},
@@ -12,7 +11,12 @@ const PostsListContext = React.createContext({
     setCommentsList: ()=>{},
 
     assetsList: [],
-    setAssetsList: ()=>{}
+    setAssetsList: ()=>{},
+
+    userLoggedIn: false,
+    usersName: null,
+    usersEmail: null,
+    usersProfileImg: null
 })
 
 export default PostsListContext
@@ -21,10 +25,10 @@ export class PostsListProvider extends Component {
     state={
         postsList: [],
         currentPost: [],
-    }
-
-    hello = () => {
-        console.log('hello ran')
+        userLoggedIn: false,
+        usersName: null,
+        usersEmail: null,
+        usersProfileImg: null
     }
 
     setPostsList = postsList => {
@@ -51,17 +55,50 @@ export class PostsListProvider extends Component {
         })
     }
 
+    setUserLoggedIn = status => {
+        this.setState({
+            userLoggedIn: status
+        })
+    }
+
+    setUsersName = usersName => {
+        this.setState({
+            usersName: usersName
+        })
+    }
+
+    setUsersEmail = usersEmail => {
+        this.setState({
+            usersEmail: usersEmail
+        })
+    }
+
+    setUsersProfileImg = usersProfileImg => {
+        this.setState({
+            usersProfileImg: usersProfileImg
+        })
+    }
+
     render(){
         const value={
             postsList: this.state.postsList,
             setPostsList: this.setPostsList,
-            hello: this.hello,
             currentPost: this.state.currentPost,
             setCurrentPost: this.setCurrentPost,
             commentsList: this.state.commentsList,
             setCommentsList: this.setCommentsList,
             assetsList: this.state.assetsList,
             setAssetsList: this.setAssetsList,
+
+            userLoggedIn: this.state.userLoggedIn,
+            setUserLoggedIn: this.setUserLoggedIn,
+            usersName: this.state.usersName,
+            setUsersName: this.setUsersName,
+            usersEmail: this.state.usersEmail,
+            setUsersEmail: this.setUsersEmail,
+            usersProfileImg: this.state.usersProfileImg,
+            setUsersProfileImg: this.setUsersProfileImg
+
         }
 
         return (

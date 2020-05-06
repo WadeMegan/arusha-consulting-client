@@ -23,7 +23,6 @@ export default class PostsList extends Component{
 
     renderPosts=()=>{
 
-        console.log(this.context.postsList)
 
         if(this.context.postsList.length !== 0){
             
