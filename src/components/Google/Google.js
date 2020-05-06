@@ -38,7 +38,7 @@ export default class Google extends Component{
 
         let googleContent
 
-        if(this.context.userLoggedIn){
+        if(this.context.userLoggedIn===true){
             googleContent=(
                 <div>
                     You are logged in!
