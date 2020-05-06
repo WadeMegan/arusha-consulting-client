@@ -4,6 +4,7 @@ import CommentsApiService from '../../services/comments-api-service'
 import PostsListContext from '../../contexts/PostsListContext'
 import CommentForm from '../../components/CommentForm/CommentForm'
 import CommentReplyThread from '../CommentReplyThread/CommentReplyThread'
+import CommentLikeButton from '../CommentLikeButton/CommentLikeButton'
 
 
 export default class CommentItem extends Component{
@@ -159,8 +160,7 @@ export default class CommentItem extends Component{
                     <div className='commentInteractionBox'>
                         {this.renderReplyButton()}
                         <em>1 Like</em>
-                        <p>•</p>
-                        <i class="fas fa-thumbs-up"></i>
+                        <CommentLikeButton/>
                     </div>
                 </div>
                 

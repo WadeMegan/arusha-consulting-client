@@ -50,7 +50,7 @@
     color:grey;
 }
 
-.commentInteractionBox p, .commentInteractionBox button, .commentInteractionBox em, .commentInteractionBox i{
+.commentInteractionBox p, .commentInteractionBox button, .commentInteractionBox em{
     margin-right:10px;
     color:grey;
     background-color: #ebebe6;
