@@ -17,8 +17,8 @@ export default class Google extends Component{
     }
 
     responseGoogle=(response)=>{
-        /*console.log(response)
-        this.setState({
+        console.log(response)
+        /*this.setState({
             isLoggedIn: true,
             userId: response.profileObj.googleId,
             name: response.profileObj.name,
@@ -26,7 +26,7 @@ export default class Google extends Component{
             picture: response.profileObj.imageUrl
         })*/
 
-        this.context.setUserLoggedIn(true)
+        this.context.setUserLoggedIn()
         this.context.setUsersName(response.profileObj.name)
         this.context.setUsersProfileImg(response.profileObj.imageUrl)
         this.context.setUsersEmail(response.profileObj.email)

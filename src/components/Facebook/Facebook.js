@@ -20,7 +20,7 @@ export default class Facebook extends Component{
             email:response.email,
             picture: response.picture.data.url
         })*/
-        this.context.setUserLoggedIn(true)
+        this.context.setUserLoggedIn()
         this.context.setUsersName(response.name)
         this.context.setUsersProfileImg(response.picture.data.url)
         this.context.setUsersEmail(response.email)

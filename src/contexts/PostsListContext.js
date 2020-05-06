@@ -13,7 +13,7 @@ const PostsListContext = React.createContext({
     assetsList: [],
     setAssetsList: ()=>{},
 
-    userLoggedIn: false,
+    userLoggedIn: null,
     usersName: null,
     usersEmail: null,
     usersProfileImg: null
@@ -25,7 +25,7 @@ export class PostsListProvider extends Component {
     state={
         postsList: [],
         currentPost: [],
-        userLoggedIn: false,
+        userLoggedIn: null,
         usersName: null,
         usersEmail: null,
         usersProfileImg: null
@@ -55,9 +55,9 @@ export class PostsListProvider extends Component {
         })
     }
 
-    setUserLoggedIn = status => {
+    setUserLoggedIn = () => {
         this.setState({
-            userLoggedIn: status
+            userLoggedIn: true
         })
     }
 
