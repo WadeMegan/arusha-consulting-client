@@ -52,7 +52,7 @@ const CommentsApiService = {
                 method: 'PUT',
                 headers: {
                     "Authorization": "Bearer CFPAT-pctkH02k_uCe2IikxDgNTmweo9EbnoiW4pszNFTyEFw",
-                    "X-Contentful-Version": 14
+                    "X-Contentful-Version": 1
                 }
             })
                 .then(res=>
@@ -61,7 +61,7 @@ const CommentsApiService = {
                         : res.json()
                 )
     },
-    updateLikedBy(commentId, username, date, content, postId, profileImg, replyingTo, likedBy, commentVersion){
+    /*updateLikedBy(commentId, username, date, content, postId, profileImg, replyingTo, likedBy, commentVersion){
         return fetch(`https://api.contentful.com/spaces/cvysyefe75et/environments/master/entries/${commentId}`,{
             method: 'PUT',
             body: JSON.stringify({
@@ -101,7 +101,7 @@ const CommentsApiService = {
                     ? res.json().then(e=>Promise.reject(e))
                     : res.json()
             )
-    },
+    },*/
 }
 
 export default CommentsApiService
