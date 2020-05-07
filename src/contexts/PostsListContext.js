@@ -16,7 +16,8 @@ const PostsListContext = React.createContext({
     userLoggedIn: null,
     usersName: null,
     usersEmail: null,
-    usersProfileImg: null
+    usersProfileImg: null,
+    usersId:null,
 })
 
 export default PostsListContext
@@ -28,7 +29,8 @@ export class PostsListProvider extends Component {
         userLoggedIn: null,
         usersName: null,
         usersEmail: null,
-        usersProfileImg: null
+        usersProfileImg: null,
+        usersId:null,
     }
 
     setPostsList = postsList => {
@@ -79,6 +81,12 @@ export class PostsListProvider extends Component {
         })
     }
 
+    setUsersId = id => {
+        this.setState({
+            usersId: id
+        })
+    }
+
     render(){
         const value={
             postsList: this.state.postsList,
@@ -97,7 +105,9 @@ export class PostsListProvider extends Component {
             usersEmail: this.state.usersEmail,
             setUsersEmail: this.setUsersEmail,
             usersProfileImg: this.state.usersProfileImg,
-            setUsersProfileImg: this.setUsersProfileImg
+            setUsersProfileImg: this.setUsersProfileImg,
+            usersId: this.state.usersId,
+            setUsersId: this.setUsersId
 
         }
 

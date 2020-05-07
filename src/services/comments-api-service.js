@@ -52,7 +52,7 @@ const CommentsApiService = {
                 method: 'PUT',
                 headers: {
                     "Authorization": "Bearer CFPAT-pctkH02k_uCe2IikxDgNTmweo9EbnoiW4pszNFTyEFw",
-                    "X-Contentful-Version": 1
+                    "X-Contentful-Version": 14
                 }
             })
                 .then(res=>
@@ -60,7 +60,48 @@ const CommentsApiService = {
                         ? res.json().then(e=>Promise.reject(e))
                         : res.json()
                 )
-    }
+    },
+    updateLikedBy(commentId, username, date, content, postId, profileImg, replyingTo, likedBy, commentVersion){
+        return fetch(`https://api.contentful.com/spaces/cvysyefe75et/environments/master/entries/${commentId}`,{
+            method: 'PUT',
+            body: JSON.stringify({
+                "fields": {
+                    "username": {
+                        "en-US": username
+                      },
+                    "date": {
+                        "en-US": date
+                      },
+                    "content": {
+                        "en-US": content
+                      },
+                    "postId": {
+                        "en-US": postId
+                      },
+                    'profileImg': {
+                        "en-US": profileImg
+                    },
+                    'replyingTo': {
+                        "en-US": replyingTo
+                    },
+                    "likedBy": {
+                        "en-US": likedBy
+                    }
+                }
+            }),
+            headers: {
+                //"Content-Type":"application/vnd.contentful.management.v1+json",
+                //"X-Contentful-Content-Type":"comment",
+                "Authorization": "Bearer CFPAT-pctkH02k_uCe2IikxDgNTmweo9EbnoiW4pszNFTyEFw",
+                "X-Contentful-Version": 13
+            }
+        })
+            .then(res => 
+                 (!res.ok)
+                    ? res.json().then(e=>Promise.reject(e))
+                    : res.json()
+            )
+    },
 }
 
 export default CommentsApiService

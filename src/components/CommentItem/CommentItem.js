@@ -5,7 +5,7 @@ import PostsListContext from '../../contexts/PostsListContext'
 import CommentForm from '../../components/CommentForm/CommentForm'
 import CommentReplyThread from '../CommentReplyThread/CommentReplyThread'
 import CommentLikeButton from '../CommentLikeButton/CommentLikeButton'
-
+import CommentUnlikeButton from '../CommentUnlikeButton/CommentUnlikeButton'
 
 export default class CommentItem extends Component{
     
@@ -136,6 +136,22 @@ export default class CommentItem extends Component{
         }
     }
 
+    renderLikeButtons=()=>{
+        if(this.context.userLoggedIn===true){
+            //comment is liked by user
+            if(this.props.comment.fields.likedBy && this.props.comment.fields.likedBy.split(',').find(id=> id===this.context.usersId)){
+                return(
+                    <CommentUnlikeButton/>
+                )
+            }
+            else{
+                return(
+                    <CommentLikeButton comment={this.props.comment} commentVersion={this.props.comment.sys.revision}/>
+                )
+            }
+            
+        }
+    }
 
     render(){
 
@@ -160,7 +176,7 @@ export default class CommentItem extends Component{
                     <div className='commentInteractionBox'>
                         {this.renderReplyButton()}
                         <em>1 Like</em>
-                        <CommentLikeButton/>
+                        {this.renderLikeButtons()}
                     </div>
                 </div>
                 

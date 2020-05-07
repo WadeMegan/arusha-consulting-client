@@ -26,10 +26,11 @@ export default class Google extends Component{
             picture: response.profileObj.imageUrl
         })*/
 
-        this.context.setUserLoggedIn()
+        //this.context.setUserLoggedIn()
         this.context.setUsersName(response.profileObj.name)
         this.context.setUsersProfileImg(response.profileObj.imageUrl)
         this.context.setUsersEmail(response.profileObj.email)
+        this.context.setUsersId(response.profileObj.googleId)
     }
 
     render(){

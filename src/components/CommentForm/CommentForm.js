@@ -140,7 +140,7 @@ export default class CommentForm extends Component{
                 <div>
                     <p>Please login to join the discussion:</p>
                     <Google/>
-                    <Facebook/>
+                    {/*<Facebook/>*/}
                 </div> 
             )
             
