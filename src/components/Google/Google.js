@@ -26,7 +26,7 @@ export default class Google extends Component{
             picture: response.profileObj.imageUrl
         })*/
 
-        //this.context.setUserLoggedIn()
+        this.context.setUserLoggedIn()
         this.context.setUsersName(response.profileObj.name)
         this.context.setUsersProfileImg(response.profileObj.imageUrl)
         this.context.setUsersEmail(response.profileObj.email)
@@ -47,13 +47,28 @@ export default class Google extends Component{
             )
         } else {
             googleContent = (<GoogleLogin
+                className='googleButton'
                 clientId="376742085814-of2ob321fhiprllfiephu05cm3s1qram.apps.googleusercontent.com"
-                buttonText="Login"
+                render={renderProps => (
+                    <i onClick={renderProps.onClick} className="fab fa-google-plus fa-2x googleSigninIcon"></i>
+                    //<button onClick={renderProps.onClick} disabled={renderProps.disabled}>G</button>
+                  )}
+                onSuccess={this.responseGoogle}
+                //onFailure={this.responseGoogle}
+                cookiePolicy={'single_host_origin'}
+                
+              /> )
+            
+            /*(<GoogleLogin
+                className='googleButton'
+                clientId="376742085814-of2ob321fhiprllfiephu05cm3s1qram.apps.googleusercontent.com"
+                buttonText="LOGIN WITH GOOGLE"
                 onSuccess={this.responseGoogle}
                 onFailure={this.responseGoogle}
                 cookiePolicy={'single_host_origin'}
                 
-              /> )
+              /> )*/
+
         }
 
         return(    

@@ -61,6 +61,56 @@ const CommentsApiService = {
                         : res.json()
                 )
     },
+    postLike(commentId, userId, postId){
+    
+        return fetch(`http://localhost:8060/api/likes`,{
+            method: 'POST',
+            body: JSON.stringify({
+                'comment_id':commentId,
+                'user_id':userId,
+                'post_id':postId
+            }),
+            headers: {
+                "content-type":"application/json"
+            }
+        })
+            .then(res => 
+                 (!res.ok)
+                    ? res.json().then(e=>Promise.reject(e))
+                    : res.json()
+            )
+    },
+    getLikesByCommentId(commentId){
+        return fetch(
+            `http://localhost:8060/api/likes/comments/${commentId}`
+            )
+                .then(res=>
+                    (!res.ok)
+                        ? res.json().then(e=>Promise.reject(e))
+                        : res.json()
+                )
+    },
+    getLikesByPostId(postId){
+        return fetch(
+            `http://localhost:8060/api/likes/posts/${postId}`
+            )
+                .then(res=>
+                    (!res.ok)
+                        ? res.json().then(e=>Promise.reject(e))
+                        : res.json()
+                )
+    },
+    deleteLike(commentId, userId){
+    
+        return fetch(`http://localhost:8060/api/likes/comments/${commentId}/users/${userId}`,{
+            method: 'DELETE'
+        })
+            /*.then(res => 
+                 (!res.ok)
+                    ? res.json().then(e=>Promise.reject(e))
+                    : res.json()
+            )*/
+    },
     /*updateLikedBy(commentId, username, date, content, postId, profileImg, replyingTo, likedBy, commentVersion){
         return fetch(`https://api.contentful.com/spaces/cvysyefe75et/environments/master/entries/${commentId}`,{
             method: 'PUT',

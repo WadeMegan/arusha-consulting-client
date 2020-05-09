@@ -12,22 +12,17 @@ export default class CommentLikeButton extends Component{
 
     clickLike=()=>{
         console.log('We are liking the comment!')
-        console.log(this.props.commentVersion)
         //want to make PUT request to add userId to comment 'likedBy' string, then re-render CommentItem component
-
-        /*if(this.props.likedBy){
-            console.log(this.props.likedBy)
-        }
-        else{
-            
-        }*/
-
-        //commentId, username, date, content, postId, profileImg, replyingTo, likedBy, commentVersion
-
-        CommentsApiService.updateLikedBy(this.props.comment.sys.id, this.props.comment.fields.username,this.props.comment.fields.date, this.props.comment.fields.content, this.props.comment.fields.postId, this.props.comment.fields.profileImg, this.props.comment.replyingTo, this.context.usersId, this.props.commentVersion)
+        
+        CommentsApiService.postLike(this.props.comment.sys.id, this.context.usersId, this.context.currentPost.sys.id)
             .then((res)=>{
-                CommentsApiService.publishComment(this.props.comment.sys.id)
-                    .then()
+                
+                CommentsApiService.getLikesByPostId(this.context.currentPost.sys.id)
+                    .then(res=>{
+                        this.context.setCurrentLikesList(res)
+                        //handle state change
+                        this.props.handleLikeButtonClicked()
+                    })
                     .catch()
                 
             })

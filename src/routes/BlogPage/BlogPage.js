@@ -11,7 +11,10 @@ export default class BlogPage extends Component{
     render(){
         return(
             <>
-            <img className='fairgroundBannerImg' src={fairgroundBanner}></img>
+            <div className='fairgroundBannerImgBox'>
+                <img className='fairgroundBannerImg' src={fairgroundBanner}></img>
+
+            </div>
             <section className='postsListSection'>
                 <PostsList/>
             </section>

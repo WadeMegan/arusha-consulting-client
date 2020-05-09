@@ -13,11 +13,7 @@ export default class NavBar extends Component{
                     <Link to='/about'> <img className='navLogoImg' src={navLogo}/></Link>
                 </div>
             
-                <div className='navBarLinks'>
-                    <Link to='/about' className='indivNavLink'>ABOUT</Link>
-                    <Link className='indivNavLink' to='/fairground'>BLOG</Link>
-                    <Link className='indivNavLink' to='/fairground-assets'>FAIRGROUND</Link>
-            </div>   
+                <NavLinks/> 
             </nav>
         )
     }

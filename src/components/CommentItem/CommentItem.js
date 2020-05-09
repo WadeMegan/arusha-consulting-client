@@ -14,72 +14,25 @@ export default class CommentItem extends Component{
     state={
         commentAdded:false,
         replyOpen: false,
+        likeClicked: false
     }
 
-    /*componentWillMount() {
+    handleLikeButtonClicked=()=>{
+        this.setState({
+            likeClicked:true
+        })
+    }
 
-       CommentsApiService.getAllComments(this.context.currentPost.id)
+    componentWillMount(){
+
+        console.log('will mount ran')
+        
+        CommentsApiService.getLikesByPostId(this.context.currentPost.sys.id)
             .then(res=>{
-                console.log(res)
-                
-                let commentsList = res.items.filter(comment=>
-                    //console.log(this.context.currentPost.sys.id)
-                    comment.fields.postId===this.context.currentPost.sys.id
-                )
-                this.context.setCommentsList(commentsList)
+                this.context.setCurrentLikesList(res)
             })
             .catch()
-
-        CommentsApiService.postComment(this.context.currentPost.id)
-            .then(res=>console.log(res))
-        .catch()
-        
-    }*/
-
-
-    /*renderComments=()=>{
-
-        //console.log(this.context.commentsList)
-
-        if(this.context.commentsList){
-            
-            let comments = this.context.commentsList
-
-            let commentsItems = comments.map(comment=>{
-                
-                if(!comment.fields.replyingTo){
-                    let date = new Date(comment.fields.date)
-                    let dateString = date.toString()
-                    let splitDate = dateString.split(' ')
-                    let month = splitDate[1]
-                    let day = splitDate[2]
-                    let year = splitDate[3]
-                    let fullDate=`${month} ${day}, ${year}`.toUpperCase()
-                    
-                    return (
-                        <div key={comment.sys.id}>
-                            <div className='commentItem'>
-                                <p>{comment.fields.username.toUpperCase()}</p>
-                                <p>{fullDate}</p>
-                                <p>{comment.fields.content}</p>
-                                <button onClick={this.openReply} className='replyButton'>Reply</button>
-                            </div>
-                            <CommentReplyThread replyOpen={this.state.replyOpen} replyingId={comment.sys.id}/>
-                        </div>
-                        
-                    )
-                }
-                
-            })
-            
-            return(
-                <>
-                {commentsItems}
-                </>
-            )
         }
-
-    }*/
 
     openReply=()=>{
         if(this.state.replyOpen==false){
@@ -93,24 +46,6 @@ export default class CommentItem extends Component{
         }
         
     }
-
-/*
-    commentAdded=()=>{
-        console.log('commentAdded ran')
-        CommentsApiService.getAllComments(this.context.currentPost.id)
-            .then(res=>{
-                let commentsList = res.items.filter(comment=>
-                    //console.log(this.context.currentPost.sys.id)
-                    comment.fields.postId===this.context.currentPost.sys.id
-                )
-                this.context.setCommentsList(commentsList)
-
-                this.setState({
-                    commentAdded:true
-                })
-            })
-            .catch()
-    }*/
 
     renderUserProfileImg=()=>{
         if(this.props.comment.fields.profileImg){
@@ -137,23 +72,65 @@ export default class CommentItem extends Component{
     }
 
     renderLikeButtons=()=>{
-        if(this.context.userLoggedIn===true){
-            //comment is liked by user
-            if(this.props.comment.fields.likedBy && this.props.comment.fields.likedBy.split(',').find(id=> id===this.context.usersId)){
-                return(
-                    <CommentUnlikeButton/>
-                )
+        if(this.context.currentLikesList){
+            /*console.log('RenderLikeButtons RAN')
+
+            let isCorrectComment = this.context.currentLikesList.find(like=>like.comment_id==this.props.comment.sys.id)
+            console.log(isCorrectComment)*/
+
+            /*let didUserLike =[]
+            if(isCorrectComment && isCorrectComment.length!==0){
+                didUserLike = isCorrectComment.find(like=>like.user_id==this.context.usersId)
             }
-            else{
-                return(
-                    <CommentLikeButton comment={this.props.comment} commentVersion={this.props.comment.sys.revision}/>
-                )
-            }
+            */
+
+            //console.log(didUserLike)
+
+            let didUserLike = this.context.currentLikesList.filter(like=>like.user_id==this.context.usersId && like.comment_id==this.props.comment.sys.id)
+
+            console.log(didUserLike)
             
+            if(this.context.userLoggedIn===true){
+                //comment is liked by user
+                if(didUserLike.length!==0){
+                    return(
+                        <CommentUnlikeButton comment={this.props.comment} handleLikeButtonClicked={this.handleLikeButtonClicked}/>
+                    )
+                }
+                else{
+                    return(
+                        <CommentLikeButton comment={this.props.comment} handleLikeButtonClicked={this.handleLikeButtonClicked}/>
+                    )
+                }
+                
+            }
         }
     }
 
+    renderLikeCount=()=>{
+
+        if(this.context.currentLikesList){
+            let count=this.context.currentLikesList.filter(like=>like.comment_id==this.props.comment.sys.id)
+            console.log(count)
+
+            if(count.length===1){
+                return(
+                    <em>{count.length} Like</em>
+                )
+            } else{
+                return(
+                    <em>{count.length} Likes</em>
+                )
+            }
+
+            
+        }
+        
+    }
+
     render(){
+
+        console.log(this.context.currentLikesList)
 
         let date = new Date(this.props.comment.fields.date)
         let dateString = date.toString()
@@ -175,7 +152,7 @@ export default class CommentItem extends Component{
                     <p>{this.props.comment.fields.content}</p>
                     <div className='commentInteractionBox'>
                         {this.renderReplyButton()}
-                        <em>1 Like</em>
+                        {this.renderLikeCount()}
                         {this.renderLikeButtons()}
                     </div>
                 </div>

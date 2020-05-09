@@ -15,7 +15,7 @@ export default class CommentsList extends Component{
 
     state={
         commentAdded:false,
-        replyOpen: false,
+        replyOpen: false
     }
 
     componentWillMount() {
@@ -68,7 +68,7 @@ export default class CommentsList extends Component{
                             </div>
                             <CommentReplyThread replyOpen={this.state.replyOpen} replyingId={comment.sys.id}/>
                         </div>*/
-                        <CommentItem key={comment.sys.id} comment={comment}/>
+                        <CommentItem key={comment.sys.id} comment={comment} />
                         
                     )
                 }

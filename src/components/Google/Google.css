@@ -1,0 +1,19 @@
+.googleButton{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    margin-bottom:10px;
+    color:#ed3839;
+    cursor: pointer;
+}
+
+.googleSigninIcon{
+    color:#ed3839;
+    cursor: pointer;
+}
+
+.googleButton div{
+    display:block;
+    padding:0px;
+    margin:0px;
+}

@@ -25,7 +25,7 @@ export default class CommentReplyThread extends Component{
 
     renderReplies=()=>{
 
-        console.log(this.context.commentsList)
+        //console.log(this.context.commentsList)
         
         let replyItems = this.context.commentsList.map(comment=>{
                 

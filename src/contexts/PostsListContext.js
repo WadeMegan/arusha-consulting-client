@@ -18,6 +18,9 @@ const PostsListContext = React.createContext({
     usersEmail: null,
     usersProfileImg: null,
     usersId:null,
+
+    currentLikesList: [],
+    setCurrentLikesList: ()=>{}
 })
 
 export default PostsListContext
@@ -31,6 +34,7 @@ export class PostsListProvider extends Component {
         usersEmail: null,
         usersProfileImg: null,
         usersId:null,
+        currentLikesList: null
     }
 
     setPostsList = postsList => {
@@ -87,6 +91,12 @@ export class PostsListProvider extends Component {
         })
     }
 
+    setCurrentLikesList = list =>{
+        this.setState({
+            currentLikesList:list
+        })
+    }
+
     render(){
         const value={
             postsList: this.state.postsList,
@@ -107,7 +117,10 @@ export class PostsListProvider extends Component {
             usersProfileImg: this.state.usersProfileImg,
             setUsersProfileImg: this.setUsersProfileImg,
             usersId: this.state.usersId,
-            setUsersId: this.setUsersId
+            setUsersId: this.setUsersId,
+
+            currentLikesList: this.state.currentLikesList,
+            setCurrentLikesList: this.setCurrentLikesList
 
         }
 

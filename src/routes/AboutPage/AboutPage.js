@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import PostsApiService from '../../services/posts-api-service'
 import PostsList from '../../components/PostsList/PostsList'
 import NavLinks from '../../components/NavLinks/NavLinks'
-import heatherHeadshot from '../../images/heatherHeadshot.jpg'
+import heatherHeadshot from '../../images/heatherHeadshot.png'
 import arushaMeetHeatherLogo from '../../images/arushaMeetHeatherLogo.jpg'
 import NavBar from '../../components/NavBar/NavBar'
 
@@ -13,8 +13,7 @@ export default class AboutPage extends Component{
     render(){
         return(
             <>
-        
-
+    
             <section className='postsListSection'>
                 <div className='meetHeather'>
                     

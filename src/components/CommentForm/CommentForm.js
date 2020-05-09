@@ -116,31 +116,49 @@ export default class CommentForm extends Component{
             .catch(this.context.setError)*/
     }
 
+    renderUserProfileImg=()=>{
+        if(this.context.usersProfileImg){
+            return(
+                <img className='userImg' src={this.context.usersProfileImg}/> 
+            )
+        }
+        /*else{
+            return(
+                <div className='userImg customIcon'><p>{this.context.usersName.charAt(0).toUpperCase()}</p></div>
+            )
+        }*/
+    }
+
     renderCommentForm=()=>{
         if(this.context.userLoggedIn===true){
             return(
-                <>
-                <p>Comment Form</p>
-                <form className='commentForm' onSubmit={this.handleSubmit} action="https://formsubmit.co/wademegan96@gmail.com" method="POST">
-                    {/*<div>
-                        <label htmlFor='username'>Username *</label>
-                        <input className='inputArea' type="text" name='username' id='username' required='require'/>
-                    </div>*/}
-                    <div>
-                        <label htmlFor='content'>Comment *</label>
-                        <textarea className='inputArea' rows={3} name='content' id='content' required='require'/>
+                <div className='commentItem'>
+                    <div className='commentImg'>
+                        {this.renderUserProfileImg()}
                     </div>
-                    <input className='submitCommentButton' type='submit' value='Submit'/>
-                </form> 
-                </>
+                    <form className='commentForm' onSubmit={this.handleSubmit} action="https://formsubmit.co/wademegan96@gmail.com" method="POST">
+                        {/*<div>
+                            <label htmlFor='username'>Username *</label>
+                            <input className='inputArea' type="text" name='username' id='username' required='require'/>
+                        </div>*/}
+                        <div>
+                            {/*<label htmlFor='content'>JOIN THE CONVERSATION</label>*/}
+                            <textarea className='inputArea' rows={3} name='content' id='content' required='require' placeholder='Join the conversation...'/>
+                        </div>
+                        <input className='submitCommentButton' type='submit' value='Submit'/>
+                    </form> 
+                </div>
             )
         }
         else{
             return(
-                <div>
-                    <p>Please login to join the discussion:</p>
-                    {/*<Google/>*/}
-                    <Facebook/>
+                <div className='socialMediaSigninBox'>
+                    <p>LOG IN TO JOIN THE CONVERSATION</p>
+                    <div className='signinButtonBox'>
+                        <Google/>
+                        <Facebook/>
+                    </div>
+                    
                 </div> 
             )
             
@@ -152,9 +170,9 @@ export default class CommentForm extends Component{
         //console.log(this.context.usersName, this.context.usersEmail)
 
         return(    
-            <>
-            {this.renderCommentForm()}
-            </>
+            <div className='commentFormContainer'>
+                {this.renderCommentForm()}
+            </div>
         )
     }
 }

@@ -1,26 +1,52 @@
+.commentFormContainer{
+
+    padding-top:10px;
+    margin-bottom:10px;
+}
 
 .commentForm label{
     display:block;
 }
 
-.commentForm .inputArea {
-    border:1px solid #bdbdbd;
+.commentForm{
     width:100%;
-    background-color: #ebebe6;
 }
 
 .commentForm div{
-    padding-top:5px;
-    padding-bottom:5px;
+    width:100%;
+}
+
+.commentForm .inputArea {
+    border:2px solid #bdbdbd;
+    width:100%;
+    background-color: #ebebe6;
+    padding:5px;
+    border-radius: 2px;
+}
+
+.commentForm div > textarea{
+    width:inherit;
 }
 
 .submitCommentButton{
-    background-color:grey;
-    color:white;
+    background-color:#600060;
     padding:10px;
+    color:white;
+    opacity:0.8;
     cursor: pointer;
+    margin-bottom:15px;
 }
 
 .submitCommentButton:hover{
-    background-color:black;
+    opacity:1;
+}
+
+.signinButtonBox{
+    display:flex;
+}
+
+.socialMediaSigninBox{
+    border-bottom:1px solid #bdbdbd;
+    margin-top:15px;
+    padding-bottom:15px;
 }

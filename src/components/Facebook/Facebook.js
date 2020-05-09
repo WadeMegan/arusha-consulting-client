@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 //import './NavLinks.css'
+import './Facebook.css'
 import FacebookLogin from 'react-facebook-login';
 import PostsListContext from '../../contexts/PostsListContext'
 
@@ -24,6 +25,7 @@ export default class Facebook extends Component{
         this.context.setUsersName(response.name)
         this.context.setUsersProfileImg(response.picture.data.url)
         this.context.setUsersEmail(response.email)
+        this.context.setUsersId(response.userID)
     }
 
     render(){
@@ -39,10 +41,15 @@ export default class Facebook extends Component{
         } else {
             fbContent = (<FacebookLogin
                 appId="285368999287154"
+                icon={<i class="fab fa-facebook fa-2x"></i>}
+                textButton = ""
+                cssClass="facebookButton"
                 autoLoad={true}
                 fields="name,email,picture"
                 onClick={this.componentClicked}
-                callback={this.responseFacebook}/>)
+                callback={this.responseFacebook}
+                //icon="fa-facebook"
+                />)
         }
 
         return(    
