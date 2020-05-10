@@ -71,7 +71,8 @@ const CommentsApiService = {
                 'post_id':postId
             }),
             headers: {
-                "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f",
+                //"Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f",
+                "Sec-Fetch-Mode": "no-cors",
                 "content-type":"application/json"
             }
         })
@@ -96,11 +97,11 @@ const CommentsApiService = {
     },*/
     getLikesByPostId(postId){
         return fetch(
-            `https://git.heroku.com/enigmatic-meadow-02313.git/api/likes/posts/${postId}`,{
+            `https://git.heroku.com/enigmatic-meadow-02313.git/api/likes/posts/${postId}`/*,{
                 headers: {
                     "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f"
                 }
-            })
+            }*/)
                 .then(res=>
                     (!res.ok)
                         ? res.json().then(e=>Promise.reject(e))
@@ -110,10 +111,10 @@ const CommentsApiService = {
     deleteLike(commentId, userId){
     
         return fetch(`https://git.heroku.com/enigmatic-meadow-02313.git/api/likes/comments/${commentId}/users/${userId}`,{
-            method: 'DELETE',
+            method: 'DELETE'/*,
             headers: {
                 "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f"
-            }
+            }*/
         })
             /*.then(res => 
                  (!res.ok)
