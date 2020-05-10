@@ -23,11 +23,15 @@ export default class CommentUnlikeButton extends Component{
                         //handle state change
                         this.props.handleLikeButtonClicked()
                     })
-                    .catch()
+                    .catch(this.context.setError)
                 
             })
-            .catch()
+            .catch(this.context.setError)
         
+    }
+
+    componentDidMount=()=>{
+        this.context.clearError()
     }
 
     render(){

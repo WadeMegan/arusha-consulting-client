@@ -20,7 +20,12 @@ const PostsListContext = React.createContext({
     usersId:null,
 
     currentLikesList: [],
-    setCurrentLikesList: ()=>{}
+    setCurrentLikesList: ()=>{},
+
+    //error handling
+    error: null,
+    setError: ()=>{},
+    clearError: ()=>{},
 })
 
 export default PostsListContext
@@ -34,7 +39,8 @@ export class PostsListProvider extends Component {
         usersEmail: null,
         usersProfileImg: null,
         usersId:null,
-        currentLikesList: null
+        currentLikesList: null,
+        error:null,
     }
 
     setPostsList = postsList => {
@@ -97,6 +103,15 @@ export class PostsListProvider extends Component {
         })
     }
 
+    setError = error => {
+        console.error(error)
+        this.setState({ error })
+    }
+
+    clearError = () => {
+        this.setState({ error: null })
+    }
+
     render(){
         const value={
             postsList: this.state.postsList,
@@ -120,7 +135,11 @@ export class PostsListProvider extends Component {
             setUsersId: this.setUsersId,
 
             currentLikesList: this.state.currentLikesList,
-            setCurrentLikesList: this.setCurrentLikesList
+            setCurrentLikesList: this.setCurrentLikesList,
+
+            error: this.state.error,
+            setError: this.setError,
+            clearError: this.clearError,
 
         }
 

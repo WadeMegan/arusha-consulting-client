@@ -21,11 +21,16 @@ export default class Facebook extends Component{
             email:response.email,
             picture: response.picture.data.url
         })*/
-        this.context.setUserLoggedIn()
-        this.context.setUsersName(response.name)
-        this.context.setUsersProfileImg(response.picture.data.url)
-        this.context.setUsersEmail(response.email)
-        this.context.setUsersId(response.userID)
+        if(!response.name){
+            this.context.setError()
+        }else{
+            this.context.setUserLoggedIn()
+            this.context.setUsersName(response.name)
+            this.context.setUsersProfileImg(response.picture.data.url)
+            this.context.setUsersEmail(response.email)
+            this.context.setUsersId(response.userID)
+        }
+        
     }
 
     render(){

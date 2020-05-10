@@ -90,12 +90,14 @@ export default class CommentForm extends Component{
                     .then(()=>{
                         this.props.commentAdded()
                     })
-                    .catch()
+                    .catch(this.context.setError)
                 this.setState({
                     publishedComment: `${res.sys.id}`
                 })
             })
-            .catch()
+            .catch(this.context.setError)
+
+
 
 
         /*CommentsApiService.publishComment(this.state.publishedComment)
@@ -114,6 +116,10 @@ export default class CommentForm extends Component{
                 this.props.onSubmit()
             })
             .catch(this.context.setError)*/
+    }
+
+    componentDidMount=()=>{
+        this.context.clearError()
     }
 
     renderUserProfileImg=()=>{

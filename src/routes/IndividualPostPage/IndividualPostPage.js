@@ -8,6 +8,7 @@ import CommentsList from '../../components/CommentsList/CommentsList'
 import MarkdownView from 'react-showdown';
 import { GoogleLogin } from 'react-google-login'
 import { GoogleLogout } from "react-google-login";
+import Error from '../../components/Error/Error'
 
 export default class IndividualPostPage extends Component{
 
@@ -49,8 +50,9 @@ export default class IndividualPostPage extends Component{
         else{
             PostsApiService.getPostById(this.props.match.params.id)
                 .then(this.context.setCurrentPost)
-                .catch()
+                .catch(this.context.setError)
         }
+
 
         /*PostsApiService.getPostById(this.props.match.params.id)
             .then(res=>{
@@ -69,6 +71,10 @@ export default class IndividualPostPage extends Component{
         
     }
 
+    componentDidMount=()=>{
+        this.context.clearError()
+    }
+
      renderImage=()=>{
 
         
@@ -82,7 +88,7 @@ export default class IndividualPostPage extends Component{
                         mediaUrl: res.fields.file.url
                     })
                 })
-                .catch()
+                .catch(this.context.setError)
             /*let featuredImg = this.context.assetsList.find(asset=>
                 asset.sys.id === currentPost.fields.featuredImage.sys.id
             )
@@ -251,6 +257,7 @@ export default class IndividualPostPage extends Component{
 
         return(    
             <>
+            <Error>
             <section className='postContentSection'>
                 {this.renderTitle()}
                 {this.renderDate()}
@@ -264,6 +271,7 @@ export default class IndividualPostPage extends Component{
             <footer >
                 <p>Footer with whatever you want in it.</p>
             </footer>
+            </Error>
             </>
         )
     }

@@ -90,9 +90,14 @@ export default class CommentReplyThread extends Component{
                     commentAdded:true
                 })
             })
-            .catch()
+            .catch(this.context.setError)
     }
 
+
+    componentDidMount=()=>{
+        this.context.clearError()
+    }
+    
     render(){
 
 

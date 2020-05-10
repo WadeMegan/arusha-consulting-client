@@ -30,12 +30,16 @@ export default class CommentsList extends Component{
                 )
                 this.context.setCommentsList(commentsList)
             })
-            .catch()
+            .catch(this.context.setError)
 
         /*CommentsApiService.postComment(this.context.currentPost.id)
             .then(res=>console.log(res))
             .catch()*/
         
+    }
+
+    componentDidMount=()=>{
+        this.context.clearError()
     }
 
 
@@ -105,9 +109,12 @@ export default class CommentsList extends Component{
                     commentAdded:true
                 })
             })
-            .catch()
+            .catch(this.context.setError)
     }
 
+    componentDidMount=()=>{
+        this.context.clearError()
+    }
 
     render(){
         return(    

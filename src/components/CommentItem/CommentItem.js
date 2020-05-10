@@ -31,7 +31,7 @@ export default class CommentItem extends Component{
             .then(res=>{
                 this.context.setCurrentLikesList(res)
             })
-            .catch()
+            .catch(this.context.setError)
         }
 
     openReply=()=>{
@@ -45,6 +45,10 @@ export default class CommentItem extends Component{
             })
         }
         
+    }
+
+    componentDidMount=()=>{
+        this.context.clearError()
     }
 
     renderUserProfileImg=()=>{

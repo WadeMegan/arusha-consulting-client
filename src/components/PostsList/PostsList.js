@@ -16,9 +16,13 @@ export default class PostsList extends Component{
                 this.context.setPostsList(res.items)
                 this.context.setAssetsList(res.includes.Asset)
             })
-            .catch()
+            .catch(this.context.setError)
 
         
+    }
+
+    componentDidMount=()=>{
+        this.context.clearError()
     }
 
     renderPosts=()=>{

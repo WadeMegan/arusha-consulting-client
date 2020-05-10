@@ -63,7 +63,7 @@ const CommentsApiService = {
     },
     postLike(commentId, userId, postId){
     
-        return fetch(`http://localhost:8060/api/likes`,{
+        return fetch(`https://git.heroku.com/enigmatic-meadow-02313.git/api/likes`,{
             method: 'POST',
             body: JSON.stringify({
                 'comment_id':commentId,
@@ -71,6 +71,7 @@ const CommentsApiService = {
                 'post_id':postId
             }),
             headers: {
+                "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f",
                 "content-type":"application/json"
             }
         })
@@ -80,20 +81,26 @@ const CommentsApiService = {
                     : res.json()
             )
     },
-    getLikesByCommentId(commentId){
+    /*getLikesByCommentId(commentId){
         return fetch(
-            `http://localhost:8060/api/likes/comments/${commentId}`
-            )
+            `http://localhost:8060/api/likes/comments/${commentId}`,{
+                headers: {
+                    "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f"
+                }
+            })
                 .then(res=>
                     (!res.ok)
                         ? res.json().then(e=>Promise.reject(e))
                         : res.json()
                 )
-    },
+    },*/
     getLikesByPostId(postId){
         return fetch(
-            `http://localhost:8060/api/likes/posts/${postId}`
-            )
+            `https://git.heroku.com/enigmatic-meadow-02313.git/api/likes/posts/${postId}`,{
+                headers: {
+                    "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f"
+                }
+            })
                 .then(res=>
                     (!res.ok)
                         ? res.json().then(e=>Promise.reject(e))
@@ -102,8 +109,11 @@ const CommentsApiService = {
     },
     deleteLike(commentId, userId){
     
-        return fetch(`http://localhost:8060/api/likes/comments/${commentId}/users/${userId}`,{
-            method: 'DELETE'
+        return fetch(`https://git.heroku.com/enigmatic-meadow-02313.git/api/likes/comments/${commentId}/users/${userId}`,{
+            method: 'DELETE',
+            headers: {
+                "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f"
+            }
         })
             /*.then(res => 
                  (!res.ok)

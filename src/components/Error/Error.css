@@ -1,0 +1,71 @@
+.errorBoundaryMessage {
+    height:100vh;
+    background-color: #ebebe6;
+    display:flex;
+    flex-direction: column;
+    padding-left:10%;
+    padding-right:10%;
+}
+
+.errorBoundaryMessage h1{
+    font-family: brushwell;
+    font-size: 50px;
+}
+
+.errorBoundaryMessage p{
+    font-family: avenir;
+    font-size: 24px;
+}
+
+.errorBoundaryButtons{
+    margin-top:10px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.errorBoundaryMessage a{
+    padding-top:15px;
+    padding-bottom:15px;
+    display:inline-block;
+    width:48%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color:#600060;
+    color:white;
+    opacity:0.8;
+    font-family: avenir;
+}
+
+.errorBoundaryMessage a:hover{
+    opacity:1;
+}
+
+
+@media(min-width: 600px) {
+    .errorBoundaryMessage {
+        padding-left:20%;
+        padding-right:20%;
+    }
+}
+
+@media(min-width: 900px) {
+    .errorBoundaryMessage {
+        padding-left:30%;
+        padding-right:30%;
+    }
+}
+
+
+
+
+
+/*
+320px
+480px
+600px
+768px
+900px
+1024px
+1200px
+*/
