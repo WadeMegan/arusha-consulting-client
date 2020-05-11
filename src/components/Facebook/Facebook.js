@@ -25,11 +25,12 @@ export default class Facebook extends Component{
         if(!response.name){
             this.context.setError()
         }else{
+            console.log(response)
             this.context.setUserLoggedIn()
             this.context.setUsersName(response.name)
             this.context.setUsersProfileImg(response.picture.data.url)
             this.context.setUsersEmail(response.email)
-            this.context.setUsersId(response.userID)
+            this.context.setUsersId(response.id)
         }
         
     }
@@ -63,8 +64,8 @@ export default class Facebook extends Component{
                        xfbml={true}
                        fields="email,name,picture"
                        version="v2.5"
-                       className="facebook-login"
-                       buttonText="Login With Facebook"/>)
+                       className="facebookButton"
+                       buttonText={<i class="fab fa-facebook fa-2x"></i>}/>)
         }
 
         return(    
