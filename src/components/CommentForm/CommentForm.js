@@ -162,7 +162,7 @@ export default class CommentForm extends Component{
                     <p>LOG IN TO JOIN THE CONVERSATION</p>
                     <div className='signinButtonBox'>
                         <Google/>
-                        <Facebook/>
+                        {<Facebook/>}
                     </div>
                     
                 </div> 

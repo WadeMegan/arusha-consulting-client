@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 //import './NavLinks.css'
 import './Facebook.css'
-import FacebookLogin from 'react-facebook-login';
+//import FacebookLogin from 'react-facebook-login';
 import PostsListContext from '../../contexts/PostsListContext'
+import { FacebookLogin } from 'react-facebook-login-component';
 
 export default class Facebook extends Component{    
 
@@ -44,7 +45,7 @@ export default class Facebook extends Component{
                 </div>
             )
         } else {
-            fbContent = (<FacebookLogin
+            fbContent = /*(<FacebookLogin
                 appId="285368999287154"
                 icon={<i class="fab fa-facebook fa-2x"></i>}
                 textButton = ""
@@ -54,7 +55,16 @@ export default class Facebook extends Component{
                 onClick={this.componentClicked}
                 callback={this.responseFacebook}
                 //icon="fa-facebook"
-                />)
+                />)*/
+               ( <FacebookLogin socialId="285368999287154"
+                       language="en_US"
+                       scope="public_profile,email"
+                       responseHandler={this.responseFacebook}
+                       xfbml={true}
+                       fields="email,name,picture"
+                       version="v2.5"
+                       className="facebook-login"
+                       buttonText="Login With Facebook"/>)
         }
 
         return(    
