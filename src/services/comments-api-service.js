@@ -97,7 +97,7 @@ const CommentsApiService = {
     },*/
     getLikesByPostId(postId){
         return fetch(
-            `${process.env.HEROKU_API_URL}likes/posts/${postId}`/*,{
+            `${process.env.REACT_APP_HEROKU_API_URL}likes/posts/${postId}`/*,{
                 headers: {
                     "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f"
                 }
