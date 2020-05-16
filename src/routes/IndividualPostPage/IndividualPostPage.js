@@ -136,7 +136,7 @@ export default class IndividualPostPage extends Component{
         }
     }
 
-    renderDate = () => {
+    renderDateAuthor = () => {
         
         if(this.context.currentPost.length!==0){
         
@@ -187,7 +187,10 @@ export default class IndividualPostPage extends Component{
             let fullDate=`${month} ${day}, ${year}`.toUpperCase()
             
             return(
+                <>
                 <p className='postDate'>{fullDate}</p>
+                <p className='postDate'>BY {this.context.currentPost.fields.author.toUpperCase()}</p>
+                </>
             )
         }
 
@@ -243,6 +246,33 @@ export default class IndividualPostPage extends Component{
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
       }*/
 
+
+    renderAnchor=()=>{
+        if(this.context.currentPost.length!==0){
+            return(
+                <div className='postPageAnchorSection'>
+                    <div className='postAnchor'>
+                        <div className='sponsorAnchor'>
+                            <p>This post is sponsored by {this.context.currentPost.fields.sponsorName}</p>
+                            <p>{this.context.currentPost.fields.sponsorDescription}</p>
+                            <a target='_blank' rel="noopener noreferrer" href={this.context.currentPost.fields.sponsorLink}>Learn more about {this.context.currentPost.fields.sponsorName}.</a>
+                        </div>
+                        <div className='disclaimerAnchor'>
+                            <p>PLEASE NOTE: Fairground blog authors don’t have all the answers. They do have thoughts and ideas that
+                            have been sparked from their own exploration of diversity, equity, inclusion, and social
+                            justice and an authentic interest in helping to improve the current reality. They share three
+                            more things in common: 1) the courage to put themselves out front in a charged field, 2) the
+                            humility to know that they may get it wrong at some point, and 3) the commitment to
+                            always do better when they know better. We thank them for their vulnerability so that
+                            others may feel less hesitant to speak up themselves. May Fairground remain a comfortable
+                            space for everyone to learn, grow, and take action. </p>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+    }
+
     render(){
         let content = this.context.currentPost.content
         
@@ -258,13 +288,18 @@ export default class IndividualPostPage extends Component{
         return(    
             <>
             <Error>
-            <section className='postContentSection'>
-                {this.renderTitle()}
-                {this.renderDate()}
-                {this.renderImage()}
-                {this.renderContent()}
-                {this.renderComments()}
-            </section>
+            <section className='individualPostPageSection'>
+                {this.renderAnchor()}
+                <div className='postContentSection'>
+                    {this.renderTitle()}
+                    {this.renderDateAuthor()}
+                    {this.renderImage()}
+                    {this.renderContent()}
+                    {this.renderComments()}
+                </div>
+
+            </section>   
+            
 
             
             

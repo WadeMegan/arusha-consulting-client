@@ -97,7 +97,7 @@ const CommentsApiService = {
     },*/
     getLikesByPostId(postId){
         return fetch(
-            `https://enigmatic-meadow-02313.herokuapp.com/api/likes/posts/${postId}`/*,{
+            `${process.env.HEROKU_API_URL}likes/posts/${postId}`/*,{
                 headers: {
                     "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f"
                 }

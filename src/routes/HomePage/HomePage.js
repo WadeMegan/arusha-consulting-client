@@ -13,8 +13,11 @@ export default class HomePage extends Component{
     
             <section className='homePageSection'>
                 <img className='homePageImage' src={arushaMeetHeatherLogo}/>
-                <p>Arusha Consulting is a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good. On the consulting side, we focus on leadership, people management, and diversity and inclusion. On the coaching side, we specialize in helping people gain clarity about their values, strengths, desires, resources, relationships, fears, and obstacles to help them pursue their best lives.</p>
-                <p>Our ability to help individuals explore their own relationship to issues of diversity, inclusion, and equity helps distinguish us from other consulting/coaching groups.</p>
+                <div className='whatIsArushaBox'>
+                    <h1>ABOUT ARUSHA</h1>
+                    <p>Arusha Consulting is a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good. On the consulting side, we focus on leadership, people management, and diversity and inclusion. On the coaching side, we specialize in helping people gain clarity about their values, strengths, desires, resources, relationships, fears, and obstacles to help them pursue their best lives.</p>
+                    <p>Our ability to help individuals explore their own relationship to issues of diversity, inclusion, and equity helps distinguish us from other consulting/coaching groups.</p>
+                </div>
             </section>
 
             <footer >

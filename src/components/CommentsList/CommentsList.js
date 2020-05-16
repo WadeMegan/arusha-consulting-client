@@ -121,7 +121,7 @@ export default class CommentsList extends Component{
             <section className='commentsSection'>
                 <div className='commentIntroBox'>
                     <h2>The Discussion</h2>
-                    <p>Always with curiosity, never with judgment.</p>
+                    <p>Always with curiosity, never with judgment. Please don't feed the trolls.</p>
                 </div>
                 <CommentForm commentAdded={this.commentAdded}/>
                 {this.renderComments()}

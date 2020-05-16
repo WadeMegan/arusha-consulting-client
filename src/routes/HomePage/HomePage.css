@@ -1,15 +1,28 @@
 .homePageSection{
-    border:1px solid red;
     background-color: #feffef;
     padding-left:35px;
     padding-right:25px;
     padding-top:50px;
 }
 
+.homePageSection h1{
+    color:#ff914d;
+}
+
 .homePageSection p{
-    margin-bottom:20px;
+    padding-bottom:20px;
 }
 
 .homePageImage{
     width:100%;
+}
+
+
+@media(min-width: 768px) {
+    .homePageSection{
+        display:flex;
+    }
+    .homePageImage{
+        width:50%;
+    }
 }

@@ -1,7 +1,7 @@
 .heroBanner{
     z-index: 1;
     position:relative;
-    height:300px;
+    height:250px;
 }
 
 .heroImage{
@@ -237,6 +237,13 @@ footer a{
         height:100%;
         background-color: white;
     }*/
+}
+
+@media(min-width: 768px) {
+    .heroBanner{
+        height:350px;
+    }
+    
 }
 
 @media(min-width: 1000px) {

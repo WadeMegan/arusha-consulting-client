@@ -1,9 +1,98 @@
 .testimonialsContainer{
-    border:1px solid red;
+    background-color: #feffef;
+}
+
+.testimonialsContainer h1{
+    text-align: center;
+    color:#ff914d;
+}
+
+.slide-container{
+    width:100%;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.react-slideshow-container .nav{
+    background: #600060 !important;
+}
+
+
+
+/*.slide-container {
+    width: 70%;
+    margin: auto; }
+  
+  h3 {
+    text-align: center; }*/
+  
+  /*.each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 300px;
+  }*/
+  /*
+  .each-slide span {
+    padding: 20px;
+    font-size: 20px;
+    background: black;
+    text-align: center;
+  }
+  
+  .each-fade {
+    display: flex;
+  }
+  
+  .each-fade .image-container {
+    width: 75%;
+    overflow: hidden;
+  }
+  
+  .each-fade .image-container img {
+    width: 100%;
+  }
+  
+  .each-fade h2 {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: #adceed;
+  }
+*/
+/*
+.each-slide span {
+    padding: 20px;
+    font-size: 20px;
+    background: black;
+    text-align: center;
+    color:black;
+  }*/
+
+
+
+/*.react-slideshow-container .nav{
+    color:black;
+    background-color: black;
+}*/
+
+.each-slide{
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+}
+
+.each-slide img{
+    width:100%;
 }
 
 .clientsContainer{
-    background-color: #feffef;
+    /*background-color: #feffef;*/
+    background-color: #F6B277;
 }
 
 .clientsContainer div{
@@ -24,7 +113,7 @@
 }
 
 .aboutArushaSection h1{
-    color:#ff914d;
+    /*color:#ff914d;*/
     font-size:28px;
     line-height: 28px;
     margin:0px;

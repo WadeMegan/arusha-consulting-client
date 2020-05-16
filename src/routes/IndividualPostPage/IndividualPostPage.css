@@ -1,3 +1,28 @@
+.individualPostPageSection{
+    padding-top:50px;
+    background-color: #feffef;
+}
+
+.postPageAnchorSection{
+    font-size: 12px;
+}
+
+.postPageAnchorSection div{
+    padding:10px;
+    border-radius:5px;
+}
+
+.sponsorAnchor{
+    background-color: #F6B277;
+    color:black;
+    margin-bottom:5px;
+}
+
+.disclaimerAnchor{
+    background-color: #A97EB0;
+    color:black;
+}
+
 .heroBannerPost{
     height:10vh;
     background-color: #31363b;
@@ -31,7 +56,6 @@
     padding-right:20px;
     padding-top:20px;
     padding-bottom:20px;
-    background-color: #ebebe6;
 }
 
 
@@ -125,13 +149,26 @@
     }
 }
 
+/*switch to anchor on the left*/
 @media(min-width: 768px) {
+
+    .individualPostPageSection{
+        display:flex;
+        flex-direction: row-reverse;
+    }
+
+    .postPageAnchorSection{
+        padding-top:25px;
+        width:25%;
+    }
+
     .postContentSection{
-        padding-left:100px;
-        padding-right:100px;
+        width:75%;
+        padding-left:25px;
     }
 }
 
+/*
 @media(min-width: 900px) {
     .postContentSection{
         padding-left:150px;
@@ -151,7 +188,7 @@
         padding-left:300px;
         padding-right:300px;
     }
-}
+}*/
 
 
 

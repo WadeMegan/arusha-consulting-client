@@ -12,17 +12,46 @@ import grouponLogo from '../../images/groupon.png'
 import loyolaLogo from '../../images/loyola.png'
 import macLogo from '../../images/mac.png'
 import westsideJusticeCenterLogo from '../../images/westsideJusticeCenter.png'
+import { Slide } from 'react-slideshow-image';
+import testimonial1 from '../../images/testimonial1.png'
+import testimonial2 from '../../images/testimonial2.png'
+
 
 export default class AboutPage extends Component{
-        
+    
     render(){
+
+
+        let properties = {
+            duration: 50000,
+            transitionDuration: 500,
+            infinite: true,
+            indicators: true,
+            arrows: true, //change to true if want arrows
+            pauseOnHover: true,
+            onChange: (oldIndex, newIndex) => {
+              console.log(`slide transition from ${oldIndex} to ${newIndex}`);
+            }
+          }
+
         return(
             <>
     
             <section className='aboutArushaSection'>
                 <div className='testimonialsContainer'>
                     <h1>TESTIMONIALS</h1>
-                    
+
+                    <div className="slide-container">
+                        <Slide {...properties}>
+                        <div className="each-slide">
+                            <img src={testimonial1}/>
+                        </div>
+                        <div className="each-slide">
+                            <img src={testimonial2}/>
+                        </div>
+                        </Slide>
+                    </div>
+
                 </div>
                 <div className='clientsContainer'>
                     <h1>CLIENTS</h1>

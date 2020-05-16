@@ -26,6 +26,11 @@ const PostsListContext = React.createContext({
     error: null,
     setError: ()=>{},
     clearError: ()=>{},
+
+    featuredSponsor: null,
+    setFeaturedSponsor:()=>{},
+    sponsorMedia: null,
+    setSponsorMedia: ()=>{}
 })
 
 export default PostsListContext
@@ -41,6 +46,8 @@ export class PostsListProvider extends Component {
         usersId:null,
         currentLikesList: null,
         error:null,
+        featuredSponsor: null,
+        sponsorMedia: null,
     }
 
     setPostsList = postsList => {
@@ -112,6 +119,18 @@ export class PostsListProvider extends Component {
         this.setState({ error: null })
     }
 
+    setFeaturedSponsor = sponsor =>{
+        this.setState({
+            featuredSponsor:sponsor
+        })
+    }
+
+    setSponsorMedia = media =>{
+        this.setState({
+            sponsorMedia:media
+        })
+    }
+
     render(){
         const value={
             postsList: this.state.postsList,
@@ -140,6 +159,11 @@ export class PostsListProvider extends Component {
             error: this.state.error,
             setError: this.setError,
             clearError: this.clearError,
+
+            featuredSponsor: this.state.featuredSponsor,
+            setFeaturedSponsor: this.setFeaturedSponsor,
+            sponsorMedia: this.state.sponsorMedia,
+            setSponsorMedia: this.setSponsorMedia,
 
         }
 
