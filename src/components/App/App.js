@@ -12,6 +12,7 @@ import HomePage from '../../routes/HomePage/HomePage'
 
 class App extends Component {
   render(){
+    console.log(process.env.REACT_APP_HEROKU_API_URL)
     return(
         <>
         <NavBar/>
