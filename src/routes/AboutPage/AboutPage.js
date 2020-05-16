@@ -7,6 +7,11 @@ import NavLinks from '../../components/NavLinks/NavLinks'
 import heatherHeadshot from '../../images/heatherHeadshot.png'
 import arushaMeetHeatherLogo from '../../images/arushaMeetHeatherLogo.jpg'
 import NavBar from '../../components/NavBar/NavBar'
+import friendsOfPrenticeLogo from '../../images/friendsOfPrentice.png'
+import grouponLogo from '../../images/groupon.png'
+import loyolaLogo from '../../images/loyola.png'
+import macLogo from '../../images/mac.png'
+import westsideJusticeCenterLogo from '../../images/westsideJusticeCenter.png'
 
 export default class AboutPage extends Component{
         
@@ -14,11 +19,26 @@ export default class AboutPage extends Component{
         return(
             <>
     
-            <section className='postsListSection'>
+            <section className='aboutArushaSection'>
+                <div className='testimonialsContainer'>
+                    <h1>TESTIMONIALS</h1>
+                    
+                </div>
+                <div className='clientsContainer'>
+                    <h1>CLIENTS</h1>
+                    <div>
+                        <img src={friendsOfPrenticeLogo}/>
+                        <img src={grouponLogo}/>
+                        <img src={loyolaLogo}/>
+                        <img src={macLogo}/>
+                        <img src={westsideJusticeCenterLogo}/>
+                    </div>
+                </div>
+
                 <div className='meetHeather'>
                     
                     <div className='phoneView'>
-                        <h2>MEET HEATHER</h2>
+                        <h1>MEET HEATHER</h1>
                         <img className='heatherHeadshot' src={heatherHeadshot}/>
                         <p>Heather Sattler inspires awareness to ignite action in both organizations and individuals. She is fervent about equal access to opportunity for all. Among her passions is providing training and coaching on supervising, mentoring, and sponsoring people outside of dominant in-groups.</p>
                         <p>Heather enjoys helping her clients align their actions with their vision and values to achieve a greater good. She relies on her strengths of awakening spirit, bringing out potential, and serving as a purveyor of depth in a light-hearted way to provide transformative experiences for those with whom she works.</p>
@@ -31,7 +51,7 @@ export default class AboutPage extends Component{
                     <div className='computerView'>
                         <div className='firstRow row'>
                             <div className='leftColumn leftP'>
-                                <h2>MEET HEATHER</h2>
+                                <h1>MEET HEATHER</h1>
                                 <p>Heather Sattler inspires awareness to ignite action in both organizations and individuals. She is fervent about equal access to opportunity for all. Among her passions is providing training and coaching on supervising, mentoring, and sponsoring people outside of dominant in-groups.</p>
                                 <p>Heather enjoys helping her clients align their actions with their vision and values to achieve a greater good. She relies on her strengths of awakening spirit, bringing out potential, and serving as a purveyor of depth in a light-hearted way to provide transformative experiences for those with whom she works.</p>
                             </div>

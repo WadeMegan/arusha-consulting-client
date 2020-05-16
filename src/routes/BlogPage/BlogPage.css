@@ -10,14 +10,10 @@
 
 .fairgroundBannerImgBox{
     background-image: linear-gradient(to right, #6E274E , #430146);
-
 }
 
 .fairgroundBannerImg{
-    margin-left:20%;
-    margin-right:20%;
-    width:60%;
-    padding:20px;
+    width:100%;
     background-color: transparent;
 }
 
@@ -28,4 +24,13 @@
 
 .blogPageNav{
     background:grey;
+}
+
+@media(min-width: 600px) {
+    .fairgroundBannerImg{
+        width:80%;
+        padding-left:10%;
+        padding-right:10%;
+        background-color: transparent;
+    }
 }

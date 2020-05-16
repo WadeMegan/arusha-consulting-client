@@ -1,0 +1,15 @@
+.homePageSection{
+    border:1px solid red;
+    background-color: #feffef;
+    padding-left:35px;
+    padding-right:25px;
+    padding-top:50px;
+}
+
+.homePageSection p{
+    margin-bottom:20px;
+}
+
+.homePageImage{
+    width:100%;
+}

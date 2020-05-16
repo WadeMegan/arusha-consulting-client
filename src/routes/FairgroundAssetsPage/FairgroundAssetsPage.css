@@ -1,7 +1,7 @@
 .heroBanner{
     z-index: 1;
     position:relative;
-    height:75vh;
+    height:300px;
 }
 
 .heroImage{
@@ -25,23 +25,21 @@
 }
 
 .heroText{
+    padding-top:calc(50px + 15px);
    z-index:4;
    height:100%;
    width:100%;
    position:absolute;
    font-family: avenir;
     color:white;
-    padding:15px;
+    padding-bottom:15px;
+    padding-left:15px;
+    padding-right:15px;
 }
 
-.heroText nav{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .title{
-    top:40%;
+    top:50%;
     height:20%;
     display:flex;
     flex-direction: column;
@@ -113,7 +111,7 @@
 }
 
 .aboutFairground{
-    background-color: #ebebe6;
+    background-color: #feffef;
     padding:35px;
 }
 
@@ -229,7 +227,24 @@ footer a{
         line-height: 30px;
         margin-top:20px;
     }
+    /*.heroImage{
+        z-index:2;
+        background: url('../../images/fairground.jpg') no-repeat;
+        background-position: bottom 100%;
+        background-size: cover;
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-color: white;
+    }*/
 }
+
+@media(min-width: 1000px) {
+    .heroImage{
+        background-position: 35% 70%;
+    }
+}
+
 
 
 

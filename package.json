@@ -14,9 +14,11 @@
     "react-facebook-login-component": "^0.9.2",
     "react-google-login": "^5.1.10",
     "react-grid-system": "^6.3.0",
+    "react-presents": "^0.8.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "react-showdown": "^2.0.3"
+    "react-showdown": "^2.0.3",
+    "react-slideshow-image": "^1.4.2"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,11 +1,9 @@
 .navBar{
-    color:white;
     /*background-color: #430146;*/
     background-image: linear-gradient(to right, #6E274E , #430146);
-    opacity: 1;
     margin:0px;
     padding:0px;
-    height:60px;
+    height:50px;
     /*box-shadow: 0 10px 10px -10px rgba(0,0,0,.8); //use if fixed*/
     display:flex;
     align-items: center;
@@ -13,11 +11,13 @@
     padding-left:20px;
     padding-right:20px;
     z-index: 99;
-    position:relative;
+    position:fixed;
+    width:100%;
+    opacity:0.95;
 }
 
 .navLogoLink{
-    height:70%;
+    height:75%;
 }
 
 .navLogoImg{
@@ -30,8 +30,8 @@
 
 .indivNavLink{
     margin-left:15px;
-    color:white;
     text-decoration: none;
+    font-size:14px;
 }
 
 .indivNavLink:hover{

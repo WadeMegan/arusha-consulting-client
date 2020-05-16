@@ -35,7 +35,7 @@
 
 .navLinksDropdown a:hover{
     color:black;
-    background-color: #F6B277;
+    background-color: grey;
 }
 
 .dropdown:hover .navLinksDropdown{
@@ -44,6 +44,11 @@
 
 .navLinks{
     display:none;
+}
+
+.indivNavLink{
+    /*color:#FA8006;*/
+    color:white;
 }
 
 @media(min-width: 600px) {

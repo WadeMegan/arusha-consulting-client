@@ -77,9 +77,9 @@
 }
 
 .contentContainer img{
-    width:90%;
-    margin-left:5%;
-    margin-right:5%;
+    width:60%;
+    margin-left:20%;
+    margin-right:20%;
 }
 
 .contentContainer h1, .contentContainer h2, .contentContainer h3, .contentContainer p{

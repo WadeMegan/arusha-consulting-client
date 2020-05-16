@@ -7,6 +7,8 @@ import SocialMedia from '../SocialMedia/SocialMedia'
 import IndividualPostPage from '../../routes/IndividualPostPage/IndividualPostPage'
 import AboutPage from '../../routes/AboutPage/AboutPage'
 import NavBar from '../NavBar/NavBar'
+import ContactPage from '../../routes/ContactPage/ContactPage'
+import HomePage from '../../routes/HomePage/HomePage'
 
 class App extends Component {
   render(){
@@ -16,10 +18,12 @@ class App extends Component {
         <main className='App'>
           <SocialMedia/>
             <Switch>
+              <Route exact path={'/'} component={HomePage}/>
               <Route path={'/fairground-assets'} component={FairgroundAssetsPage}/>
               <Route exact path={'/fairground'} component={BlogPage}/>
               <Route path={'/fairground/posts/:id'} render={(props)=> <IndividualPostPage {...props}/>}/>
               <Route path={'/about'} component={AboutPage}/>
+              <Route path={'/contact'} component={ContactPage}/>
               {/*<Route path={"*"} component={FairgroundAssetsPage} />*/}
             </Switch>
         </main>    

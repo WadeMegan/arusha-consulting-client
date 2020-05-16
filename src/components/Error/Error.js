@@ -16,6 +16,7 @@ class Error extends Component {
                 <div className='errorBoundaryButtons'>
                    <Link to='/about'>Home</Link>
                     <Link to='/fairground'>Blog</Link> 
+                    <Link to='/fairground-assets'>Assets</Link>
                 </div>
                 
            </div>
