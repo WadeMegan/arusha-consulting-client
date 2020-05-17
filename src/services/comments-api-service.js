@@ -104,10 +104,10 @@ const CommentsApiService = {
                     "Authorization": `Bearer ${config.HEROKU_API_TOKEN}`
                 }
             }*/)
-                .then(res=>
-                    (!res.ok)
+                .then(res=>console.log(res)
+                    /*(!res.ok)
                         ? res.json().then(e=>Promise.reject(e))
-                        : res.json()
+                        : res.json()*/
                 )
     },
     deleteLike(commentId, userId){
