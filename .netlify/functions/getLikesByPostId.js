@@ -6,7 +6,7 @@ exports.handler = async (event, context, callback) => {
     axios
         .get(`${process.env.REACT_APP_HEROKU_API_URL}/likes/posts/1VIIwtztOR0RzQbDdFIfDu`)
         .then((response)=>{
-            pass(response.data)
+            pass(response.json())
         })
         .catch((err)=>pass(err))
 
