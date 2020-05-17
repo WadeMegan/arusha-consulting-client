@@ -84,7 +84,7 @@ export default class PostItem extends Component{
         let fullDate=`${month} ${day}, ${year}`.toUpperCase()
         
         return(    
-            <Link to={`/fairground/posts/${this.props.post.sys.id}`}>
+            <Link to={`/blog/${this.props.post.fields.title}`}>
                 <div className='postItem'>
                     {this.renderImage()}
                     <p>{fullDate}</p>

@@ -20,7 +20,8 @@ export default class CommentsList extends Component{
 
     componentWillMount() {
 
-       CommentsApiService.getAllComments(this.context.currentPost.id)
+        if(this.context.currentPost && this.context.currentPost.sys){
+       CommentsApiService.getAllComments(this.context.currentPost.sys.id)
             .then(res=>{
                 console.log(res)
                 
@@ -31,6 +32,7 @@ export default class CommentsList extends Component{
                 this.context.setCommentsList(commentsList)
             })
             .catch(this.context.setError)
+        }
 
         /*CommentsApiService.postComment(this.context.currentPost.id)
             .then(res=>console.log(res))

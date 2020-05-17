@@ -65,7 +65,7 @@ const CommentsApiService = {
     },
     postLike(commentId, userId, postId){
     
-        return fetch(`https://enigmatic-meadow-02313.herokuapp.com/api/likes`,{
+        return fetch(/*`https://enigmatic-meadow-02313.herokuapp.com/api/likes`*/"http://localhost:8070/likes",{
             method: 'POST',
             body: JSON.stringify({
                 'comment_id':commentId,
@@ -84,87 +84,46 @@ const CommentsApiService = {
                     : res.json()
             )
     },
-    /*getLikesByCommentId(commentId){
-        return fetch(
-            `http://localhost:8060/api/likes/comments/${commentId}`,{
+    getLikesByPostId(postId){
+        return fetch(`http://localhost:8070/likes/posts/${postId}`
+            /*`https://enigmatic-meadow-02313.herokuapp.com/api/likes/posts/${postId}`,{
                 headers: {
-                    "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f"
+                    "Authorization": `Bearer 78f18194-fea7-4300-8afc-ba49064ee70f`
                 }
-            })
+            }*/)
                 .then(res=>
+                    /*(res.error==="Unauthorized request")
+                        ? res.json().then(e=>{
+                            throw new Error(e)
+                        })
+                        : res.json()*/
+                    
                     (!res.ok)
                         ? res.json().then(e=>Promise.reject(e))
                         : res.json()
-                )
-    },*/
-    getLikesByPostId(/*postId*/){
-        return fetch("../../.netlify/functions/getLikesByPostId"
-            /*`${config.HEROKU_API_URL}/likes/posts/${postId}`,{
-                headers: {
-                    "Authorization": `Bearer ${config.HEROKU_API_TOKEN}`
-                }
-            }*/)
-                .then(res=>console.log(res)
-                    /*(!res.ok)
-                        ? res.json().then(e=>Promise.reject(e))
-                        : res.json()*/
-                )
+                )/*
+                .then(json=>{
+                    (json.error)
+                        ? json.json().then(e=>{
+                            throw new Error(e)
+                        })
+                        : json.json()
+                    console.log(json)
+                })*/
     },
     deleteLike(commentId, userId){
     
-        return fetch(`https://enigmatic-meadow-02313.herokuapp.com/api/likes/comments/${commentId}/users/${userId}`,{
+        return fetch(`http://localhost:8070/likes/comments/${commentId}/users/${userId}`,{
             method: 'DELETE',
             headers: {
                 "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f"
             }
         })
+            
             /*.then(res => 
-                 (!res.ok)
-                    ? res.json().then(e=>Promise.reject(e))
-                    : res.json()
+                 console.log(res)
             )*/
     },
-    /*updateLikedBy(commentId, username, date, content, postId, profileImg, replyingTo, likedBy, commentVersion){
-        return fetch(`https://api.contentful.com/spaces/cvysyefe75et/environments/master/entries/${commentId}`,{
-            method: 'PUT',
-            body: JSON.stringify({
-                "fields": {
-                    "username": {
-                        "en-US": username
-                      },
-                    "date": {
-                        "en-US": date
-                      },
-                    "content": {
-                        "en-US": content
-                      },
-                    "postId": {
-                        "en-US": postId
-                      },
-                    'profileImg': {
-                        "en-US": profileImg
-                    },
-                    'replyingTo': {
-                        "en-US": replyingTo
-                    },
-                    "likedBy": {
-                        "en-US": likedBy
-                    }
-                }
-            }),
-            headers: {
-                //"Content-Type":"application/vnd.contentful.management.v1+json",
-                //"X-Contentful-Content-Type":"comment",
-                "Authorization": "Bearer CFPAT-pctkH02k_uCe2IikxDgNTmweo9EbnoiW4pszNFTyEFw",
-                "X-Contentful-Version": 13
-            }
-        })
-            .then(res => 
-                 (!res.ok)
-                    ? res.json().then(e=>Promise.reject(e))
-                    : res.json()
-            )
-    },*/
 }
 
 export default CommentsApiService

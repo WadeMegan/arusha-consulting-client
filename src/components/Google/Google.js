@@ -50,11 +50,10 @@ export default class Google extends Component{
                 className='googleButton'
                 clientId="376742085814-of2ob321fhiprllfiephu05cm3s1qram.apps.googleusercontent.com"
                 render={renderProps => (
-                    <i onClick={renderProps.onClick} className="fab fa-google-plus fa-2x googleSigninIcon"></i>
-                    //<button onClick={renderProps.onClick} disabled={renderProps.disabled}>G</button>
+                    <i onClick={renderProps.onClick} className="fab fa-google-plus fa-2x googleSigninIcon"></i>    
                   )}
                 onSuccess={this.responseGoogle}
-                //onFailure={this.responseGoogle}
+                onFailure={err => console.log('fail', err)}
                 cookiePolicy={'single_host_origin'}
                 
               /> )

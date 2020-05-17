@@ -31,10 +31,13 @@ export default class IndividualPostPage extends Component{
 
             let postsList = this.context.postsList
 
+            console.log(this.props.match.params.title)
+
             const currentPost = postsList.find(post=>
-                post.sys.id === this.props.match.params.id
+                post.fields.title === this.props.match.params.title
             )
 
+            
 
             this.context.setCurrentPost(currentPost)
 
@@ -48,9 +51,26 @@ export default class IndividualPostPage extends Component{
 
         }
         else{
-            PostsApiService.getPostById(this.props.match.params.id)
+
+            PostsApiService.getPosts()
+            .then(res=>{ console.log(res)
+
+                this.context.setPostsList(res.items)
+
+                let currentPost = res.items.find(post=>
+                    post.fields.title === this.props.match.params.title
+                )
+
+                console.log(currentPost)
+
+                this.context.setCurrentPost(currentPost)
+            })
+            .catch(this.context.setError)
+
+            /*
+            PostsApiService.getPosts()
                 .then(this.context.setCurrentPost)
-                .catch(this.context.setError)
+                .catch(this.context.setError)*/
         }
 
 
@@ -79,7 +99,7 @@ export default class IndividualPostPage extends Component{
 
         
 
-        if(!this.state.mediaUrl && this.context.currentPost.length !== 0){
+        if(!this.state.mediaUrl && this.context.currentPost && this.context.currentPost.fields ){
 
 
             PostsApiService.getPostFeaturedImage(this.context.currentPost.fields.featuredImage.sys.id)
@@ -119,7 +139,7 @@ export default class IndividualPostPage extends Component{
     renderContent = () => {
         //let html = this.createMarkup()
 
-        if(this.context.currentPost.length!==0){
+        if(this.context.currentPost && this.context.currentPost.fields){
 
 
             //var converter = new showdown.Converter()
@@ -138,7 +158,7 @@ export default class IndividualPostPage extends Component{
 
     renderDateAuthor = () => {
         
-        if(this.context.currentPost.length!==0){
+        if(this.context.currentPost && this.context.currentPost.fields){
         
             let date = new Date(this.context.currentPost.fields.date)
             let dateString = date.toString()
@@ -199,7 +219,7 @@ export default class IndividualPostPage extends Component{
     renderTitle=()=>{
 
 
-        if(this.context.currentPost.length!==0){
+        if(this.context.currentPost && this.context.currentPost.fields ){
             return (
                 <>
                 <h1>{this.context.currentPost.fields.title}</h1>
@@ -210,7 +230,7 @@ export default class IndividualPostPage extends Component{
 
     renderComments = () => {
         
-        if(this.context.currentPost.length!==0){
+        if(this.context.currentPost && this.context.currentPost.fields){
             return(
                 <CommentsList /*postId={this.context.currentPost.id}*//>
             )
@@ -247,34 +267,25 @@ export default class IndividualPostPage extends Component{
       }*/
 
 
-    renderAnchor=()=>{
-        if(this.context.currentPost.length!==0){
+    renderSponsorAnchor=()=>{
+        if(this.context.currentPost && this.context.currentPost.fields && this.context.currentPost.fields.sponsorName){
             return(
-                <div className='postPageAnchorSection'>
-                    <div className='postAnchor'>
-                        <div className='sponsorAnchor'>
-                            <p>This post is sponsored by {this.context.currentPost.fields.sponsorName}</p>
-                            <p>{this.context.currentPost.fields.sponsorDescription}</p>
-                            <a target='_blank' rel="noopener noreferrer" href={this.context.currentPost.fields.sponsorLink}>Learn more about {this.context.currentPost.fields.sponsorName}.</a>
-                        </div>
-                        <div className='disclaimerAnchor'>
-                            <p>PLEASE NOTE: Fairground blog authors don’t have all the answers. They do have thoughts and ideas that
-                            have been sparked from their own exploration of diversity, equity, inclusion, and social
-                            justice and an authentic interest in helping to improve the current reality. They share three
-                            more things in common: 1) the courage to put themselves out front in a charged field, 2) the
-                            humility to know that they may get it wrong at some point, and 3) the commitment to
-                            always do better when they know better. We thank them for their vulnerability so that
-                            others may feel less hesitant to speak up themselves. May Fairground remain a comfortable
-                            space for everyone to learn, grow, and take action. </p>
-                        </div>
-                    </div>
+                <div className='sponsorAnchor'>
+                    <p>This post is sponsored by {this.context.currentPost.fields.sponsorName}</p>
+                    <p>{this.context.currentPost.fields.sponsorDescription}</p>
+                    <a target='_blank' rel="noopener noreferrer" href={this.context.currentPost.fields.sponsorLink}>Learn more about {this.context.currentPost.fields.sponsorName}.</a>
                 </div>
             )
         }
     }
 
     render(){
-        let content = this.context.currentPost.content
+
+        if(this.context.currentPost){
+            let content = this.context.currentPost.content
+        } else {
+            let content = null
+        }
         
         /*function onSignIn(googleUser){
             console.log('onSignIn ran')
@@ -289,7 +300,21 @@ export default class IndividualPostPage extends Component{
             <>
             <Error>
             <section className='individualPostPageSection'>
-                {this.renderAnchor()}
+                <div className='postPageAnchorSection'>
+                    <div className='postAnchor'>
+                        {this.renderSponsorAnchor()}
+                        <div className='disclaimerAnchor'>
+                            <p>PLEASE NOTE: Fairground blog authors don’t have all the answers. They do have thoughts and ideas that
+                            have been sparked from their own exploration of diversity, equity, inclusion, and social
+                            justice and an authentic interest in helping to improve the current reality. They share three
+                            more things in common: 1) the courage to put themselves out front in a charged field, 2) the
+                            humility to know that they may get it wrong at some point, and 3) the commitment to
+                            always do better when they know better. We thank them for their vulnerability so that
+                            others may feel less hesitant to speak up themselves. May Fairground remain a comfortable
+                            space for everyone to learn, grow, and take action. </p>
+                        </div>
+                    </div>
+                </div>
                 <div className='postContentSection'>
                     {this.renderTitle()}
                     {this.renderDateAuthor()}

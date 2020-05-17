@@ -15,10 +15,10 @@ export default class CommentUnlikeButton extends Component{
         
         
         CommentsApiService.deleteLike(this.props.comment.sys.id, this.context.usersId)
-            .then((res)=>{
+            .then((res)=>{console.log(res)
                 
                 CommentsApiService.getLikesByPostId(this.context.currentPost.sys.id)
-                    .then(res=>{
+                    .then(res=>{ 
                         this.context.setCurrentLikesList(res)
                         //handle state change
                         this.props.handleLikeButtonClicked()

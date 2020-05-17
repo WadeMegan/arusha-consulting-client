@@ -1,16 +1,16 @@
-import { createClient } from "contentful"
+//import { createClient } from "contentful"
 
-var client = createClient({
+/*var client = createClient({
     space: "cvysyefe75et",
     accessToken:
       "sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM"
-  });
+  });*/
   
 
 const PostsApiService = {
     
     getPosts(){
-        return fetch(`https://cdn.contentful.com/spaces/cvysyefe75et/environments/master/entries?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM&content_type=post`
+        return fetch("http://localhost:8070/posts"/*`https://cdn.contentful.com/spaces/cvysyefe75et/environments/master/entries?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM&content_type=post`*/
         /*spaces/cvysyefe75et/environments/master/content_types/post?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM*/)
             .then(res=> res.json()
                 /*(!res.ok)

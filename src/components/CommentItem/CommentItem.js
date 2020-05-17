@@ -25,14 +25,16 @@ export default class CommentItem extends Component{
 
     componentWillMount(){
 
-        console.log('will mount ran')
-        
+        console.log(this.context.currentPost)
+
+        if(this.context.currentPost.sys){        
         CommentsApiService.getLikesByPostId(this.context.currentPost.sys.id)
             .then(res=>{
                 this.context.setCurrentLikesList(res)
             })
             .catch(this.context.setError)
         }
+    }
 
     openReply=()=>{
         if(this.state.replyOpen==false){

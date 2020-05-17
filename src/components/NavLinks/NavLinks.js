@@ -13,7 +13,7 @@ export default class NavLinks extends Component{
                     {/*<p className='indivNavLink'>HOME</p>*/}
                     <Link to='/' className='indivNavLink'>HOME</Link>
                     <Link to='/about' className='indivNavLink'>ABOUT</Link>
-                    <Link className='indivNavLink' to='/fairground'>BLOG</Link>
+                    <Link className='indivNavLink' to='/blog'>BLOG</Link>
                     <Link className='indivNavLink' to='/fairground-assets'>ASSETS</Link>
                     <Link className='indivNavLink' to='/contact'>STAY IN TOUCH</Link>
 
@@ -24,7 +24,7 @@ export default class NavLinks extends Component{
                 {/*<p className='indivNavLink'>HOME</p>*/}
                 <Link to='/' className='indivNavLink'>HOME</Link>
                 <Link to='/about' className='indivNavLink'>ABOUT</Link>
-                <Link className='indivNavLink' to='/fairground'>BLOG</Link>
+                <Link className='indivNavLink' to='/blog'>BLOG</Link>
                 <Link className='indivNavLink' to='/fairground-assets'>ASSETS</Link>
                 <Link className='indivNavLink' to='/contact'>STAY IN TOUCH</Link>
                 {/*<p className='indivNavLink'>REACH OUT</p>*/}
