@@ -1,7 +1,16 @@
+const axios = require("axios")
+
 exports.handler = async (event, context, callback) => {
     const pass = (body) => {callback(null, {statusCode: 200, body: JSON.stringify(body)})}
   
-    try {
+    axios
+        .get(`${process.env.REACT_APP_HEROKU_API_URL}/likes/posts/1VIIwtztOR0RzQbDdFIfDu`)
+        .then((response)=>{
+            pass(response.data)
+        })
+        .catch((err)=>pass(err))
+
+    /*try {
       let response = await fetch(`${process.env.REACT_APP_HEROKU_API_URL}/likes/posts/1VIIwtztOR0RzQbDdFIfDu`, 
     {
      method: event.httpMethod,
@@ -19,5 +28,5 @@ exports.handler = async (event, context, callback) => {
          body: JSON.stringify({error: err.message})
    }
     await pass(error)
-   }
+   }*/
   }
