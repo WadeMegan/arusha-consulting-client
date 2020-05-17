@@ -97,13 +97,13 @@ const CommentsApiService = {
                         : res.json()
                 )
     },*/
-    getLikesByPostId(postId){
-        return fetch(
-            `${config.HEROKU_API_URL}/likes/posts/${postId}`,{
+    getLikesByPostId(/*postId*/){
+        return fetch("../../.netlify/functions/getLikesByPostId"
+            /*`${config.HEROKU_API_URL}/likes/posts/${postId}`,{
                 headers: {
                     "Authorization": `Bearer ${config.HEROKU_API_TOKEN}`
                 }
-            })
+            }*/)
                 .then(res=>
                     (!res.ok)
                         ? res.json().then(e=>Promise.reject(e))
