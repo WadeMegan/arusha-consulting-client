@@ -1,9 +1,9 @@
 import config from '../config'
 
 const CommentsApiService = {
-    getAllComments(id){
+    getAllComments(/*id*/){
         return fetch(
-            `https://cdn.contentful.com/spaces/cvysyefe75et/environments/master/entries?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM&content_type=comment`
+            `http://localhost:8070/comments`
             )
                 .then(res=>
                     (!res.ok)
@@ -13,7 +13,7 @@ const CommentsApiService = {
     },
     postComment(postId, username, content, date, profileImg, replyingTo){
     
-        return fetch(`https://api.contentful.com/spaces/cvysyefe75et/environments/master/entries?access_token=CFPAT-pctkH02k_uCe2IikxDgNTmweo9EbnoiW4pszNFTyEFw`,{
+        return fetch(`http://localhost:8070/comments`,{
             method: 'POST',
             body: JSON.stringify({
                 "fields": {
@@ -38,8 +38,9 @@ const CommentsApiService = {
                 }
             }),
             headers: {
-                "Content-Type":"application/vnd.contentful.management.v1+json",
-                "X-Contentful-Content-Type":"comment"
+                "content-type":"application/json"
+                /*"Content-Type":"application/vnd.contentful.management.v1+json",
+                "X-Contentful-Content-Type":"comment"*/
             }
         })
             .then(res => 
@@ -50,12 +51,12 @@ const CommentsApiService = {
     },
     publishComment(commentId){
         return fetch(
-            `https://api.contentful.com/spaces/cvysyefe75et/environments/master/entries/${commentId}/published`,{
-                method: 'PUT',
+            `http://localhost:8070/comments/${commentId}`,{
+                method: 'PUT'/*,
                 headers: {
                     "Authorization": "Bearer CFPAT-pctkH02k_uCe2IikxDgNTmweo9EbnoiW4pszNFTyEFw",
                     "X-Contentful-Version": 1
-                }
+                }*/
             })
                 .then(res=>
                     (!res.ok)
@@ -73,8 +74,8 @@ const CommentsApiService = {
                 'post_id':postId
             }),
             headers: {
-                "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f",
-                "Sec-Fetch-Mode": "no-cors",
+                //"Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f",
+                //"Sec-Fetch-Mode": "no-cors",
                 "content-type":"application/json"
             }
         })
@@ -115,9 +116,9 @@ const CommentsApiService = {
     
         return fetch(`http://localhost:8070/likes/comments/${commentId}/users/${userId}`,{
             method: 'DELETE',
-            headers: {
+            /*headers: {
                 "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f"
-            }
+            }*/
         })
             
             /*.then(res => 

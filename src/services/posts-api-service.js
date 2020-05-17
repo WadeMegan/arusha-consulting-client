@@ -18,17 +18,17 @@ const PostsApiService = {
                     : res.json()*/
             )
     }, 
-    getPostById(id){
+    /*getPostById(id){
         return fetch(`http://localhost:8070/posts/${id}`)
             .then(res=>
                 (!res.ok)
                     ? res.json().then(e=>Promise.reject(e))
                     : res.json()
             )
-    },
+    },*/
     getPostFeaturedImage(assetId){
         return fetch(
-            `https://cdn.contentful.com/spaces/cvysyefe75et/environments/master/assets/${assetId}?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM`)
+            `http://localhost:8070/posts/assets/${assetId}`)
                 .then(res=>
                     (!res.ok)
                         ? res.json().then(e=>Promise.reject(e))
