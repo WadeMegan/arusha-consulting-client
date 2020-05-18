@@ -1,0 +1,78 @@
+.contactPageSection{
+    padding:75px 25px 25px 25px;
+    background-color: #feffef;
+}
+
+.contactPageSection h1{
+    padding:0px;
+    margin:0px;
+    font-family: brushwell;
+    font-size:50px;
+    color:#ff914d;
+}
+
+.contactPageSection h2, .contactPageSection p{
+    font-family:avenir;
+}
+
+.contactPageSection h2{
+    margin-top:40px;
+}
+
+.contactPageSection p{
+    margin-top:15px;
+}
+
+.subscribeButton{
+    background-color:#600060;
+    padding:15px;
+    color:white;
+    opacity:0.8;
+    font-family: avenir;
+    cursor: pointer;
+    text-decoration: none;
+    display:inline-block;
+    margin-top:15px;
+    
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+
+    text-align: center;
+}
+
+.subscribeButton:hover{
+    opacity: 1;
+}
+
+.unsubscribeButton{
+    background-color:transparent;
+    color:black;
+    opacity:0.8;
+    font-family: avenir;
+    cursor: pointer;
+    text-decoration: none;
+    display:block;
+    margin-top:15px;
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+    text-align: center;
+}
+
+.unsubscribeButton:hover{
+    opacity: 1;
+}
+
+@media(min-width: 400px) {
+    .subscribeButton{
+        width:150px;
+        margin-left:0px;
+        margin-right:0px;
+    }
+    .unsubscribeButton{
+        width:150px;
+        margin-left:0px;
+        margin-right:0px;
+    }
+}

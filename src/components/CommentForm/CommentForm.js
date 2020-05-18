@@ -4,6 +4,7 @@ import CommentsApiService from '../../services/comments-api-service'
 import PostsListContext from '../../contexts/PostsListContext'
 import Google from '../Google/Google'
 import Facebook from '../Facebook/Facebook'
+import UsersService from '../../services/users-service'
 
 
 export default class CommentForm extends Component{
@@ -11,7 +12,8 @@ export default class CommentForm extends Component{
     static contextType = PostsListContext
 
     state={
-        publishedComment:null
+        publishedComment:null,
+        loggedIn:false,
     }
 
 
@@ -83,7 +85,7 @@ export default class CommentForm extends Component{
 
         let date = new Date().toISOString()
 
-        CommentsApiService.postComment(postId, this.context.usersName, content.value, date, this.context.usersProfileImg, this.props.replyingTo)
+        CommentsApiService.postComment(postId, UsersService.getName(), content.value, date, UsersService.getProfileImg(), this.props.replyingTo)
             .then((res)=>{
                 content.value=''
                 CommentsApiService.publishComment(res.sys.id)
@@ -123,9 +125,9 @@ export default class CommentForm extends Component{
     }
 
     renderUserProfileImg=()=>{
-        if(this.context.usersProfileImg){
+        if(UsersService.getProfileImg()){
             return(
-                <img className='userImg' src={this.context.usersProfileImg}/> 
+                <img className='userImg' src={UsersService.getProfileImg()}/> 
             )
         }
         /*else{
@@ -135,14 +137,25 @@ export default class CommentForm extends Component{
         }*/
     }
 
+    signOut=()=>{
+        UsersService.clearEmail()
+        UsersService.clearName()
+        UsersService.clearProfileImg()
+        UsersService.clearUserId()
+        this.setState({
+            loggedIn:false
+        })
+    }
+
     renderCommentForm=()=>{
-        if(this.context.userLoggedIn===true){
+        if(UsersService.getName()){
             return(
                 <div className='commentItem'>
                     <div className='commentImg'>
                         {this.renderUserProfileImg()}
+                        <button className='logoutButton' onClick={this.signOut}>Sign Out</button>
                     </div>
-                    <form className='commentForm' onSubmit={this.handleSubmit} action="https://formsubmit.co/wademegan96@gmail.com" method="POST">
+                    <form className='commentForm' onSubmit={this.handleSubmit}>
                         {/*<div>
                             <label htmlFor='username'>Username *</label>
                             <input className='inputArea' type="text" name='username' id='username' required='require'/>
@@ -161,8 +174,8 @@ export default class CommentForm extends Component{
                 <div className='socialMediaSigninBox'>
                     <p>LOG IN TO JOIN THE CONVERSATION</p>
                     <div className='signinButtonBox'>
-                        <Google/>
-                        {<Facebook/>}
+                        <Google onSuccess={()=>{this.setState({loggedIn:true})}}/>
+                        <Facebook onSuccess={()=>{this.setState({loggedIn:true})}}/>
                     </div>
                     
                 </div> 

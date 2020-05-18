@@ -1,5 +1,14 @@
+.aboutArushaSection h1{
+    text-align: center;
+    font-family: brushwell;
+    font-size:50px;
+    margin:0px;
+    padding-bottom:20px;
+}
+
 .testimonialsContainer{
     background-color: #feffef;
+    padding:25px;
 }
 
 .testimonialsContainer h1{
@@ -9,9 +18,6 @@
 
 .slide-container{
     width:100%;
-    padding-top:10px;
-    padding-left:10px;
-    padding-right:10px;
 }
 
 .react-slideshow-container .nav{
@@ -81,18 +87,21 @@
 }*/
 
 .each-slide{
-    width:70%;
-    margin-left:15%;
-    margin-right:15%;
+    width:80%;
+    margin-left:10%;
+    margin-right:10%;
 }
 
 .each-slide img{
     width:100%;
 }
 
+
+
 .clientsContainer{
     /*background-color: #feffef;*/
     background-color: #F6B277;
+    padding:25px;
 }
 
 .clientsContainer div{
@@ -100,7 +109,7 @@
 }
 
 .clientsContainer img{
-    height:50px;
+    height:65px;
     margin-top:20px;
     margin-bottom:20px;
     margin-left:15px;
@@ -110,25 +119,73 @@
 .aboutArushaSection{
     padding-top:50px;
     background-color: #ebebe6;
+
 }
 
-.aboutArushaSection h1{
-    /*color:#ff914d;*/
-    font-size:28px;
-    line-height: 28px;
-    margin:0px;
+.aboutArushaSection p{
+    font-family: avenir;
 }
+
 
 .meetHeather{
-    border:1px solid red;
+    background-color: #feffef;
+}
+
+.meetHeather h1{
+    color:#ff914d;
+}
+
+
+
+.boldAboutParagraph{
+    height:200px;
+    /*background: url('../../images/brushstrokes.png') no-repeat;
+    background-position: 50% 50%;
+    background-size: 85%;*/
+    text-align: center;
+    position:relative;
+    margin-top:20px;
+}
+
+.boldAboutParagraph div{
+    padding-top:0px !important;
+    font-weight:900;
+    /*font-weight:900;
+    padding-top:0px !important;
+    position:absolute;
+    top:0;
+    text-align: left !important;
+    border:1px solid green;*/
+    /*position:absolute;
+    top:0;
+    display:inline-block;*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100% !important;
+    text-align: left !important;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+}
+
+.boldAboutParagraph div p{
+    padding:0px !important;
+}
+
+.boldAboutParagraph img{
+    position:relative;
+    padding:0px !important;
+    margin:0px !important;
+    height:100% !important;
 }
 
 .meetHeather .phoneView{
     padding:35px;
-    border:1px solid blue;
 }
 
-.meetHeather .phoneView img, .meetHeather .phoneView p{
+.meetHeather .phoneView p{
     padding-top:25px;
 }
 
@@ -140,7 +197,6 @@
 
 .meetHeather .computerView{
     display:none;
-    border:1px solid green;
 }
 
 .meetHeather .computerView .row{
@@ -183,6 +239,10 @@
     margin-right:25%;
 }
 
+.aboutPageFooter{
+    background-color: #F6B277 !important;
+}
+
 @media(min-width: 500px) {
     .meetHeather .phoneView img{
         width:80%;
@@ -197,6 +257,11 @@
         margin-left:20%;
         margin-right:20%;
     }
+    .slide-container{
+        width:70%;
+        margin-right:15%;
+        margin-left:15%;
+    }
 }
 
 @media(min-width: 700px) {
@@ -206,6 +271,14 @@
     .meetHeather .computerView{
         display:flex;
         flex-direction: column;
+    }
+}
+
+@media(min-width: 1000px) {
+    .slide-container{
+        width:46%;
+        margin-right:27%;
+        margin-left:27%;
     }
 }
 

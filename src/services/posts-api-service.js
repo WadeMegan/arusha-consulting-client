@@ -1,3 +1,4 @@
+import config from '../config'
 //import { createClient } from "contentful"
 
 /*var client = createClient({
@@ -10,7 +11,7 @@
 const PostsApiService = {
     
     getPosts(){
-        return fetch("http://localhost:8070/posts"/*`https://cdn.contentful.com/spaces/cvysyefe75et/environments/master/entries?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM&content_type=post`*/
+        return fetch(`${config.API_ENDPOINT}/posts`/*`https://cdn.contentful.com/spaces/cvysyefe75et/environments/master/entries?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM&content_type=post`*/
         /*spaces/cvysyefe75et/environments/master/content_types/post?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM*/)
             .then(res=> res.json()
                 /*(!res.ok)
@@ -28,7 +29,7 @@ const PostsApiService = {
     },*/
     getPostFeaturedImage(assetId){
         return fetch(
-            `http://localhost:8070/posts/assets/${assetId}`)
+            `${config.API_ENDPOINT}/posts/assets/${assetId}`)
                 .then(res=>
                     (!res.ok)
                         ? res.json().then(e=>Promise.reject(e))

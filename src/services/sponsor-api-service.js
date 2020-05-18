@@ -1,3 +1,4 @@
+import config from '../config'
 /*import { createClient } from "contentful"
 
 var client = createClient({
@@ -10,7 +11,7 @@ var client = createClient({
 const SponsorApiService = {
     
     getSponsor(){
-        return fetch(`http://localhost:8070/sponsors`
+        return fetch(`${config.API_ENDPOINT}/sponsors`
         /*spaces/cvysyefe75et/environments/master/content_types/post?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM*/)
             .then(res=> 
                 (!res.ok)

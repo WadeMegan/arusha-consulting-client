@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './Google.css'
 import GoogleLogin from 'react-google-login'
 import PostsListContext from '../../contexts/PostsListContext'
+import UsersService from '../../services/users-service'
 
 export default class Google extends Component{
 
@@ -26,11 +27,16 @@ export default class Google extends Component{
             picture: response.profileObj.imageUrl
         })*/
 
-        this.context.setUserLoggedIn()
+        /*this.context.setUserLoggedIn()
         this.context.setUsersName(response.profileObj.name)
         this.context.setUsersProfileImg(response.profileObj.imageUrl)
         this.context.setUsersEmail(response.profileObj.email)
-        this.context.setUsersId(response.profileObj.googleId)
+        this.context.setUsersId(response.profileObj.googleId)*/
+        UsersService.saveName(response.profileObj.name)
+        UsersService.saveProfileImg(response.profileObj.imageUrl)
+        UsersService.saveEmail(response.profileObj.email)
+        UsersService.saveUserId(response.profileObj.googleId)
+        this.props.onSuccess()
     }
 
     render(){
@@ -39,7 +45,7 @@ export default class Google extends Component{
 
         let googleContent
 
-        if(this.context.userLoggedIn===true){
+        if(UsersService.getName()){
             googleContent=(
                 <div>
                     You are logged in!

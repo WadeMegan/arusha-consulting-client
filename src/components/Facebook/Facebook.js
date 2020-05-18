@@ -4,6 +4,7 @@ import './Facebook.css'
 //import FacebookLogin from 'react-facebook-login';
 import PostsListContext from '../../contexts/PostsListContext'
 import { FacebookLogin } from 'react-facebook-login-component';
+import UsersService from '../../services/users-service'
 
 export default class Facebook extends Component{    
 
@@ -25,12 +26,19 @@ export default class Facebook extends Component{
         if(!response.name){
             this.context.setError()
         }else{
-            console.log(response)
-            this.context.setUserLoggedIn()
-            this.context.setUsersName(response.name)
+            //console.log(response)
+            //this.context.setUserLoggedIn()
+            /*this.context.setUsersName(response.name)
             this.context.setUsersProfileImg(response.picture.data.url)
             this.context.setUsersEmail(response.email)
-            this.context.setUsersId(response.id)
+            this.context.setUsersId(response.id)*/
+
+            UsersService.saveName(response.name)
+            UsersService.saveProfileImg(response.picture.data.url)
+            UsersService.saveEmail(response.email)
+            UsersService.saveUserId(response.id)
+            this.props.onSuccess()
+
         }
         
     }
@@ -39,7 +47,7 @@ export default class Facebook extends Component{
 
         let fbContent
 
-        if(this.context.userLoggedIn===true){
+        if(UsersService.getName()){
             fbContent=(
                 <div>
                     You are logged in!

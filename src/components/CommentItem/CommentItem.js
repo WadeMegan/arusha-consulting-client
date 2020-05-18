@@ -6,6 +6,7 @@ import CommentForm from '../../components/CommentForm/CommentForm'
 import CommentReplyThread from '../CommentReplyThread/CommentReplyThread'
 import CommentLikeButton from '../CommentLikeButton/CommentLikeButton'
 import CommentUnlikeButton from '../CommentUnlikeButton/CommentUnlikeButton'
+import UsersService from '../../services/users-service'
 
 export default class CommentItem extends Component{
     
@@ -92,11 +93,11 @@ export default class CommentItem extends Component{
 
             //console.log(didUserLike)
 
-            let didUserLike = this.context.currentLikesList.filter(like=>like.user_id==this.context.usersId && like.comment_id==this.props.comment.sys.id)
+            let didUserLike = this.context.currentLikesList.filter(like=>like.user_id==UsersService.getUserId() && like.comment_id==this.props.comment.sys.id)
 
             console.log(didUserLike)
             
-            if(this.context.userLoggedIn===true){
+            if(UsersService.getName()){
                 //comment is liked by user
                 if(didUserLike.length!==0){
                     return(

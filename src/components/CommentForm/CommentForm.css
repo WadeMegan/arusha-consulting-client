@@ -41,6 +41,14 @@
     opacity:1;
 }
 
+.logoutButton{
+    color:black;
+    background-color: transparent;
+    cursor: pointer;
+    font-size:10px;
+    /*float:right;*/
+}
+
 .signinButtonBox{
     display:flex;
 }

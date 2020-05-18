@@ -49,6 +49,7 @@
 .indivNavLink{
     /*color:#FA8006;*/
     color:white;
+    font-family: avenir;
 }
 
 @media(min-width: 600px) {

@@ -9,10 +9,17 @@ export default class ContactPage extends Component{
 
     render(){
         return(    
-            <div>
-               <h1>Contact Page</h1>
-               <a href='http://eepurl.com/g3Q13b'>Subscribe</a>
-               <a href='https://arushainc.us18.list-manage.com/unsubscribe?u=f5a80641987afaa0a68101adf&id=084100a8da'>Unsubscribe</a>
+            <>
+            <section className='contactPageSection'>
+               <h1>Contact</h1>
+               <h2>Heather Sattler, Principal</h2>
+               <p>Arusha Consulting, Inc. | coaching + consulting </p>
+               <p>pronouns: SHE/HER/HERS</p>
+               <p>p: 872.239.8839 | c: 773.991.1194 | e: heather@arushainc.com</p>
+               <h2>Stay In Touch</h2>
+               <p>Subsribe to the email list to stay in touch with what's happening at Arusha.</p>
+               <a className='subscribeButton' target='_blank' rel="noopener noreferrer" href='http://eepurl.com/g3Q13b'>Subscribe</a>
+               <a className='unsubscribeButton' target='_blank' rel="noopener noreferrer" href='https://arushainc.us18.list-manage.com/unsubscribe?u=f5a80641987afaa0a68101adf&id=084100a8da'>Unsubscribe</a>
 
 
 
@@ -35,7 +42,13 @@ export default class ContactPage extends Component{
 
 
 
-            </div>   
+            </section>   
+            <footer className='aboutPageFooter'>
+                <h3>Copyright 2020 - Arusha Consulting</h3>
+                <p>Fairground and Fairground Assets are powered by Arusha Consulting, a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good. On the consulting side, we focus on leadership, people management, and diversity and inclusion. On the coaching side, we specialize in helping people gain clarity about their values, strengths, desires, resources, relationships, fears, and obstacles to help them pursue their best lives. Our ability to help individuals explore their own relationship to issues of diversity, inclusion, and equity helps distinguish us from other consulting/coaching groups. Reach out to learn more about our 1:1 coaching, workshops, and consulting offerings.</p>
+                <p>For any questions or comments, please contact Heather at <a href={"mailto:Heather@arushainc"}> Heather@arushainc.com</a></p>
+            </footer>
+            </>
         )
     }
 }

@@ -3,7 +3,7 @@ import config from '../config'
 const CommentsApiService = {
     getAllComments(/*id*/){
         return fetch(
-            `http://localhost:8070/comments`
+            `${config.API_ENDPOINT}/comments`
             )
                 .then(res=>
                     (!res.ok)
@@ -13,7 +13,7 @@ const CommentsApiService = {
     },
     postComment(postId, username, content, date, profileImg, replyingTo){
     
-        return fetch(`http://localhost:8070/comments`,{
+        return fetch(`${config.API_ENDPOINT}/comments`,{
             method: 'POST',
             body: JSON.stringify({
                 "fields": {
@@ -51,7 +51,7 @@ const CommentsApiService = {
     },
     publishComment(commentId){
         return fetch(
-            `http://localhost:8070/comments/${commentId}`,{
+            `${config.API_ENDPOINT}/comments/${commentId}`,{
                 method: 'PUT'/*,
                 headers: {
                     "Authorization": "Bearer CFPAT-pctkH02k_uCe2IikxDgNTmweo9EbnoiW4pszNFTyEFw",
@@ -66,7 +66,7 @@ const CommentsApiService = {
     },
     postLike(commentId, userId, postId){
     
-        return fetch(/*`https://enigmatic-meadow-02313.herokuapp.com/api/likes`*/"http://localhost:8070/likes",{
+        return fetch(`${config.API_ENDPOINT}/likes`,{
             method: 'POST',
             body: JSON.stringify({
                 'comment_id':commentId,
@@ -86,7 +86,7 @@ const CommentsApiService = {
             )
     },
     getLikesByPostId(postId){
-        return fetch(`http://localhost:8070/likes/posts/${postId}`
+        return fetch(`${config.API_ENDPOINT}/likes/posts/${postId}`
             /*`https://enigmatic-meadow-02313.herokuapp.com/api/likes/posts/${postId}`,{
                 headers: {
                     "Authorization": `Bearer 78f18194-fea7-4300-8afc-ba49064ee70f`
@@ -114,7 +114,7 @@ const CommentsApiService = {
     },
     deleteLike(commentId, userId){
     
-        return fetch(`http://localhost:8070/likes/comments/${commentId}/users/${userId}`,{
+        return fetch(`${config.API_ENDPOINT}/likes/comments/${commentId}/users/${userId}`,{
             method: 'DELETE',
             /*headers: {
                 "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f"

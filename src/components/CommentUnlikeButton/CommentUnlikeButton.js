@@ -4,6 +4,7 @@ import CommentsApiService from '../../services/comments-api-service'
 import PostsListContext from '../../contexts/PostsListContext'
 //import CommentForm from '../../components/CommentForm/CommentForm'
 //import CommentReplyThread from '../CommentReplyThread/CommentReplyThread'
+import UsersService from '../../services/users-service'
 
 
 export default class CommentUnlikeButton extends Component{
@@ -14,7 +15,7 @@ export default class CommentUnlikeButton extends Component{
         console.log('We are UNliking the comment!')
         
         
-        CommentsApiService.deleteLike(this.props.comment.sys.id, this.context.usersId)
+        CommentsApiService.deleteLike(this.props.comment.sys.id, UsersService.getUserId())
             .then((res)=>{console.log(res)
                 
                 CommentsApiService.getLikesByPostId(this.context.currentPost.sys.id)
