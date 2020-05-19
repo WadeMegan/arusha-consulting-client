@@ -25,7 +25,7 @@ export default class NavLinks extends Component{
         return(   
             <>
             <div className={`dropdown${this.state.menuOpen ? " show" : ""}`} onMouseEnter={this.handleBoxToggle} onMouseLeave={this.handleToggleOff}>
-                <button className='dropdownButton' >MENU</button>
+                <button className='dropdownButton' onClick={()=>{this.setState({menuOpen:true})}} >MENU</button>
                 <div className='navLinksDropdown'>
                     {/*<p className='indivNavLink'>HOME</p>*/}
                     <Link to='/' onClick={()=>{this.setState({menuOpen:false})}}className='indivNavLink'>HOME</Link>
