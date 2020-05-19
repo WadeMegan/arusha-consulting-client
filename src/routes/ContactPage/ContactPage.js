@@ -1,25 +1,48 @@
 import React, { Component } from 'react'
 import './ContactPage.css'
 import PostsListContext from '../../contexts/PostsListContext'
-
+import facebookLogo from '../../images/facebookLogo.png'
+import instagramLogo from '../../images/instagramLogo.png'
+import pinterestLogo from '../../images/pinterestLogo.png'
+import linkedInLogo from '../../images/linkedInLogo.png'
 
 export default class ContactPage extends Component{    
 
     static contextType = PostsListContext
+
+    componentWillMount(){
+        window.scrollTo(0, 0)
+    }
 
     render(){
         return(    
             <>
             <section className='contactPageSection'>
                <h1>Contact</h1>
-               <h2>Heather Sattler, Principal</h2>
-               <p>Arusha Consulting, Inc. | coaching + consulting </p>
-               <p>pronouns: SHE/HER/HERS</p>
-               <p>p: 872.239.8839 | c: 773.991.1194 | e: heather@arushainc.com</p>
                <h2>Stay In Touch</h2>
                <p>Subsribe to the email list to stay in touch with what's happening at Arusha.</p>
                <a className='subscribeButton' target='_blank' rel="noopener noreferrer" href='http://eepurl.com/g3Q13b'>Subscribe</a>
-               <a className='unsubscribeButton' target='_blank' rel="noopener noreferrer" href='https://arushainc.us18.list-manage.com/unsubscribe?u=f5a80641987afaa0a68101adf&id=084100a8da'>Unsubscribe</a>
+               <h2>Arusha Consulting, Inc. | coaching + consulting </h2>
+               <p className='phoneContactInfo'>p: 872.239.8839</p>
+               <p className='phoneContactInfo'>c: 773.991.1194</p>
+               <p className='phoneContactInfo'>e: heather@arushainc.com</p>
+
+               {/*<p className='compContactInfo'>p: 872.239.8839 | c: 773.991.1194 | e: heather@arushainc.com</p>*/}
+               <div>
+                   <a target='_blank' rel="noopener noreferrer" href="https://www.facebook.com/arushaconsulting"><img className='contactSocial' src={facebookLogo}/></a>
+
+                   <a target='_blank' rel="noopener noreferrer" href="https://www.instagram.com/arushaconsulting/"><img className='contactSocial' src={instagramLogo}/></a>
+
+                   <a target='_blank' rel="noopener noreferrer" href="https://www.pinterest.com/arushaconsulting/"><img className='contactSocial' src={pinterestLogo}/></a>
+
+                   <a target='_blank' rel="noopener noreferrer" href="https://www.linkedin.com/company/arusha-consulting-inc"><img className='contactSocial' src={linkedInLogo}/></a>
+
+               </div>
+
+
+
+
+                {/*<a className='unsubscribeButton' target='_blank' rel="noopener noreferrer" href='https://arushainc.us18.list-manage.com/unsubscribe?u=f5a80641987afaa0a68101adf&id=084100a8da'>Unsubscribe</a>*/}
 
 
 

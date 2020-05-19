@@ -26,8 +26,9 @@
 }
 
 .homePageFooter{
-    background-color: #F6B277 !important;
+    background-color: #feffef;
     font-family: avenir;
+    border-top:15px solid #ff914d;
 }
 
 

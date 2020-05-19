@@ -304,14 +304,14 @@ export default class IndividualPostPage extends Component{
                     <div className='postAnchor'>
                         {this.renderSponsorAnchor()}
                         <div className='disclaimerAnchor'>
-                            <p>PLEASE NOTE: Fairground blog authors don’t have all the answers. They do have thoughts and ideas that
+                            <p><em>Fairground blog authors don’t have all the answers. They do have thoughts and ideas that
                             have been sparked from their own exploration of diversity, equity, inclusion, and social
                             justice and an authentic interest in helping to improve the current reality. They share three
                             more things in common: 1) the courage to put themselves out front in a charged field, 2) the
                             humility to know that they may get it wrong at some point, and 3) the commitment to
                             always do better when they know better. We thank them for their vulnerability so that
                             others may feel less hesitant to speak up themselves. May Fairground remain a comfortable
-                            space for everyone to learn, grow, and take action. </p>
+                            space for everyone to learn, grow, and take action. </em></p>
                         </div>
                     </div>
                 </div>

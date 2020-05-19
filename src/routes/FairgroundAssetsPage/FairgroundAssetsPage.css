@@ -51,6 +51,7 @@
     align-items: center;
 }
 
+
 @font-face {
     font-family: brushwell;
     src: url('../FairgroundAssetsPage/Brushwell-4BBJD.ttf');
@@ -122,6 +123,20 @@
     font-size: 34px;
 }
 
+.aboutFairground h3{
+    margin-top:20px;
+    margin-bottom: 20px;
+    display:inline-block;
+}
+
+.assetNavItem{
+    margin-left:5%;
+    margin-bottom:10px;
+    text-decoration: underline;
+    color:#600060;
+    cursor:pointer;
+}
+
 .aboutFairground p{
     font-family: avenir;
     margin-bottom: 20px;
@@ -140,6 +155,12 @@
     opacity:0.8;
     font-family: avenir;
     cursor: pointer;
+}
+
+.airtableContainer{
+    margin-top:30px;
+    margin-bottom:20px;
+    border-top: 20px solid #600060;
 }
 
 .listItem{
@@ -187,9 +208,11 @@
 }
 
 footer{
-    background-color: #ebebe6;
     padding:35px;
+    background-color: #feffef;
     font-family: avenir;
+    border-top:15px solid #ff914d;
+
 }
 
 footer h3{

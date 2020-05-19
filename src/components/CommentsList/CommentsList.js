@@ -15,7 +15,8 @@ export default class CommentsList extends Component{
 
     state={
         commentAdded:false,
-        replyOpen: false
+        replyOpen: false,
+        loggedIn: false,
     }
 
     componentWillMount() {
@@ -118,6 +119,20 @@ export default class CommentsList extends Component{
         this.context.clearError()
     }
 
+    handleSignin=()=>{
+        console.log("handle signin")
+        this.setState({
+            loggedIn: true
+        })
+    }
+
+    handleSignout=()=>{
+        console.log("handle signout")
+        this.setState({
+            loggedIn: false
+        })
+    }
+
     render(){
         return(    
             <section className='commentsSection'>
@@ -125,7 +140,7 @@ export default class CommentsList extends Component{
                     <h2>The Discussion</h2>
                     <p>Always with curiosity, never with judgment. Please don't feed the trolls.</p>
                 </div>
-                <CommentForm commentAdded={this.commentAdded}/>
+                <CommentForm commentAdded={this.commentAdded} handleSignin={this.handleSignin} handleSignout={this.handleSignout}/>
                 {this.renderComments()}
             </section>     
         )

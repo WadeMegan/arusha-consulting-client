@@ -3,8 +3,17 @@ import './FairgroundAssetsPage.css'
 /*import { Link } from 'react-router-dom'*/
 import NavLinks from '../../components/NavLinks/NavLinks'
 import NavBar from '../../components/NavBar/NavBar'
+//import Scroll from 'react-scroll'
+//import { Element } from 'react-scroll'
+//const ScrollLink = Scroll.ScrollLink
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 export default class FairgroundAssetsPage extends Component{
+
+    componentWillMount(){
+        window.scrollTo(0, 0)
+    }
     
     createCreditBadge =()=>{
     
@@ -49,7 +58,62 @@ export default class FairgroundAssetsPage extends Component{
             </div>
           
             <section className='aboutFairground'>
-                <h2>About Fairground Assets</h2>
+                <h2>Assets</h2>
+                <p>Fairground Assets is a crowd-sourced database for those interested in deepening their understanding to make a positive difference when it comes to diversity, inclusion, equity, and social justice.</p>
+                <p>Jump right in by using the table below or find out more about Fairground Assets and the Fairground community by clicking these links.</p>
+                <ul>
+                    <li className="assetNavItem" >
+                    <Link to="whyImportantBox" spy={true} smooth={true} offset={-60} duration={500} onSetActive={this.handleSetActive}>
+                    Why is Fairground Assets Important?
+                    </Link> 
+                    </li>
+                    <li className="assetNavItem">
+                    <Link to="whyBePartBox" spy={true} smooth={true} offset={-60} duration={500} onSetActive={this.handleSetActive}>
+                    Why Should I Be Part of the Fairground Community?
+                    </Link> 
+                    </li>
+                    <li className="assetNavItem">
+                    <Link to="howToParticipateBox" spy={true} smooth={true} offset={-60} duration={500} onSetActive={this.handleSetActive}>
+                    How Can I Participate in the Community?
+                    </Link> 
+                    </li>
+                </ul>
+                <div className="airtableContainer">
+                    <iframe className="airtable-embed" src="https://airtable.com/embed/shruUGrq2VMRvuu5P?backgroundColor=blue&viewControls=on" frameBorder="0" width="100%" height="533"></iframe>
+                </div>
+                <div name='whyImportantBox'>
+                    <h3>Why is Fairground Assets Important?</h3>
+                    <p>Fairground Assets addresses the biggest obstacles to achieving inclusion, equity, and social justice for diverse people. Until members of the dominant in-groups care about, understand, and address the issues members of out-groups face, we will not gain any ground. We must not shy away from poignant conversations with and about people who are different from us due to a fear of saying or doing the wrong thing. This kind of inaction is as dangerous as overt prejudice. We must educate ourselves so that we can stand up for our values with confidence and truly make a difference.</p>
+                    <p>We believe that peer-to-peer recommendations are an incredible way to support each other with a wide net of proven resources to meet our specific learning interests in one organized place.</p>
+                </div>
+                <div name='whyBePartBox'>
+                    <h3>Why Should I Be Part of the Fairground Community?</h3>
+                    <p>Fairground is a place that welcomes anyone who belongs to a dominant in-group, and frankly, that should be just about every human. With very few exceptions, each of us, no matter the injustices we face, belongs to at least one dominant in-group.</p>
+                    <p>Fairground Assets we can rely on each other to equip ourselves for being the change we would like to see when it comes to diversity, inclusion, equity, and social justice.</p>
+                </div>
+                <div name='howToParticipateBox'>
+                    <h3>How Can I Participate in the Community?</h3>
+                    <p>Please join us in making a concerted effort to learn more so we can do more. We encourage you to:</p>
+                    <ul>
+                        <li className='listItem'>submit resources and include a comment for each as to why you believe others would find it helpful;</li>
+                        <li className='listItem'>explore the available assets, which will deepen your understanding, introduce you to the unfamiliar, and challenge you to stretch the limits of your level of comfort; and</li>
+                        <li className='listItem'>move from this place of education and inspiration to a place of action
+                            <ul>
+                                <li className='firstSubListItem subListItem'>as a better friend, neighbor, relative, lover, ally, sponsor, mentor, or advocate to people who are different than you</li>
+                                <li className='lastSubListItem subListItem'>and as a role model, teacher, and organizer within the groups that have historically held (and hoarded) power.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Together we will achieve fairground, where every individual will be able to stand with an expectation for respect, justice, and equal access to opportunity.</p>
+                    <button onClick={()=> window.open("https://airtable.com/shrwoRXZIJFs2EwwJ", "_blank")}>Submit A Resource</button>
+                </div>
+                {/*<Element id='example-destination' name='example-destination'>
+                    <p>Fairground Assets addresses the biggest obstacles to achieving inclusion, equity, and social justice for diverse people. Until members of the dominant in-groups care about, understand, and address the issues members of out-groups face, we will not gain any ground. We must not shy away from poignant conversations with and about people who are different from us due to a fear of saying or doing the wrong thing. This kind of inaction is as dangerous as overt prejudice. We must educate ourselves so that we can stand up for our values with confidence and truly make a difference.</p>
+                    <p>We believe that peer-to-peer recommendations are an incredible way to support each other with a wide net of proven resources to meet our specific learning interests in one organized place.</p>
+                </Element>*/}
+
+
+                {/*
                 <p>Fairground is a place that welcomes anyone who belongs to a dominant in-group, and frankly, that should be just about every human. With very few exceptions, each of us, no matter the injustices we face, belongs to at least one dominant in-group.</p>
                 <p>So, Fairground has one huge tent with an open door to everyone. Come one, come all to explore our own role in perpetuating out-groups despite even our best intentions. Through Fairground Assets we can rely on each other to equip ourselves for being the change we would like to see when it comes to diversity, inclusion, equity, and social justice.</p>
                 <p>Fairground Assets addresses the biggest obstacles to achieving inclusion, equity, and social justice for diverse people. Until members of the dominant in-groups care about, understand, and address the issues members of out-groups face, we will not gain any ground. We must not shy away from poignant conversations with and about people who are different from us due to a fear of saying or doing the wrong thing. This kind of inaction is as dangerous as overt prejudice. We must educate ourselves so that we can stand up for our values with confidence and truly make a difference.</p>
@@ -70,12 +134,13 @@ export default class FairgroundAssetsPage extends Component{
             </section>
             <section className='resourcesSection'>
                 <h2>Assets</h2>
-                {/*<p>Anything you want to note about the resources or how to use them?</p>*/}
+                <p>Anything you want to note about the resources or how to use them?</p>
                 <div className="airtableContainer">
                     <iframe className="airtable-embed" src="https://airtable.com/embed/shruUGrq2VMRvuu5P?backgroundColor=blue&viewControls=on" frameBorder="0" width="100%" height="533"></iframe>
                 </div>
+                */}
             </section>
-            <footer>
+            <footer name='footer'>
                 <h3>Copyright 2020 - Arusha Consulting</h3>
                 <p>Fairground and Fairground Assets are powered by Arusha Consulting, a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good. On the consulting side, we focus on leadership, people management, and diversity and inclusion. On the coaching side, we specialize in helping people gain clarity about their values, strengths, desires, resources, relationships, fears, and obstacles to help them pursue their best lives. Our ability to help individuals explore their own relationship to issues of diversity, inclusion, and equity helps distinguish us from other consulting/coaching groups. Reach out to learn more about our 1:1 coaching, workshops, and consulting offerings.</p>
                 <p>Very special thanks to Molly, Megan, and Sophia whose genius and hard work brought this passion project to fruition in record time.</p>

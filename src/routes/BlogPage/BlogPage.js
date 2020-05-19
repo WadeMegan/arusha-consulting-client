@@ -7,6 +7,9 @@ import NavLinks from '../../components/NavLinks/NavLinks'
 import fairgroundBanner from '../../images/fairgroundBanner.png'
 
 export default class BlogPage extends Component{
+    componentWillMount(){
+        window.scrollTo(0, 0)
+    }
         
     render(){
         return(

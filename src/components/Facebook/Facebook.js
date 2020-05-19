@@ -38,6 +38,7 @@ export default class Facebook extends Component{
             UsersService.saveEmail(response.email)
             UsersService.saveUserId(response.id)
             this.props.onSuccess()
+            //this.props.handleSignin()
 
         }
         

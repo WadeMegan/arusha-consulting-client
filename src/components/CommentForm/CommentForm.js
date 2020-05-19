@@ -145,6 +145,14 @@ export default class CommentForm extends Component{
         this.setState({
             loggedIn:false
         })
+        this.props.handleSignout()
+    }
+
+    handleSignin=()=>{
+
+        this.setState({loggedIn:true})
+        this.props.handleSignin()
+        console.log(this.props)
     }
 
     renderCommentForm=()=>{
@@ -174,8 +182,11 @@ export default class CommentForm extends Component{
                 <div className='socialMediaSigninBox'>
                     <p>LOG IN TO JOIN THE CONVERSATION</p>
                     <div className='signinButtonBox'>
-                        <Google onSuccess={()=>{this.setState({loggedIn:true})}}/>
-                        <Facebook onSuccess={()=>{this.setState({loggedIn:true})}}/>
+                        <Google onSuccess={this.handleSignin}
+                        />
+                        <Facebook onSuccess={this.handleSignin}
+                            //handleSignin={this.props.handleSignin}
+                        />
                     </div>
                     
                 </div> 

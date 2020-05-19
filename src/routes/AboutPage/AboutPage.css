@@ -100,8 +100,14 @@
 
 .clientsContainer{
     /*background-color: #feffef;*/
-    background-color: #F6B277;
+    border-top:15px solid #600060;
+    border-bottom:15px solid #600060;
+    background-color:#feffef;
     padding:25px;
+}
+
+.clientsContainer h1{
+    color:#600060;
 }
 
 .clientsContainer div{
@@ -201,7 +207,7 @@
 
 .meetHeather .computerView .row{
     display:flex;
-    padding-top:35px;
+    padding-top:30px;
 }
 
 .meetHeather .computerView .leftP{
@@ -212,9 +218,9 @@
     padding-left:35px;
 }
 
-.meetHeather .computerView .row p{
+/*.meetHeather .computerView .row p{
     padding-top:30px;
-}
+}*/
 
 .meetHeather .computerView .firstRow .leftColumn{
     width:50%;
@@ -240,22 +246,30 @@
 }
 
 .aboutPageFooter{
-    background-color: #F6B277 !important;
+    border-top:15px solid #ff914d;
+    background-color:#feffef;
 }
 
 @media(min-width: 500px) {
     .meetHeather .phoneView img{
-        width:80%;
-        margin-left:10%;
-        margin-right:10%;
+        width:60%;
+        margin-left:20%;
+        margin-right:20%;
+    }
+    .clientsContainer img{
+        height:70px;
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-left:15px;
+        margin-right:15px;
     }
 }
 
 @media(min-width: 600px) {
     .meetHeather .phoneView img{
-        width:60%;
-        margin-left:20%;
-        margin-right:20%;
+        width:50%;
+        margin-left:25%;
+        margin-right:25%;
     }
     .slide-container{
         width:70%;
@@ -265,12 +279,27 @@
 }
 
 @media(min-width: 700px) {
+    .meetHeather{
+        padding:25px;
+    }
     .meetHeather .phoneView{
         display:none;
     }
     .meetHeather .computerView{
         display:flex;
         flex-direction: column;
+        /*padding-left:25px;
+        padding-right:25px;*/
+        width:650px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .clientsContainer img{
+        height:80px;
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-left:15px;
+        margin-right:15px;
     }
 }
 
@@ -279,6 +308,13 @@
         width:46%;
         margin-right:27%;
         margin-left:27%;
+    }
+    .clientsContainer img{
+        height:100px;
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-left:15px;
+        margin-right:15px;
     }
 }
 

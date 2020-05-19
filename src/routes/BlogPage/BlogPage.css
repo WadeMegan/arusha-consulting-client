@@ -8,6 +8,14 @@
     background-color: white;
 }*/
 
+.postsListSection h1{
+    padding:0px;
+    margin-top:0px;
+    margin-bottom:30px;
+    text-align: center;
+    color:#ff914d;
+}
+
 .fairgroundBannerContainer{
     height:250px;
     padding-top:50px;

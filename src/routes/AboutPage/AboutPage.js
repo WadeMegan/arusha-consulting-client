@@ -19,6 +19,10 @@ import brushstrokes from '../../images/brushstrokes.png'
 
 
 export default class AboutPage extends Component{
+
+    componentWillMount(){
+        window.scrollTo(0, 0)
+    }
     
     render(){
 
@@ -89,8 +93,13 @@ export default class AboutPage extends Component{
                             <div className='leftColumn leftP'>
                                 <h1>Meet Heather</h1>
                                 <p>Heather Sattler inspires awareness to ignite action in both organizations and individuals. She is fervent about equal access to opportunity for all. Among her passions is providing training and coaching on supervising, mentoring, and sponsoring people outside of dominant in-groups.</p>
+                                <div className='boldAboutParagraph'>
+                            <img src={brushstrokes}/>
+                            <div>
                                 <p>Heather enjoys helping her clients align their actions with their vision and values to achieve a greater good. She relies on her strengths of awakening spirit, bringing out potential, and serving as a purveyor of depth in a light-hearted way to provide transformative experiences for those with whom she works.</p>
                             </div>
+                            
+                        </div>                            </div>
                             <div className='rightColumn'>
                                 <img className='heatherHeadshot' src={heatherHeadshot}/>
                             </div>
@@ -118,7 +127,6 @@ export default class AboutPage extends Component{
                         <p>Some of Heather’s consulting clients have included Groupon, Big Shoulders Fund, the 100 Club of Chicago, Friends of Prentice, Gallery 37’s ArtScape Chicago, and West Cook Community Development Corporation.</p>
                         <p>Heather is a Certified Diversity Coach and Gold Status Tiara International Certified Coach. She is currently pursuing the International Coaching Federation’s Professional Coaching Certification.</p>
                     </div>*/}
-                    <img className='arushaMeetHeatherLogo' src={arushaMeetHeatherLogo}/>
                 </div>
                 
             </section>
