@@ -18,7 +18,6 @@ export default class Google extends Component{
     }
 
     responseGoogle=(response)=>{
-        console.log(response)
         /*this.setState({
             isLoggedIn: true,
             userId: response.profileObj.googleId,
@@ -41,7 +40,7 @@ export default class Google extends Component{
 
     render(){
 
-        console.log(this.state)
+
 
         let googleContent
 

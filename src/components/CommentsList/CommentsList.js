@@ -24,7 +24,7 @@ export default class CommentsList extends Component{
         if(this.context.currentPost && this.context.currentPost.sys){
        CommentsApiService.getAllComments(this.context.currentPost.sys.id)
             .then(res=>{
-                console.log(res)
+  
                 
                 let commentsList = res.items.filter(comment=>
                     //console.log(this.context.currentPost.sys.id)
@@ -99,7 +99,7 @@ export default class CommentsList extends Component{
 
 
     commentAdded=()=>{
-        console.log('commentAdded ran')
+
         CommentsApiService.getAllComments(this.context.currentPost.id)
             .then(res=>{
                 let commentsList = res.items.filter(comment=>
@@ -120,14 +120,14 @@ export default class CommentsList extends Component{
     }
 
     handleSignin=()=>{
-        console.log("handle signin")
+
         this.setState({
             loggedIn: true
         })
     }
 
     handleSignout=()=>{
-        console.log("handle signout")
+
         this.setState({
             loggedIn: false
         })

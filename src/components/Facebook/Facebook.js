@@ -11,11 +11,11 @@ export default class Facebook extends Component{
     static contextType = PostsListContext
 
     componentClicked=ev=>{
-        console.log('clicked')
+       
     }
 
     responseFacebook=(response)=>{
-        console.log(response)
+
         /*this.setState({
             isLoggedIn: true,
             userId: response.userID,

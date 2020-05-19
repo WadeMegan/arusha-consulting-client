@@ -74,17 +74,17 @@ export default class PostsList extends Component{
         if(this.context.sponsorMedia){
             
             let assetList = this.context.sponsorMedia
-            console.log(assetList)
+ 
 
             let featuredImgId = this.context.featuredSponsor.fields.image.sys.id
 
-            console.log(featuredImgId)
+
 
             const featuredImg = assetList.find(asset=>
                 asset.sys.id === featuredImgId
             )
 
-            console.log(featuredImg)
+
 
 
             let myStyle = {
@@ -100,7 +100,7 @@ export default class PostsList extends Component{
 
     renderFeaturedSponsor=()=>{
         if(this.context.featuredSponsor){
-            console.log(this.context.featuredSponsor)
+            
             return (
                 <a target='_blank' rel="noopener noreferrer" href={this.context.featuredSponsor.fields.sponsorWebsite}>
                     <div className='postItem'>

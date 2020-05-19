@@ -13,7 +13,6 @@ export default class CommentLikeButton extends Component{
     static contextType = PostsListContext
 
     clickLike=()=>{
-        console.log('We are liking the comment!')
         //want to make PUT request to add userId to comment 'likedBy' string, then re-render CommentItem component
         
         CommentsApiService.postLike(this.props.comment.sys.id, UsersService.getUserId(), this.context.currentPost.sys.id)

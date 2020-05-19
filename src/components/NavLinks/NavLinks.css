@@ -1,6 +1,7 @@
 .dropdown{
     position:relative;
     display:inline-block;
+    font-family: avenir;
 }
 
 .dropdownButton{
@@ -33,14 +34,19 @@
     margin:0;
 }
 
+.dropdown.show .navLinksDropdown{
+    display:block;
+}
+
+
 .navLinksDropdown a:hover{
     color:black;
     background-color: grey;
 }
 
-.dropdown:hover .navLinksDropdown{
+/*.dropdown:hover .navLinksDropdown{
     display: block;
-}
+}*/
 
 .navLinks{
     display:none;

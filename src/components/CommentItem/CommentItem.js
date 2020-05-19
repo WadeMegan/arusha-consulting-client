@@ -26,7 +26,7 @@ export default class CommentItem extends Component{
 
     componentWillMount(){
 
-        console.log(this.context.currentPost)
+    
 
         if(this.context.currentPost.sys){        
         CommentsApiService.getLikesByPostId(this.context.currentPost.sys.id)
@@ -95,8 +95,7 @@ export default class CommentItem extends Component{
 
             let didUserLike = this.context.currentLikesList.filter(like=>like.user_id==UsersService.getUserId() && like.comment_id==this.props.comment.sys.id)
 
-            console.log(didUserLike)
-            
+    
             if(UsersService.getName()){
                 //comment is liked by user
                 if(didUserLike.length!==0){
@@ -118,7 +117,7 @@ export default class CommentItem extends Component{
 
         if(this.context.currentLikesList){
             let count=this.context.currentLikesList.filter(like=>like.comment_id==this.props.comment.sys.id)
-            console.log(count)
+
 
             if(count.length===1){
                 return(
@@ -137,7 +136,7 @@ export default class CommentItem extends Component{
 
     render(){
 
-        console.log(this.context.currentLikesList)
+
 
         let date = new Date(this.props.comment.fields.date)
         let dateString = date.toString()
@@ -146,6 +145,10 @@ export default class CommentItem extends Component{
         let day = splitDate[2]
         let year = splitDate[3]
         let fullDate=`${month} ${day}, ${year}`.toUpperCase()
+
+        let nameArr = this.props.comment.fields.username.split(' ')
+        let firstName = nameArr[0].toUpperCase()
+        let lastInitial = nameArr[nameArr.length-1].charAt(0).toUpperCase()
         
         return(  
             <>  
@@ -155,7 +158,7 @@ export default class CommentItem extends Component{
                 </div>
                 
                 <div className='commentContent'>
-                    <p>{this.props.comment.fields.username.toUpperCase()}<span> • {fullDate}</span></p>
+                    <p>{firstName} {lastInitial}.<span> • {fullDate}</span></p>
                     <p>{this.props.comment.fields.content}</p>
                     <div className='commentInteractionBox'>
                         {this.renderReplyButton()}

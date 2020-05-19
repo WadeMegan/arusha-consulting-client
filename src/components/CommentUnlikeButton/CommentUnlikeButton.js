@@ -12,11 +12,11 @@ export default class CommentUnlikeButton extends Component{
     static contextType = PostsListContext
 
     clickLike=()=>{
-        console.log('We are UNliking the comment!')
+      
         
         
         CommentsApiService.deleteLike(this.props.comment.sys.id, UsersService.getUserId())
-            .then((res)=>{console.log(res)
+            .then((res)=>{
                 
                 CommentsApiService.getLikesByPostId(this.context.currentPost.sys.id)
                     .then(res=>{ 

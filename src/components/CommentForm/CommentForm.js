@@ -152,7 +152,7 @@ export default class CommentForm extends Component{
 
         this.setState({loggedIn:true})
         this.props.handleSignin()
-        console.log(this.props)
+
     }
 
     renderCommentForm=()=>{

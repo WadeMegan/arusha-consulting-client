@@ -31,7 +31,7 @@ export default class CommentReplyThread extends Component{
                 
             if(comment.fields.replyingTo && comment.fields.replyingTo===this.props.replyingId){
 
-                console.log(comment)
+
                 let date = new Date(comment.fields.date)
                 let dateString = date.toString()
                 let splitDate = dateString.split(' ')
@@ -77,7 +77,7 @@ export default class CommentReplyThread extends Component{
     
 
     commentAdded=()=>{
-        console.log('commentAdded ran')
+
         CommentsApiService.getAllComments(this.context.currentPost.id)
             .then(res=>{
                 let commentsList = res.items.filter(comment=>

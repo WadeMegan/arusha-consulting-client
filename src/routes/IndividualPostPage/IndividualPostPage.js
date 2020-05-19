@@ -19,7 +19,8 @@ export default class IndividualPostPage extends Component{
         this.state = {
           userDetails: {},
           isUserLoggedIn: false,
-          mediaUrl: null
+          mediaUrl: null,
+          sponsorImg: null,
         };
       }
 
@@ -31,7 +32,7 @@ export default class IndividualPostPage extends Component{
 
             let postsList = this.context.postsList
 
-            console.log(this.props.match.params.title)
+        
 
             const currentPost = postsList.find(post=>
                 post.fields.title === this.props.match.params.title
@@ -45,15 +46,27 @@ export default class IndividualPostPage extends Component{
                 asset.sys.id === currentPost.fields.featuredImage.sys.id
             )
 
+            /*let sponsorImg
+
+            console.log(currentPost.fields.sponsorImg.sys.id)
+            console.log(this.context.assetsList)
+
+            if(currentPost.fields.sponsorImg){
+                sponsorImg = this.context.assetsList.find(asset=>
+                    asset.sys.id === currentPost.fields.sponsorImg.sys.id
+                )
+            }*/
+            
             this.setState({
-                mediaUrl: featuredImg.fields.file.url
+                mediaUrl: featuredImg.fields.file.url,
+                //sponsorImg: sponsorImg.fields.file.url
             })
 
         }
         else{
 
             PostsApiService.getPosts()
-            .then(res=>{ console.log(res)
+            .then(res=>{ 
 
                 this.context.setPostsList(res.items)
 
@@ -61,7 +74,7 @@ export default class IndividualPostPage extends Component{
                     post.fields.title === this.props.match.params.title
                 )
 
-                console.log(currentPost)
+
 
                 this.context.setCurrentPost(currentPost)
             })
@@ -117,14 +130,33 @@ export default class IndividualPostPage extends Component{
                 mediaUrl: featuredImg.fields.file.url
             })*/
 
-        }
+        }   
         
  
              return(
                 <img src={this.state.mediaUrl} className='featuredImgPost' alt='featured image'></img>
              )
  
-         }        
+         }     
+        
+    renderSponsorImg=()=>{
+        if(!this.state.sponsorImg && this.context.currentPost && this.context.currentPost.fields ){
+
+
+            PostsApiService.getPostFeaturedImage(this.context.currentPost.fields.sponsorImg.sys.id)
+                .then(res=>{
+                    this.setState({
+                        sponsorImg: res.fields.file.url
+                    })
+                })
+                .catch(this.context.setError)
+        }   
+        
+ 
+        return(
+        <img src={this.state.sponsorImg} className='sponsorAnchorImg' alt='sponsors image'></img>
+        )
+    }
 
     componentWillUnmount() {
         this.context.setCurrentPost([])
@@ -266,15 +298,22 @@ export default class IndividualPostPage extends Component{
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
       }*/
 
+    
 
     renderSponsorAnchor=()=>{
+        
+
         if(this.context.currentPost && this.context.currentPost.fields && this.context.currentPost.fields.sponsorName){
             return(
-                <div className='sponsorAnchor'>
-                    <p>This post is sponsored by {this.context.currentPost.fields.sponsorName}</p>
-                    <p>{this.context.currentPost.fields.sponsorDescription}</p>
-                    <a target='_blank' rel="noopener noreferrer" href={this.context.currentPost.fields.sponsorLink}>Learn more about {this.context.currentPost.fields.sponsorName}.</a>
-                </div>
+                <a className='sponsorAnchorLink' target='_blank' rel="noopener noreferrer" href={this.context.currentPost.fields.sponsorLink}>
+                    <div className='sponsorAnchor'>
+                        {this.renderSponsorImg()}
+
+                        {/*this.renderImage()*/}
+                        {/*<p>{fullDate}</p>*/}
+                        <h2>SPONSORED BY {this.context.currentPost.fields.sponsorName.toUpperCase()}</h2>
+                    </div>    
+                </a>
             )
         }
     }
