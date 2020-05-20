@@ -9,6 +9,7 @@ import AboutPage from '../../routes/AboutPage/AboutPage'
 import NavBar from '../NavBar/NavBar'
 import ContactPage from '../../routes/ContactPage/ContactPage'
 import HomePage from '../../routes/HomePage/HomePage'
+import PrivacyPolicyPage from '../../routes/PrivacyPolicyPage/PrivacyPolicyPage'
 
 class App extends Component {
   render(){
@@ -20,11 +21,12 @@ class App extends Component {
           <SocialMedia/>
             <Switch>
               <Route exact path={'/'} component={HomePage}/>
-              <Route path={'/fairground-assets'} component={FairgroundAssetsPage}/>
+              <Route path={'/assets'} component={FairgroundAssetsPage}/>
               <Route exact path={'/blog'} component={BlogPage}/>
               <Route path={'/blog/:title'} render={(props)=> <IndividualPostPage {...props}/>}/>
               <Route path={'/about'} component={AboutPage}/>
               <Route path={'/contact'} component={ContactPage}/>
+              <Route path={'/privacy-policy'} component={PrivacyPolicyPage}/>
               {/*<Route path={"*"} component={FairgroundAssetsPage} />*/}
             </Switch>
         </main>    

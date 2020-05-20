@@ -31,7 +31,7 @@ export default class NavLinks extends Component{
                     <Link to='/' onClick={()=>{this.setState({menuOpen:false})}}className='indivNavLink'>HOME</Link>
                     <Link to='/about' onClick={()=>{this.setState({menuOpen:false})}}className='indivNavLink'>ABOUT</Link>
                     <Link onClick={()=>{this.setState({menuOpen:false})}}className='indivNavLink' to='/blog'>BLOG</Link>
-                    <Link onClick={()=>{this.setState({menuOpen:false})}} className='indivNavLink' to='/fairground-assets'>ASSETS</Link>
+                    <Link onClick={()=>{this.setState({menuOpen:false})}} className='indivNavLink' to='/assets'>ASSETS</Link>
                     <Link onClick={()=>{this.setState({menuOpen:false})}}className='indivNavLink' to='/contact'>STAY IN TOUCH</Link>
 
                     {/*<p className='indivNavLink'>REACH OUT</p>*/}
@@ -43,7 +43,7 @@ export default class NavLinks extends Component{
                 <Link to='/' className='indivNavLink'>HOME</Link>
                 <Link to='/about' className='indivNavLink'>ABOUT</Link>
                 <Link className='indivNavLink' to='/blog'>BLOG</Link>
-                <Link className='indivNavLink' to='/fairground-assets'>ASSETS</Link>
+                <Link className='indivNavLink' to='/assets'>ASSETS</Link>
                 <Link className='indivNavLink' to='/contact'>STAY IN TOUCH</Link>
                 {/*<p className='indivNavLink'>REACH OUT</p>*/}
             </div>

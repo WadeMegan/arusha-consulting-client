@@ -1,0 +1,30 @@
+.privacyPolicyPageSection{
+    font-family: avenir;
+    padding: 75px 25px 25px 25px;
+    background-color: #feffef;
+}
+
+.privacyPolicyPageSection h1{
+    margin:0px;
+    color:#ff914d;
+    margin-bottom:20px;
+    font-family: brushwell;
+    font-size:50px;
+}
+
+.privacyPolicyPageSection h2{
+    color:#ff914d;
+    margin-bottom:10px;
+    font-size:22px;
+   /* margin-bottom: 10px;
+    margin-top:20px;*/
+}
+
+.privacyPolicyPageSection p{
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.privacyPolicyPageSection a{
+    color:#600060;
+}

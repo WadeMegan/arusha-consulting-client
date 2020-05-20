@@ -6,6 +6,23 @@ import SponsorApiService from '../../services/sponsor-api-service'
 import PostsListContext from '../../contexts/PostsListContext'
 import PostItem from '../PostItem/PostItem'
 import { Container, Row, Col } from 'react-grid-system';
+import { trackPromise } from 'react-promise-tracker';
+import { usePromiseTracker } from "react-promise-tracker";
+import Loader from 'react-loader-spinner';
+
+
+const LoadingIndicator = props => {
+
+    const { promiseInProgress } = usePromiseTracker()
+
+    return (
+        promiseInProgress &&
+        <div className='loadingIndicatorBox'>
+            <Loader className='loadingIndicator' type="ThreeDots" color="#6E274E" height="100" width="100"/>
+        </div>
+        
+    )
+}
 
 export default class PostsList extends Component{
     
@@ -13,8 +30,15 @@ export default class PostsList extends Component{
 
     componentWillMount() {
 
-        PostsApiService.getPosts()
+        trackPromise(
+            PostsApiService.getPosts()
+            /*.then(value=>new Promise(resolve=>{
+                setTimeout(() => {
+                    resolve(value);
+                }, 1000);
+            }))*/
             .then(res=>{
+
                 this.context.setPostsList(res.items)
                 this.context.setAssetsList(res.includes.Asset)
 
@@ -27,6 +51,7 @@ export default class PostsList extends Component{
 
             })
             .catch(this.context.setError)
+        )
 
         /*SponsorApiService.getSponsor()
             .then(res=>{
@@ -117,6 +142,7 @@ export default class PostsList extends Component{
         return(
             <>
             <div className='postsContainer'>
+                <LoadingIndicator/>
                 {this.renderFeaturedSponsor()}   
                 {this.renderPosts()} 
             </div>            

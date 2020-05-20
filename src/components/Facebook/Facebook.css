@@ -1,5 +1,12 @@
 .facebookButton{
-    color:#2c5b92;
-    background-color:#ebebe6;
+    background-color:#2c5b92;
+    color:white;
     cursor: pointer;
+    width:150px;
+    padding:10px;
+    opacity:0.9;
+}
+
+.facebookButton:hover{
+    opacity:1;
 }

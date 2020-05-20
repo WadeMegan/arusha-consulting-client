@@ -42,9 +42,18 @@ export default class IndividualPostPage extends Component{
 
             this.context.setCurrentPost(currentPost)
 
-            let featuredImg = this.context.assetsList.find(asset=>
-                asset.sys.id === currentPost.fields.featuredImage.sys.id
-            )
+            console.log(this.context.assetsList)
+
+            if(this.context.assetsList){
+                let featuredImg = this.context.assetsList.find(asset=>
+                    asset.sys.id === currentPost.fields.featuredImage.sys.id
+                )
+                this.setState({
+                    mediaUrl: featuredImg.fields.file.url,
+                    //sponsorImg: sponsorImg.fields.file.url
+                })
+            }
+            
 
             /*let sponsorImg
 
@@ -57,10 +66,7 @@ export default class IndividualPostPage extends Component{
                 )
             }*/
             
-            this.setState({
-                mediaUrl: featuredImg.fields.file.url,
-                //sponsorImg: sponsorImg.fields.file.url
-            })
+            
 
         }
         else{
@@ -368,7 +374,11 @@ export default class IndividualPostPage extends Component{
             
             
             <footer >
-                <p>Footer with whatever you want in it.</p>
+                <h3>Copyright 2020 - Arusha Consulting</h3>
+                <p><Link to='/blog'>Fairground</Link> and <Link to='/assets'>Fairground Assets</Link> are powered by <Link to="/">Arusha Consulting</Link>, a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good.</p>
+                <p><Link to='/assets'>Fairground Assets</Link> is a crowd-sourced database for those interested in deepening their understanding to make a positive difference when it comes to diversity, inclusion, equity, and social justice.</p>
+                <p>Questions? Comments? Reach out to Heather at <a href={"mailto:Heather@arushainc"}> Heather@arushainc.com</a></p>
+
             </footer>
             </Error>
             </>

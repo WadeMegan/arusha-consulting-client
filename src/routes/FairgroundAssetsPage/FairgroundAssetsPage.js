@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './FairgroundAssetsPage.css'
-/*import { Link } from 'react-router-dom'*/
+import LinkRouter from 'react-router-dom/Link'
 import NavLinks from '../../components/NavLinks/NavLinks'
 import NavBar from '../../components/NavBar/NavBar'
 //import Scroll from 'react-scroll'
@@ -142,8 +142,9 @@ export default class FairgroundAssetsPage extends Component{
             </section>
             <footer name='footer'>
                 <h3>Copyright 2020 - Arusha Consulting</h3>
-                <p>Fairground and Fairground Assets are powered by Arusha Consulting, a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good. On the consulting side, we focus on leadership, people management, and diversity and inclusion. On the coaching side, we specialize in helping people gain clarity about their values, strengths, desires, resources, relationships, fears, and obstacles to help them pursue their best lives. Our ability to help individuals explore their own relationship to issues of diversity, inclusion, and equity helps distinguish us from other consulting/coaching groups. Reach out to learn more about our 1:1 coaching, workshops, and consulting offerings.</p>
+                <p><LinkRouter to='/blog'>Fairground</LinkRouter> and <LinkRouter to='/assets'>Fairground Assets</LinkRouter> are powered by <LinkRouter to="/">Arusha Consulting</LinkRouter>, a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good.</p>
                 <p>Very special thanks to Molly, Megan, and Sophia whose genius and hard work brought this passion project to fruition in record time.</p>
+                <p>Check out the <LinkRouter to='/blog'>Fairground Blog</LinkRouter> for a deeper dive into the themes represented in Fairground Assets.</p>
                 <p>For any questions or comments, please contact Heather at <a href={"mailto:Heather@arushainc"}> Heather@arushainc.com</a></p>
             </footer>
             </>

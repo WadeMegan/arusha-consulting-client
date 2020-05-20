@@ -55,7 +55,7 @@ export default class Google extends Component{
                 className='googleButton'
                 clientId="376742085814-of2ob321fhiprllfiephu05cm3s1qram.apps.googleusercontent.com"
                 render={renderProps => (
-                    <i onClick={renderProps.onClick} className="fab fa-google-plus fa-2x googleSigninIcon"></i>    
+                    <i onClick={renderProps.onClick} className="fab fa-google googleSigninIcon"></i>    
                   )}
                 onSuccess={this.responseGoogle}
                 onFailure={err => console.log('fail', err)}

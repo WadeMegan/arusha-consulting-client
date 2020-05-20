@@ -14,7 +14,7 @@ export default class BlogPage extends Component{
     render(){
         return(
             <>
-            <div className='fairgroundBannerContainer'>
+            <div className='fairgroundBannerContainer' name='blogPage'>
                 
                 <div className='fairgroundBannerImgBox'></div>
 
