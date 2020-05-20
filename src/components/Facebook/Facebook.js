@@ -24,7 +24,7 @@ export default class Facebook extends Component{
             picture: response.picture.data.url
         })*/
         if(!response.name){
-            this.context.setError()
+            console.log('failure')
         }else{
             //console.log(response)
             //this.context.setUserLoggedIn()
