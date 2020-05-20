@@ -25,9 +25,9 @@ export default class ContactPage extends Component{
                <p>Subsribe to the email list to stay in touch with what's happening at Arusha.</p>
                <a className='subscribeButton' target='_blank' rel="noopener noreferrer" href='http://eepurl.com/g3Q13b'>Subscribe</a>
                <h2>Arusha Consulting, Inc. | coaching + consulting </h2>
-               <p className='phoneContactInfo'>p: 872.239.8839</p>
-               <p className='phoneContactInfo'>c: 773.991.1194</p>
-               <p className='phoneContactInfo'>e: heather@arushainc.com</p>
+               <p className='phoneContactInfo'>p: <a href="tel:872-239-8839">872.239.8839</a></p>
+               <p className='phoneContactInfo'>c: <a href="tel:773-991-1194">773.991.1194</a></p>
+               <p className='phoneContactInfo'>e: <a href={"mailto:Heather@arushainc"}> heather@arushainc.com</a></p>
 
                {/*<p className='compContactInfo'>p: 872.239.8839 | c: 773.991.1194 | e: heather@arushainc.com</p>*/}
                <div>

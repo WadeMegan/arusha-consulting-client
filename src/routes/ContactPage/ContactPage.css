@@ -80,6 +80,10 @@
     opacity:1;
 }
 
+.phoneContactInfo a{
+    color:#600060;
+}
+
 /*.compContactInfo{
     display:none;
 }*/
