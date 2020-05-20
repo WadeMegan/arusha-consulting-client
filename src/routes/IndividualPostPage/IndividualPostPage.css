@@ -13,6 +13,7 @@
 
 .sponsorAnchorImg{
     height:100px;
+    max-width:50%;
 } 
 
 .sponsorAnchor{
@@ -99,12 +100,23 @@
     color:grey;
 }
 
+/*.featuredImgPost{
+    width:100%;
+    margin-top:10px;
+    margin-bottom:10px;
+    max-height:250px;
+    border:1px solid red;
+    height:250px;
+}*/
+
 .featuredImgPost{
     width:100%;
     margin-top:10px;
     margin-bottom:10px;
+    height:200px;
+    background-size: cover;
+    background-position: 35% 100%;
 }
-
 
 /*styling content*/
 
@@ -196,9 +208,13 @@
     .sponsorAnchorImg{
         width:100%;
         height:auto;
+        max-width:100%;
     }
     .sponsorAnchor h2{
         padding:10px 0px 0px 0px !important;
+    }
+    .featuredImgPost{
+        height:300px;
     }
 }
 
@@ -229,6 +245,9 @@
     }
     .sponsorAnchorImg{
         width:100%;
+    }
+    .featuredImgPost{
+        height:400px;
     }
 }
 

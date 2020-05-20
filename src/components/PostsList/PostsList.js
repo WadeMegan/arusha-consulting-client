@@ -143,7 +143,7 @@ export default class PostsList extends Component{
             <>
             <div className='postsContainer'>
                 <LoadingIndicator/>
-                {this.renderFeaturedSponsor()}   
+                {/*this.renderFeaturedSponsor()*/}   
                 {this.renderPosts()} 
             </div>            
             </>

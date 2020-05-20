@@ -89,7 +89,7 @@ export default class FairgroundAssetsPage extends Component{
                 <div name='whyBePartBox'>
                     <h3>Why Should I Be Part of the Fairground Community?</h3>
                     <p>Fairground is a place that welcomes anyone who belongs to a dominant in-group, and frankly, that should be just about every human. With very few exceptions, each of us, no matter the injustices we face, belongs to at least one dominant in-group.</p>
-                    <p>Fairground Assets we can rely on each other to equip ourselves for being the change we would like to see when it comes to diversity, inclusion, equity, and social justice.</p>
+                    <p>Through Fairground Assets we can rely on each other to equip ourselves for being the change we would like to see when it comes to diversity, inclusion, equity, and social justice.</p>
                 </div>
                 <div name='howToParticipateBox'>
                     <h3>How Can I Participate in the Community?</h3>
@@ -141,13 +141,13 @@ export default class FairgroundAssetsPage extends Component{
                 */}
             </section>
             <footer name='footer'>
-                <p><LinkRouter to='/blog'>Fairground</LinkRouter> and Fairground Assets are powered by <LinkRouter to="/">Arusha Consulting</LinkRouter>, a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good.</p>
+                <p>Fairground and Fairground Assets are powered by <LinkRouter to="/">Arusha Consulting</LinkRouter>, a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good.</p>
                 <p>Very special thanks to Molly, Megan, and Sophia whose genius and hard work brought this passion project to fruition in record time.</p>
                 <p>Check out the <LinkRouter to='/blog'>Fairground Blog</LinkRouter> for a deeper dive into the themes represented in Fairground Assets.</p>
                 <p>Questions? Comments? Reach out to Heather at <a href={"mailto:Heather@arushainc"}> Heather@arushainc.com</a>.</p>
                 <div className='copyrightContainer'>
                     <p>Copyright 2020 - Arusha Consulting</p>
-                    <Link to='/privacy-policy'>Privacy Policy</Link>
+                    <LinkRouter to='/privacy-policy'>Privacy Policy</LinkRouter>
                 </div>
             </footer>
             </>

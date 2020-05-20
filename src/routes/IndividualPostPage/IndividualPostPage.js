@@ -42,7 +42,7 @@ export default class IndividualPostPage extends Component{
 
             this.context.setCurrentPost(currentPost)
 
-            console.log(this.context.assetsList)
+            //console.log(this.context.assetsList)
 
             if(this.context.assetsList){
                 let featuredImg = this.context.assetsList.find(asset=>
@@ -137,10 +137,15 @@ export default class IndividualPostPage extends Component{
             })*/
 
         }   
-        
+            let style={
+                backgroundImage:`url(${this.state.mediaUrl})`
+            }
  
              return(
-                <img src={this.state.mediaUrl} className='featuredImgPost' alt='featured image'></img>
+                 <div className='featuredImgPost' style={style}>
+
+                 </div>
+                /*<img src={this.state.mediaUrl} className='featuredImgPost' alt='featured image'></img>*/
              )
  
          }     

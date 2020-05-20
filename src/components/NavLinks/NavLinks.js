@@ -9,7 +9,6 @@ export default class NavLinks extends Component{
     }
 
     handleBoxToggle=()=>{
-        console.log('testing hover')
         this.setState({
             menuOpen: true /*!this.state.menuOpen*/
         })

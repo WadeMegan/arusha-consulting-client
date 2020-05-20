@@ -54,7 +54,7 @@ export default class PrivacyPolicyPage extends Component{
 			
 			
 						<h2>Cookies</h2>
-			<p>To enrich and perfect your online experience, Arusha Consulting uses "Cookies", similar technologies and services provided by others to display personalized content, appropriate advertising and store your preferences on your computer.</p>
+			<p>To enrich and perfect your online experience, Arusha Consulting uses "Cookies," similar technologies and services provided by others to display personalized content, appropriate advertising and store your preferences on your computer.</p>
 			<p>A cookie is a string of information that a website stores on a visitor's computer, and that the visitor's browser provides to the website each time the visitor returns. Arusha Consulting uses cookies to help Arusha Consulting identify and track visitors, their usage of https://www.arushainc.com/, and their website access preferences. Arusha Consulting visitors who do not wish to have cookies placed on their computers should set their browsers to refuse cookies before using Arusha Consulting's websites, with the drawback that certain features of Arusha Consulting's websites may not function properly without the aid of cookies.</p>
 			<p>By continuing to navigate our website without changing your cookie settings, you hereby acknowledge and agree to Arusha Consulting's use of cookies.</p>
 			

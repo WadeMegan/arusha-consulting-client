@@ -39,8 +39,6 @@ const CommentsApiService = {
             }),
             headers: {
                 "content-type":"application/json"
-                /*"Content-Type":"application/vnd.contentful.management.v1+json",
-                "X-Contentful-Content-Type":"comment"*/
             }
         })
             .then(res => 
@@ -52,11 +50,7 @@ const CommentsApiService = {
     publishComment(commentId){
         return fetch(
             `${config.API_ENDPOINT}/comments/${commentId}`,{
-                method: 'PUT'/*,
-                headers: {
-                    "Authorization": "Bearer CFPAT-pctkH02k_uCe2IikxDgNTmweo9EbnoiW4pszNFTyEFw",
-                    "X-Contentful-Version": 1
-                }*/
+                method: 'PUT'
             })
                 .then(res=>
                     (!res.ok)
@@ -74,8 +68,6 @@ const CommentsApiService = {
                 'post_id':postId
             }),
             headers: {
-                //"Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f",
-                //"Sec-Fetch-Mode": "no-cors",
                 "content-type":"application/json"
             }
         })
@@ -86,49 +78,22 @@ const CommentsApiService = {
             )
     },
     getLikesByPostId(postId){
-        return fetch(`${config.API_ENDPOINT}/likes/posts/${postId}`
-            /*`https://enigmatic-meadow-02313.herokuapp.com/api/likes/posts/${postId}`,{
-                headers: {
-                    "Authorization": `Bearer 78f18194-fea7-4300-8afc-ba49064ee70f`
-                }
-            }*/)
+        return fetch(`${config.API_ENDPOINT}/likes/posts/${postId}`)
                 .then(res=>
-                    /*(res.error==="Unauthorized request")
-                        ? res.json().then(e=>{
-                            throw new Error(e)
-                        })
-                        : res.json()*/
-                    
                     (!res.ok)
                         ? res.json().then(e=>Promise.reject(e))
                         : res.json()
-                )/*
-                .then(json=>{
-                    (json.error)
-                        ? json.json().then(e=>{
-                            throw new Error(e)
-                        })
-                        : json.json()
-                    console.log(json)
-                })*/
+                )
     },
     deleteLike(commentId, userId){
     
         return fetch(`${config.API_ENDPOINT}/likes/comments/${commentId}/users/${userId}`,{
-            method: 'DELETE',
-            /*headers: {
-                "Authorization": "Bearer 78f18194-fea7-4300-8afc-ba49064ee70f"
-            }*/
+            method: 'DELETE'
         })
             
-            /*.then(res => 
-                 console.log(res)
-            )*/
+
     },
 }
 
 export default CommentsApiService
 
-/*https://public-api.wordpress.com/rest/v1/sites/arushatest725870187.wordpress.com/posts/${postId}/replies/new*/
-
-//

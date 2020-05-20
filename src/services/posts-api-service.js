@@ -11,8 +11,7 @@ import config from '../config'
 const PostsApiService = {
     
     getPosts(){
-        return fetch(`${config.API_ENDPOINT}/posts`/*`https://cdn.contentful.com/spaces/cvysyefe75et/environments/master/entries?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM&content_type=post`*/
-        /*spaces/cvysyefe75et/environments/master/content_types/post?access_token=sUfETTOWGHcvDD1Xvbk6ZQEHEFoRS5eO50YeO7dr9tM*/)
+        return fetch(`${config.API_ENDPOINT}/posts`)
             .then(res=> res.json()
                 /*(!res.ok)
                     ? res.json().then(e=>Promise.reject(e))

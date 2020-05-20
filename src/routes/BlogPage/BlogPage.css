@@ -67,4 +67,22 @@
     .fairgroundBannerContainer{
         height:350px;
     }
+    .fairgroundBannerImgBox{
+        height:100%;
+        padding:0px;
+        background: url('../../images/fairgroundBanner.png') no-repeat;
+        background-position: 50% 50%;
+        background-size: auto 100%;
+        /*background-image: linear-gradient(to right, #6E274E , #430146);*/
+    }
 }
+
+/*@media(min-width: 1100px) {
+    .fairgroundBannerImgBox{
+        height:100%;
+        padding:0px;
+        background: url('../../images/fairgroundBanner.png') no-repeat;
+        background-position: 50% 50%;
+        background-size: auto 100%;
+    }
+}*/

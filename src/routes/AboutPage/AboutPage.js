@@ -58,7 +58,7 @@ export default class AboutPage extends Component{
                     </div>
 
                 </div>
-                <div className='clientsContainer'>
+                {/*<div className='clientsContainer'>
                     <h1>Clients</h1>
                     <div>
                         <img src={friendsOfPrenticeLogo}/>
@@ -67,7 +67,7 @@ export default class AboutPage extends Component{
                         <img src={macLogo}/>
                         <img src={westsideJusticeCenterLogo}/>
                     </div>
-                </div>
+        </div>*/}
 
                 <div className='meetHeather'>
                     
@@ -85,7 +85,7 @@ export default class AboutPage extends Component{
                         <p>Following a career in non-profit management and public service, Heather founded Arusha Consulting, which provides coaching and consulting services related to leadership, people management, and diversity, equity, and inclusion.</p>
                         <p>A graduate of Georgetown University, Heather received a Master of Science degree in Public Service Management from DePaul University. For nearly a decade, she taught human resources management as an adjunct instructor for DePaul University’s Graduate School of Public Service Management and All Hallows College in Dublin, Ireland.</p>
                         <p>Some of Heather’s consulting clients have included Groupon, Big Shoulders Fund, the 100 Club of Chicago, Friends of Prentice, Gallery 37’s ArtScape Chicago, and West Cook Community Development Corporation.</p>
-                        <p>Heather is a Certified Diversity Coach and Gold Status Tiara International Certified Coach. She is currently pursuing the International Coaching Federation’s Professional Coaching Certification.</p>
+                        <p>Heather is a Gold Status Tiara International Certified Coach and just days away from becoming a Certified Diversity Coach through Coach Diversity Institute. She is currently pursuing the International Coaching Federation’s Professional Coaching Certification.</p>
                     </div>
 
                     <div className='computerView'>

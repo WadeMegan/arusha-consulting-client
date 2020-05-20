@@ -58,7 +58,7 @@ export default class Google extends Component{
                     <i onClick={renderProps.onClick} className="fab fa-google googleSigninIcon"></i>    
                   )}
                 onSuccess={this.responseGoogle}
-                onFailure={err => console.log('fail', err)}
+                onFailure={err => console.log('error')}
                 cookiePolicy={'single_host_origin'}
                 
               /> )
