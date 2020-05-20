@@ -1,5 +1,12 @@
 .commentsSection{
-    padding-top:25px;
+    padding-top:40px;
+    font-family:avenir;
+}
+
+.commentsSection h2{
+    font-family: hightower;
+    font-size: 24px;
+    margin-bottom:10px;
 }
 
 .commentIntroBox{

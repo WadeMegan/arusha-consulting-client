@@ -8,10 +8,20 @@
     margin-left:5%;
     margin-right:5%;
     color:black;
+    cursor:pointer;
 }
 
-.postItem{
-    cursor:pointer;
+.postItem h2{
+    font-family: avenir;
+    font-size: 24px;
+}
+
+.postItem p{
+    font-size: 16px;
+    font-family: avenir;
+    color:grey;
+    margin-top:5px;
+    margin-bottom:5px;
 }
 
 .featuredImage{
@@ -40,7 +50,7 @@
       width:46%;
       margin-left:0%;
       margin-right:2%;
-      height:350px;
+      height:325px;
     }
     .postsContainer{
         padding-left:6%;
@@ -52,7 +62,6 @@
     .postItem {
       width:30%;
       margin-right:2%;
-      height:350px;
     }
     .postsContainer{
         padding-left:6%;

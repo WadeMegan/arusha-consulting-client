@@ -1,4 +1,4 @@
-.googleButton{
+/*.googleButton{
     border:1px solid green;
     width:100%;
     display:flex;
@@ -6,20 +6,26 @@
     margin-bottom:10px;
     color:#ed3839;
     cursor: pointer;
-}
+}*/
 
 .googleSigninIcon{
     cursor: pointer;
     background-color:#ed3839;
     color:white;
     cursor: pointer;
-    width:150px;
+    width:250px;
     padding:10px;
-    opacity:0.9;
     height:100%;
+    opacity:0.9;
+    text-align: center;
+    margin-top:5px;
 }
 
-.googleButton div{
+.googleSigninIcon:hover{
+    opacity:1;
+}
+
+/*.googleButton div{
     display:block;
     padding:0px;
     margin:0px;
@@ -38,4 +44,4 @@
 
 .facebookButton:hover{
     opacity:1;
-}
+}*/

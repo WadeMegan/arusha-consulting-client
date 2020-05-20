@@ -1,15 +1,17 @@
 .errorBoundaryMessage {
     height:100vh;
-    background-color: #ebebe6;
+    background-color: #feffef;
     display:flex;
     flex-direction: column;
     padding-left:10%;
     padding-right:10%;
+    padding-top:75px;
 }
 
 .errorBoundaryMessage h1{
     font-family: brushwell;
     font-size: 50px;
+    color:#ff914d;
 }
 
 .errorBoundaryMessage p{

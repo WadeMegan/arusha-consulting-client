@@ -42,7 +42,7 @@ export default class CommentReplyThread extends Component{
                 
                 return (
                     
-                    <CommentItem comment={comment}/>
+                    <CommentItem comment={comment} key={comment.sys.id}/>
 
                     /*<div className='commentItem'>
                         <p>{comment.fields.username.toUpperCase()}<span> • {fullDate}</span></p>
@@ -70,7 +70,7 @@ export default class CommentReplyThread extends Component{
     renderReplyForm=()=>{
         if(this.props.replyOpen===true){
             return(
-                <CommentForm commentAdded={this.commentAdded} replyingTo={this.props.replyingId}/>
+                <CommentForm onThread={true} commentAdded={this.commentAdded} replyingTo={this.props.replyingId}/>
             )
         }
     }

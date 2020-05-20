@@ -157,9 +157,9 @@ export default class CommentItem extends Component{
                    {this.renderUserProfileImg()}
                 </div>
                 
-                <div className='commentContent'>
-                    <p>{firstName} {lastInitial}.<span> • {fullDate}</span></p>
-                    <p>{this.props.comment.fields.content}</p>
+                <div className='commentContentBox'>
+                    <p className='commentData'>{firstName} {lastInitial}.<span> • </span>{fullDate}</p>
+                    <p className='commentContent'>{this.props.comment.fields.content}</p>
                     <div className='commentInteractionBox'>
                         {this.renderReplyButton()}
                         {this.renderLikeCount()}

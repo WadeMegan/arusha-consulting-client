@@ -39,7 +39,7 @@ export default class CommentLikeButton extends Component{
         return(  
             <>
                 <p>•</p>
-                <i onClick={this.clickLike} class="fas fa-thumbs-up commentLikeButton commentLikeButton"></i>
+                <i onClick={this.clickLike} className="fas fa-thumbs-up commentLikeButton commentLikeButton"></i>
             </>
         )
     }

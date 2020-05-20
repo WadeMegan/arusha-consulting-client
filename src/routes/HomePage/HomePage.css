@@ -18,6 +18,7 @@
 .homePageSection p{
     padding-bottom:20px;
     font-family: avenir;
+    font-size: 16px;
 }
 
 .homePageImage{
@@ -25,11 +26,32 @@
     /*border:1px solid red;*/
 }
 
-.homePageFooter{
+footer{
     background-color: #feffef;
     font-family: avenir;
     border-top:15px solid #ff914d;
+    padding-bottom:60px;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
 }
+
+footer .copyrightContainer{
+    text-align:center;
+}
+
+footer .copyrightContainer p{
+    margin-bottom:2px;
+    font-size: 12px;
+}
+
+footer .copyrightContainer a{
+    font-size: 12px;
+    color:#600060;
+    cursor:pointer;
+}
+
+
 
 
 @media(min-width: 768px) {
@@ -45,5 +67,8 @@
         width:60%;
         margin-left:20%;
         margin-right:20%;
+    }
+    footer{
+        padding-bottom:10px;
     }
 }

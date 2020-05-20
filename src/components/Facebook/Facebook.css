@@ -2,9 +2,10 @@
     background-color:#2c5b92;
     color:white;
     cursor: pointer;
-    width:150px;
+    width:250px;
     padding:10px;
     opacity:0.9;
+    margin-top:5px;
 }
 
 .facebookButton:hover{

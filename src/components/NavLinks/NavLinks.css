@@ -50,12 +50,14 @@
 
 .navLinks{
     display:none;
+    font-size: 18px;
 }
 
 .indivNavLink{
     /*color:#FA8006;*/
     color:white;
     font-family: avenir;
+    font-size: 18px;
 }
 
 @media(min-width: 600px) {

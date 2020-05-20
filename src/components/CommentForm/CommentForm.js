@@ -5,6 +5,7 @@ import PostsListContext from '../../contexts/PostsListContext'
 import Google from '../Google/Google'
 import Facebook from '../Facebook/Facebook'
 import UsersService from '../../services/users-service'
+import { Link } from 'react-router-dom'
 
 
 export default class CommentForm extends Component{
@@ -155,13 +156,21 @@ export default class CommentForm extends Component{
 
     }
 
+    renderLogoutLink=()=>{
+        if(this.props.onThread===false){
+            return(
+                <button className='logoutButton' onClick={this.signOut}>Sign Out</button>
+            )
+        }
+    }
+
     renderCommentForm=()=>{
         if(UsersService.getName()){
             return(
                 <div className='commentItem'>
                     <div className='commentImg'>
                         {this.renderUserProfileImg()}
-                        <button className='logoutButton' onClick={this.signOut}>Sign Out</button>
+                        {this.renderLogoutLink()}
                     </div>
                     <form className='commentForm' onSubmit={this.handleSubmit}>
                         {/*<div>
@@ -180,7 +189,7 @@ export default class CommentForm extends Component{
         else{
             return(
                 <div className='socialMediaSigninBox'>
-                    <p>LOG IN TO JOIN THE CONVERSATION</p>
+                    <p>Login to Join the Conversation</p>
                     <div className='signinButtonBox'>
                         <Google onSuccess={this.handleSignin}
                         />
@@ -188,6 +197,7 @@ export default class CommentForm extends Component{
                             //handleSignin={this.props.handleSignin}
                         />
                     </div>
+                    <Link to='/privacy-policy'>Privacy Policy</Link>
                     
                 </div> 
             )

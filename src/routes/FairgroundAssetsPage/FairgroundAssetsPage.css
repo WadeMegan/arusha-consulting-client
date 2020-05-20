@@ -62,20 +62,25 @@
     src: url('../FairgroundAssetsPage/AvenirLTStd-Book.otf');
   }
 
+@font-face {
+    font-family: hightower;
+    src: url('../FairgroundAssetsPage/hightower.TTF');
+}
+
 .title h1{
     margin-left:auto;
     margin-right:auto;
     margin-top:0px;
     margin-bottom:0px;
-    font-size: 50px;
+    font-size: 35px;
     line-height: 50px;
-    font-family: brushwell;
+    font-family: hightower;
 }
 
 .title h2{
     font-size: 20px;
     line-height: 20px;
-    margin-top:15px;
+    margin-top:0px;
     font-family: brushwell;
 }
 
@@ -91,7 +96,7 @@
 
 .message{
     font-style: italic;
-    font-size:18px;
+    font-size:16px;
 }
 
 .socialMediaIcons a{
@@ -118,15 +123,17 @@
 
 .aboutFairground h2{
     /*font-family: 'Playfair Display', serif;*/
-    font-family: brushwell;
+    font-family: hightower;
     margin-bottom:20px;
-    font-size: 34px;
+    font-size: 35px;
 }
 
 .aboutFairground h3{
     margin-top:20px;
     margin-bottom: 20px;
     display:inline-block;
+    font-family: hightower;
+    font-size:24px;
 }
 
 .assetNavItem{
@@ -140,12 +147,12 @@
 .aboutFairground p{
     font-family: avenir;
     margin-bottom: 20px;
-    font-size:14px;
+    font-size:16px;
 }
 
 .aboutFairground li{
     font-family: avenir;
-    font-size:14px;
+    font-size:16px;
 }
 
 .aboutFairground button{
@@ -207,13 +214,13 @@
     margin-bottom:35px;
 }
 
-footer{
+/*footer{
     padding:35px;
     background-color: #feffef;
     font-family: avenir;
     border-top:15px solid #ff914d;
 
-}
+}*/
 
 footer h3{
     font-size:16px;
@@ -221,7 +228,7 @@ footer h3{
 }
 
 footer p{
-    margin-bottom:20px;
+    margin-bottom:10px;
     font-size:14px;
 }
 
@@ -241,14 +248,13 @@ footer a{
         margin-right:auto;
         margin-top:0px;
         margin-bottom:0px;
-        font-size: 70px;
+        font-size: 50px;
         line-height: 70px;
-        font-family: brushwell;
     }
     .title h2{
         font-size: 30px;
         line-height: 30px;
-        margin-top:20px;
+        /*margin-top:20px;*/
     }
     /*.heroImage{
         z-index:2;

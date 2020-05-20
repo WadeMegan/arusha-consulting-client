@@ -53,34 +53,45 @@ export default class CommentsList extends Component{
         if(this.context.commentsList){
             
             let comments = this.context.commentsList
+            let commentsItems
 
-            let commentsItems = comments.map(comment=>{
+            if(comments.length===0){
+                commentsItems = <p>Be the first to comment.</p>
                 
-                if(!comment.fields.replyingTo){
-                    /*let date = new Date(comment.fields.date)
-                    let dateString = date.toString()
-                    let splitDate = dateString.split(' ')
-                    let month = splitDate[1]
-                    let day = splitDate[2]
-                    let year = splitDate[3]
-                    let fullDate=`${month} ${day}, ${year}`.toUpperCase()*/
-                    
-                    return (
-                        /*<div key={comment.sys.id}>
-                            <div className='commentItem'>
-                                <p>{comment.fields.username.toUpperCase()}</p>
-                                <p>{fullDate}</p>
-                                <p>{comment.fields.content}</p>
-                                <button onClick={this.openReply} className='replyButton'>Reply</button>
-                            </div>
-                            <CommentReplyThread replyOpen={this.state.replyOpen} replyingId={comment.sys.id}/>
-                        </div>*/
-                        <CommentItem key={comment.sys.id} comment={comment} />
+            }
+            else{
+
+                
+                commentsItems = comments.map(comment=>{
+                
+                    if(!comment.fields.replyingTo){
+                        /*let date = new Date(comment.fields.date)
+                        let dateString = date.toString()
+                        let splitDate = dateString.split(' ')
+                        let month = splitDate[1]
+                        let day = splitDate[2]
+                        let year = splitDate[3]
+                        let fullDate=`${month} ${day}, ${year}`.toUpperCase()*/
                         
-                    )
-                }
-                
-            })
+                        return (
+                            /*<div key={comment.sys.id}>
+                                <div className='commentItem'>
+                                    <p>{comment.fields.username.toUpperCase()}</p>
+                                    <p>{fullDate}</p>
+                                    <p>{comment.fields.content}</p>
+                                    <button onClick={this.openReply} className='replyButton'>Reply</button>
+                                </div>
+                                <CommentReplyThread replyOpen={this.state.replyOpen} replyingId={comment.sys.id}/>
+                            </div>*/
+                            <CommentItem key={comment.sys.id} comment={comment} />
+                            
+                        )
+                    }
+                    
+                })
+
+            }
+            
             
             return(
                 <>
@@ -140,7 +151,7 @@ export default class CommentsList extends Component{
                     <h2>The Discussion</h2>
                     <p>Always with curiosity, never with judgment. Please don't feed the trolls.</p>
                 </div>
-                <CommentForm commentAdded={this.commentAdded} handleSignin={this.handleSignin} handleSignout={this.handleSignout}/>
+                <CommentForm onThread={false} commentAdded={this.commentAdded} handleSignin={this.handleSignin} handleSignout={this.handleSignout}/>
                 {this.renderComments()}
             </section>     
         )

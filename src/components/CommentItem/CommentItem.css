@@ -2,10 +2,18 @@
     border-bottom:1px solid #bdbdbd;
     margin-top:15px;
     display:flex;
+    font-size: 16px;
 }
 
-.commentContent{
+.commentData{
     width:100%;
+    color:grey;
+    font-size: 14px;
+}
+
+.commentData span{
+    margin-left:5px;
+    margin-right:5px;
 }
 
 .commentImg{
@@ -37,26 +45,31 @@
 
 .commentItem span{
     color:grey;
-    font-size: 14px;
 }
 
 .replyButton{
     cursor: pointer;
 }
 
+.commentContent{
+    margin-top:8px;
+    margin-bottom:8px;
+}
+
 .commentInteractionBox{
     display:flex;
     align-items: center;
     color:grey;
+    font-size: 14px;
 }
 
 .commentInteractionBox p, .commentInteractionBox button, .commentInteractionBox em{
     margin-right:10px;
     color:grey;
-    background-color: #ebebe6;
+    background-color: transparent;
 }
 
-.commentContent p, .commentContent div{
+.commentContentBox div{
     margin-bottom:8px;
 }
 

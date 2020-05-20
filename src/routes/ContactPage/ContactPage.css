@@ -41,6 +41,11 @@
     text-align: center;
 }
 
+.contactPageSection div{
+    display:flex;
+    justify-content: center;
+}
+
 .subscribeButton:hover{
     opacity: 1;
 }
@@ -89,5 +94,9 @@
         width:150px;
         margin-left:0px;
         margin-right:0px;
+    }
+    .contactPageSection div{
+        justify-content: start;
+
     }
 }

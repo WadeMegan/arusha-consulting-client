@@ -74,7 +74,7 @@ export default class Facebook extends Component{
                        fields="email,name,picture"
                        version="v2.5"
                        className="facebookButton"
-                       buttonText={<i class="fab fa-facebook-f"></i>}/>)
+                       buttonText={<i className="fab fa-facebook-f"></i>}/>)
         }
 
         return(    

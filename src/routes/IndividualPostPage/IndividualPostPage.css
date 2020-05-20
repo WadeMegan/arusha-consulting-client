@@ -12,15 +12,17 @@
 }
 
 .sponsorAnchorImg{
-    width:30%;
+    height:100px;
 } 
+
 .sponsorAnchor{
     color:black;
     margin-bottom:5px;
     padding:0px !important;
     display:flex;
     height:100%;
-    background-color: #F6B277;
+    font-family: avenir;
+    /*background-color: #F6B277;*/
 }
 
 .sponsorAnchor h2{
@@ -28,8 +30,9 @@
     height:100%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    padding:10px !important;
+    /*align-items: flex-end;*/
+    padding:0px 0px 0px 10px !important;
+    font-size:24px;
 }
 
 .sponsorAnchorLink{
@@ -41,7 +44,8 @@
 .disclaimerAnchor{
     background-color: #600060;
     color:white;
-    font-size:14px;
+    font-size:16px;
+    font-family: avenir;
 }
 
 .heroBannerPost{
@@ -80,16 +84,19 @@
 }
 
 
-.postContentSection h1{
+.postTitle{
     margin:0px;
     text-align: center;
-    font-style: italic;
-    font-family: 'Playfair Display', serif;
+    font-family: hightower;
+    font-size: 35px;
 }
 
 .postDate{
     text-align: center;
-    font-family: 'Playfair Display', serif;
+    font-family: avenir;
+    font-size:16px;
+    line-height: 20px;
+    color:grey;
 }
 
 .featuredImgPost{
@@ -101,11 +108,19 @@
 
 /*styling content*/
 
-.contentContainer h1{
+.contentContainer{
+    font-family:avenir;
+}
+
+/*.contentContainer h1{
     font-style: normal;
     text-align: left;
     font-size:24px;
     line-height: 24px;
+}*/
+
+.contentContainer h1{
+    font-size: 24px;
 }
 
 .contentContainer h2{
@@ -113,11 +128,11 @@
 }
 
 .contentContainer h3{
-    font-size:16px;
+    font-size:18px;
 }
 
 .contentContainer p{
-    font-size: 14px;
+    font-size: 16px;
     line-height: 18px;
 }
 
@@ -133,14 +148,18 @@
 
 .contentContainer li{
     margin-top:5px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 18px;
     margin-left: 2rem;
 }
 
+.contentContainer a{
+    color:#600060;
+}
 
+/*
 .postContent{
-    font-family: 'Open Sans', sans-serif;
+    font-family: avenir;
 }
 
 .postContent p{
@@ -159,7 +178,7 @@
 
 .has-text-align-center{
     text-align: center;
-}
+}*/
 
 /*Media Queries*/
 
@@ -176,9 +195,10 @@
     }
     .sponsorAnchorImg{
         width:100%;
+        height:auto;
     }
     .sponsorAnchor h2{
-        padding-left:0px;
+        padding:10px 0px 0px 0px !important;
     }
 }
 

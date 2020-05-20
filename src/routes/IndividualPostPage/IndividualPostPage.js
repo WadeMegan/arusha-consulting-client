@@ -260,7 +260,7 @@ export default class IndividualPostPage extends Component{
         if(this.context.currentPost && this.context.currentPost.fields ){
             return (
                 <>
-                <h1>{this.context.currentPost.fields.title}</h1>
+                <h1 className='postTitle'>{this.context.currentPost.fields.title}</h1>
                 </>
             )
         }
@@ -374,10 +374,15 @@ export default class IndividualPostPage extends Component{
             
             
             <footer >
-                <h3>Copyright 2020 - Arusha Consulting</h3>
-                <p><Link to='/blog'>Fairground</Link> and <Link to='/assets'>Fairground Assets</Link> are powered by <Link to="/">Arusha Consulting</Link>, a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good.</p>
-                <p><Link to='/assets'>Fairground Assets</Link> is a crowd-sourced database for those interested in deepening their understanding to make a positive difference when it comes to diversity, inclusion, equity, and social justice.</p>
-                <p>Questions? Comments? Reach out to Heather at <a href={"mailto:Heather@arushainc"}> Heather@arushainc.com</a></p>
+            <p><Link to='/blog'>Fairground</Link> and <Link to='/assets'>Fairground Assets</Link> are powered by <Link to="/">Arusha Consulting</Link>, a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good.</p>
+                <p><Link to='/assets'>Fairground Assets</Link> is a crowd-sourced database for those interested in deepening their
+                understanding to make a positive difference when it comes to diversity, inclusion, equity,
+                and social justice.</p>
+                <p>Questions? Comments? Reach out to Heather at <a href={"mailto:Heather@arushainc"}> Heather@arushainc.com</a>.</p>
+                <div className='copyrightContainer'>
+                    <p>Copyright 2020 - Arusha Consulting</p>
+                    <Link to='/privacy-policy'>Privacy Policy</Link>
+                </div>
 
             </footer>
             </Error>
