@@ -79,7 +79,7 @@ export default class FairgroundAssetsPage extends Component{
                     </li>
                 </ul>
                 <div className="airtableContainer">
-                    <iframe className="airtable-embed" src="https://airtable.com/embed/shruUGrq2VMRvuu5P?backgroundColor=blue&viewControls=on" frameBorder="0" width="100%" height="533"></iframe>
+                    <iframe title='assets table' className="airtable-embed" src="https://airtable.com/embed/shruUGrq2VMRvuu5P?backgroundColor=blue&viewControls=on" frameBorder="0" width="100%" height="533"></iframe>
                 </div>
                 <div name='whyImportantBox'>
                     <h3>Why is Fairground Assets Important?</h3>

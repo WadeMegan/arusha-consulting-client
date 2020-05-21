@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import './BlogPage.css'
 import { Link } from 'react-router-dom'
-import PostsApiService from '../../services/posts-api-service'
+//import PostsApiService from '../../services/posts-api-service'
 import PostsList from '../../components/PostsList/PostsList'
-import NavLinks from '../../components/NavLinks/NavLinks'
-import fairgroundBanner from '../../images/fairgroundBanner.png'
+//import NavLinks from '../../components/NavLinks/NavLinks'
+//import fairgroundBanner from '../../images/fairgroundBanner.png'
 
 export default class BlogPage extends Component{
     componentWillMount(){

@@ -68,7 +68,7 @@ export default class PrivacyPolicyPage extends Component{
 			
 			
 			<h2>Credit & Contact Information</h2>
-							<p>This privacy policy was created at <a href="https://termsandconditionstemplate.com/privacy-policy-generator/" title="Privacy policy template generator" target="_blank">termsandconditionstemplate.com</a>. If you have any questions about this Privacy Policy, please contact us via <a href="mailto:Heather@arushainc.com">email</a> or <a href="tel:7739911194">phone</a>.</p>
+							<p>This privacy policy was created at <a href="https://termsandconditionstemplate.com/privacy-policy-generator/" title="Privacy policy template generator" target="_blank" rel="noopener noreferrer">termsandconditionstemplate.com</a>. If you have any questions about this Privacy Policy, please contact us via <a href="mailto:Heather@arushainc.com">email</a> or <a href="tel:7739911194">phone</a>.</p>
 					
 
 

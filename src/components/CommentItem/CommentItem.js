@@ -57,7 +57,7 @@ export default class CommentItem extends Component{
     renderUserProfileImg=()=>{
         if(this.props.comment.fields.profileImg){
             return(
-                <img className='userImg' src={this.props.comment.fields.profileImg}/> 
+                <img className='userImg' src={this.props.comment.fields.profileImg} alt='user profile'/> 
             )
         }
         else{

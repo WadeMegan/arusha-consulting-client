@@ -61,11 +61,11 @@ export default class AboutPage extends Component{
                 <div className='clientsContainer'>
                     <h1>Clients</h1>
                     <div>
-                        <img src={friendsOfPrenticeLogo}/>
-                        <img src={grouponLogo}/>
+                        <img src={friendsOfPrenticeLogo} alt='friends of prentice logo'/>
+                        <img src={grouponLogo} alt='groupon logo'/>
                         {/*<img src={loyolaLogo}/>*/}
-                        <img src={macLogo}/>
-                        <img src={westsideJusticeCenterLogo}/>
+                        <img src={macLogo} alt='mac logo'/>
+                        <img src={westsideJusticeCenterLogo} alt='westside justice center logo'/>
                     </div>
                 </div>
 
@@ -73,10 +73,10 @@ export default class AboutPage extends Component{
                     
                     <div className='phoneView'>
                         <h1>Meet Heather</h1>
-                        <img className='heatherHeadshot' src={heatherHeadshot}/>
+                        <img className='heatherHeadshot' src={heatherHeadshot} alt='heather headshot'/>
                         <p>Heather Sattler inspires awareness to ignite action in both organizations and individuals. She is fervent about equal access to opportunity for all. Among her passions is providing training and coaching on supervising, mentoring, and sponsoring people outside of dominant in-groups.</p>
                         <div className='boldAboutParagraph'>
-                            <img src={brushstrokes}/>
+                            <img src={brushstrokes} alt=''/>
                             <div>
                                 <p>Heather enjoys helping her clients align their actions with their vision and values to achieve a greater good. She relies on her strengths of awakening spirit, bringing out potential, and serving as a purveyor of depth in a light-hearted way to provide transformative experiences for those with whom she works.</p>
                             </div>
@@ -94,13 +94,13 @@ export default class AboutPage extends Component{
                                 <h1>Meet Heather</h1>
                                 <p>Heather Sattler inspires awareness to ignite action in both organizations and individuals. She is fervent about equal access to opportunity for all. Among her passions is providing training and coaching on supervising, mentoring, and sponsoring people outside of dominant in-groups.</p>
                                 <div className='boldAboutParagraph'>
-                                    <img src={brushstrokes}/>
+                                    <img src={brushstrokes} alt=''/>
                                     <div>
                                         <p>Heather enjoys helping her clients align their actions with their vision and values to achieve a greater good. She relies on her strengths of awakening spirit, bringing out potential, and serving as a purveyor of depth in a light-hearted way to provide transformative experiences for those with whom she works.</p>
                                     </div>
                                 </div>                            </div>
                             <div className='rightColumn'>
-                                <img className='heatherHeadshot' src={heatherHeadshot}/>
+                                <img className='heatherHeadshot' src={heatherHeadshot} alt='heather headshot'/>
                             </div>
                             
                             

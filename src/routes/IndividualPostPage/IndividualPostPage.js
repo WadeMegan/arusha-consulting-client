@@ -6,8 +6,8 @@ import PostsApiService from '../../services/posts-api-service'
 import NavLinks from '../../components/NavLinks/NavLinks'
 import CommentsList from '../../components/CommentsList/CommentsList'
 import MarkdownView from 'react-showdown';
-import { GoogleLogin } from 'react-google-login'
-import { GoogleLogout } from "react-google-login";
+//import { GoogleLogin } from 'react-google-login'
+//import { GoogleLogout } from "react-google-login";
 import Error from '../../components/Error/Error'
 
 export default class IndividualPostPage extends Component{
@@ -165,7 +165,7 @@ export default class IndividualPostPage extends Component{
         
  
         return(
-        <img src={this.state.sponsorImg} className='sponsorAnchorImg' alt='sponsors image'></img>
+        <img src={this.state.sponsorImg} className='sponsorAnchorImg' alt='sponsor'></img>
         )
     }
 
@@ -330,11 +330,11 @@ export default class IndividualPostPage extends Component{
 
     render(){
 
-        if(this.context.currentPost){
+        /*if(this.context.currentPost){
             let content = this.context.currentPost.content
         } else {
             let content = null
-        }
+        }*/
         
         /*function onSignIn(googleUser){
             console.log('onSignIn ran')

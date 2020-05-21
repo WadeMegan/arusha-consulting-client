@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './PostItem.css'
 import { Link } from 'react-router-dom'
-import PostsApiService from '../../services/posts-api-service'
+//import PostsApiService from '../../services/posts-api-service'
 import PostsListContext from '../../contexts/PostsListContext'
 
 
