@@ -141,7 +141,7 @@ export default class FairgroundAssetsPage extends Component{
                 */}
             </section>
             <footer name='footer'>
-                <p>Fairground and Fairground Assets are powered by <LinkRouter to="/">Arusha Consulting</LinkRouter>, a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good.</p>
+                <p><LinkRouter to='/blog'>Fairground</LinkRouter> and Fairground Assets are powered by <LinkRouter to="/">Arusha Consulting</LinkRouter>, a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good.</p>
                 <p>Very special thanks to Molly, Megan, and Sophia whose genius and hard work brought this passion project to fruition in record time.</p>
                 <p>Check out the <LinkRouter to='/blog'>Fairground Blog</LinkRouter> for a deeper dive into the themes represented in Fairground Assets.</p>
                 <p>Questions? Comments? Reach out to Heather at <a href={"mailto:Heather@arushainc"}> Heather@arushainc.com</a>.</p>

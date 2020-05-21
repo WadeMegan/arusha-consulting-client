@@ -22,7 +22,7 @@ export default class ContactPage extends Component{
             <section className='contactPageSection'>
                <h1>Contact</h1>
                <h2>Stay In Touch</h2>
-               <p>Subsribe to the email list to stay in touch with what's happening at Arusha.</p>
+               <p>Subsribe to the email list to stay in touch with what's happening at Arusha and Fairground.</p>
                <a className='subscribeButton' target='_blank' rel="noopener noreferrer" href='http://eepurl.com/g3Q13b'>Subscribe</a>
                <h2>Arusha Consulting, Inc. | coaching + consulting </h2>
                <p className='phoneContactInfo'>p: <a href="tel:872-239-8839">872.239.8839</a></p>

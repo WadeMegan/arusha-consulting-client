@@ -109,13 +109,27 @@
     height:250px;
 }*/
 
+/*.featuredImgPost{
+    width:100%;
+    margin-top:10px;
+    margin-bottom:10px;
+    height:0;
+    background-size: contain;
+    background-position: 35% 100%;
+    padding-top: 66.64%;
+    background-repeat: no-repeat;
+}*/
+
 .featuredImgPost{
     width:100%;
     margin-top:10px;
     margin-bottom:10px;
     height:200px;
-    background-size: cover;
-    background-position: 35% 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-color:#dedede;
+    /*background-color:transparent;*/
 }
 
 /*styling content*/
