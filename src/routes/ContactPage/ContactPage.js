@@ -31,13 +31,13 @@ export default class ContactPage extends Component{
 
                {/*<p className='compContactInfo'>p: 872.239.8839 | c: 773.991.1194 | e: heather@arushainc.com</p>*/}
                <div>
-                   <a target='_blank' rel="noopener noreferrer" href="https://www.facebook.com/arushaconsulting"><img className='contactSocial' src={facebookLogo}/></a>
+                   <a target='_blank' rel="noopener noreferrer" href="https://www.facebook.com/arushaconsulting"><img className='contactSocial' src={facebookLogo} alt='facebook logo'/></a>
 
-                   <a target='_blank' rel="noopener noreferrer" href="https://www.instagram.com/arushaconsulting/"><img className='contactSocial' src={instagramLogo}/></a>
+                   <a target='_blank' rel="noopener noreferrer" href="https://www.instagram.com/arushaconsulting/"><img className='contactSocial' src={instagramLogo} alt='instagram logo'/></a>
 
-                   <a target='_blank' rel="noopener noreferrer" href="https://www.pinterest.com/arushaconsulting/"><img className='contactSocial' src={pinterestLogo}/></a>
+                   <a target='_blank' rel="noopener noreferrer" href="https://www.pinterest.com/arushaconsulting/"><img className='contactSocial' src={pinterestLogo} alt='pinterest logo'/></a>
 
-                   <a target='_blank' rel="noopener noreferrer" href="https://www.linkedin.com/company/arusha-consulting-inc"><img className='contactSocial' src={linkedInLogo}/></a>
+                   <a target='_blank' rel="noopener noreferrer" href="https://www.linkedin.com/company/arusha-consulting-inc"><img className='contactSocial' src={linkedInLogo} alt='linkedin logo'/></a>
 
                </div>
 

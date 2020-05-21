@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import './FairgroundAssetsPage.css'
 import {Link as LinkRouter} from 'react-router-dom'
-import NavLinks from '../../components/NavLinks/NavLinks'
-import NavBar from '../../components/NavBar/NavBar'
+//import NavLinks from '../../components/NavLinks/NavLinks'
+//import NavBar from '../../components/NavBar/NavBar'
 //import Scroll from 'react-scroll'
 //import { Element } from 'react-scroll'
 //const ScrollLink = Scroll.ScrollLink
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 
 export default class FairgroundAssetsPage extends Component{

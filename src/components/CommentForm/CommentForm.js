@@ -128,7 +128,7 @@ export default class CommentForm extends Component{
     renderUserProfileImg=()=>{
         if(UsersService.getProfileImg()){
             return(
-                <img className='userImg' src={UsersService.getProfileImg()}/> 
+                <img className='userImg' src={UsersService.getProfileImg()} alt='user profile'/> 
             )
         }
         /*else{

@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import './AboutPage.css'
 import { Link } from 'react-router-dom'
-import PostsApiService from '../../services/posts-api-service'
-import PostsList from '../../components/PostsList/PostsList'
-import NavLinks from '../../components/NavLinks/NavLinks'
+//import PostsApiService from '../../services/posts-api-service'
+//import PostsList from '../../components/PostsList/PostsList'
+//import NavLinks from '../../components/NavLinks/NavLinks'
 import heatherHeadshot from '../../images/heatherHeadshot.png'
-import arushaMeetHeatherLogo from '../../images/arushaMeetHeatherLogo.jpg'
-import NavBar from '../../components/NavBar/NavBar'
+//import arushaMeetHeatherLogo from '../../images/arushaMeetHeatherLogo.jpg'
+//import NavBar from '../../components/NavBar/NavBar'
 import friendsOfPrenticeLogo from '../../images/friendsOfPrentice.png'
 import grouponLogo from '../../images/groupon.png'
-import loyolaLogo from '../../images/loyola.png'
+//import loyolaLogo from '../../images/loyola.png'
 import macLogo from '../../images/mac.png'
 import westsideJusticeCenterLogo from '../../images/westsideJusticeCenter.png'
 import { Slide } from 'react-slideshow-image';
@@ -49,10 +49,10 @@ export default class AboutPage extends Component{
                     <div className="slide-container">
                         <Slide {...properties}>
                         <div className="each-slide">
-                            <img src={testimonial1}/>
+                            <img src={testimonial1} alt='testimonial 1'/>
                         </div>
                         <div className="each-slide">
-                            <img src={testimonial2}/>
+                            <img src={testimonial2} alt='testimonial 2'/>
                         </div>
                         </Slide>
                     </div>

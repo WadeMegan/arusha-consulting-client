@@ -10,7 +10,7 @@ export default class NavBar extends Component{
         return(  
             <nav className='navBar'>
                 <div className='navLogoLink'>
-                    <Link to='/'> <img className='navLogoImg' src={navLogo}/></Link>
+                    <Link to='/'> <img className='navLogoImg' src={navLogo} alt='Arusha Consulting Logo'/></Link>
                 </div>
             
                 <NavLinks/> 
