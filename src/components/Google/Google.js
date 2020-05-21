@@ -53,12 +53,12 @@ export default class Google extends Component{
         } else {
             googleContent = (<GoogleLogin
                 className='googleButton'
-                clientId="376742085814-of2ob321fhiprllfiephu05cm3s1qram.apps.googleusercontent.com"
+                clientId="376742085814-cme16sgovcgr1pkpgga0dtt0b5i6hnmo.apps.googleusercontent.com"
                 render={renderProps => (
                     <i onClick={renderProps.onClick} className="fab fa-google googleSigninIcon"></i>    
                   )}
                 onSuccess={this.responseGoogle}
-                onFailure={err => console.log('error',err)}
+                onFailure={err => console.log('error')}
                 cookiePolicy={'single_host_origin'}
                 
               /> )
