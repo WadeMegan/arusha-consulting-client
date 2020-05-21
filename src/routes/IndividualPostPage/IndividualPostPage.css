@@ -33,7 +33,8 @@
     justify-content: center;
     /*align-items: flex-end;*/
     padding:0px 0px 0px 10px !important;
-    font-size:24px;
+    font-size:20px;
+    text-align: center;
 }
 
 .sponsorAnchorLink{
@@ -166,6 +167,23 @@
     width:60%;
     margin-left:20%;
     margin-right:20%;
+}
+
+pre{
+    margin-top: 15px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    margin-left: 2rem;
+}
+
+pre code{
+    font-family: avenir;
+    font-size: 16px;
+    line-height: 18px;
 }
 
 .contentContainer h1, .contentContainer h2, .contentContainer h3, .contentContainer p{

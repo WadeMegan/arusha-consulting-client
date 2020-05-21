@@ -188,7 +188,7 @@ export default class IndividualPostPage extends Component{
             //var converter = new showdown.Converter()
             //let html = converter.makeHtml(this.context.currentPost.fields.content)
             //console.log(html)
-
+            console.log(this.context.currentPost.fields.content)
             return(
                 <div className='contentContainer'>
                 {/*<div>{html}</div>*/}
@@ -322,7 +322,7 @@ export default class IndividualPostPage extends Component{
 
                         {/*this.renderImage()*/}
                         {/*<p>{fullDate}</p>*/}
-                        <h2>SPONSORED BY {this.context.currentPost.fields.sponsorName.toUpperCase()}</h2>
+                        <h2>Sponsored By {this.context.currentPost.fields.sponsorName}</h2>
                     </div>    
                 </a>
             )
