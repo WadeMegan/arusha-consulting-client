@@ -58,16 +58,16 @@ export default class AboutPage extends Component{
                     </div>
 
                 </div>
-                {/*<div className='clientsContainer'>
+                <div className='clientsContainer'>
                     <h1>Clients</h1>
                     <div>
                         <img src={friendsOfPrenticeLogo}/>
                         <img src={grouponLogo}/>
-                        <img src={loyolaLogo}/>
+                        {/*<img src={loyolaLogo}/>*/}
                         <img src={macLogo}/>
                         <img src={westsideJusticeCenterLogo}/>
                     </div>
-        </div>*/}
+                </div>
 
                 <div className='meetHeather'>
                     
