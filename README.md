@@ -8,6 +8,10 @@ A live version of the app can be accessed [here](https://www.arushainc.com/).
 
 I built this full-stack web application for a recent client. The client, Arusha Consulting, is a boutique consulting firm with a focus on promoting diversity within the workplace. This website allows Arusha Consulting to communicate with users via About, Blog, and Contact pages. I implemented a headless CMS to allow the client to manage their own content. The project also includes a crowd-sourced database that holds informative resources concerning numerous social justice issues.
 
+### Please Note
+
+This is the repository for the Arusha Consulting client. This project also consists of the arusha-consulting-proxy and arusha-consulting-api repositories. The latter are made private for security purposes. 
+
 ### Home Page
 ![home page](https://i.imgur.com/JRbduS0.png)
 
@@ -32,13 +36,12 @@ I built this full-stack web application for a recent client. The client, Arusha 
 
 ### APIs: 
 * Contentful API
-* Arusha Consulting Proxy ([documentation](https://github.com/WadeMegan/best-brand-for-api))
-* Arusha Consulting API ([documentation](https://github.com/WadeMegan/best-brand-for-api))
+* Arusha Consulting Proxy
+* Arusha Consulting API
 
 ### Other: 
 * Mailchimp 
 * Airtable
+* Netlify 
+* Heroku
 
-## Associated Repositories
-
-This is the repository for Best Brand For's client. The repository for Best Brand For's server can be found [here](https://github.com/WadeMegan/best-brand-for-api).
