@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Arusha Consulting
 
-## Available Scripts
+## Live App 
 
-In the project directory, you can run:
+A live version of the app can be accessed [here](https://www.arushainc.com/). 
 
-### `npm start`
+## Summary 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I built this full-stack web application for a recent client. The client, Arusha Consulting, is a boutique consulting firm with a focus on promoting diversity within the workplace. This website allows Arusha Consulting to communicate with users via About, Blog, and Contact pages. I implemented a headless CMS to allow the client to manage their own content. The project also includes a crowd-sourced database that holds informative resources concerning numerous social justice issues.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Home Page
+![home page](https://i.imgur.com/JRbduS0.png)
 
-### `npm test`
+### Individual Blog Post Page
+![individual post page](https://i.imgur.com/RyEcJuD.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Assets Page
+![assets page](https://i.imgur.com/FCopkR9.png)
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Front End: 
+* ReactJS
+* jQuery
+* HTML
+* CSS
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Back End: 
+* Node.js
+* Express
+* PostgreSQL
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### APIs: 
+* Contentful API
+* Arusha Consulting Proxy ([documentation](https://github.com/WadeMegan/best-brand-for-api))
+* Arusha Consulting API ([documentation](https://github.com/WadeMegan/best-brand-for-api))
 
-### `npm run eject`
+### Other: 
+* Mailchimp 
+* Airtable
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Associated Repositories
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This is the repository for Best Brand For's client. The repository for Best Brand For's server can be found [here](https://github.com/WadeMegan/best-brand-for-api).
