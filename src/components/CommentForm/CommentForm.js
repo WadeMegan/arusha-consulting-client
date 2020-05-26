@@ -17,66 +17,6 @@ export default class CommentForm extends Component{
         loggedIn:false,
     }
 
-
-    componentWillMount() {
-
-       /*CommentsApiService.getAllComments(this.context.currentPost.id)
-            .then(res=>{
-                let commentsList = res.items.filter(comment=>
-                    comment.fields.postId===this.context.currentPost.sys.id
-                )
-                this.context.setCommentsList(commentsList)
-            })
-            .catch()
-
-        CommentsApiService.postComment(this.context.currentPost.id)
-            .then(res=>console.log(res))
-            .catch()*/
-        
-    }
-
-
-    /*renderComments=()=>{
-
-        //console.log(this.context.commentsList)
-
-        if(this.context.commentsList){
-            
-            let comments = this.context.commentsList
-
-            let commentsItems = comments.map(comment=>{
-                
-                let date = new Date(comment.fields.date)
-                let dateString = date.toString()
-                let splitDate = dateString.split(' ')
-                let month = splitDate[1]
-                let day = splitDate[2]
-                let year = splitDate[3]
-                let fullDate=`${month} ${day}, ${year}`.toUpperCase()
-                
-                return (
-
-                    <div className='commentItem' key={comment.sys.id}>
-                        <p>{comment.fields.username.toUpperCase()}</p>
-                        <p>{fullDate}</p>
-                        <p>{comment.fields.content}</p>
-                        
-                    </div>
-                    
-                    
-                )
-            })
-            
-            return(
-                <>
-                {commentsItems}
-                </>
-            )
-        }
-
-    }*/
-
-
     handleSubmit = ev => {
         ev.preventDefault()
 
@@ -100,25 +40,6 @@ export default class CommentForm extends Component{
             })
             .catch(this.context.setError)
 
-
-
-
-        /*CommentsApiService.publishComment(this.state.publishedComment)
-            .then()
-            .catch()*/
-        /*const { brand, why } = ev.target
-
-        let userId = Number(UserService.getUserToken())
-
-
-
-        RequestApiService.postNewComment(this.context.currentRequest.id, userId, brand.value, why.value)
-            .then(()=>{
-                brand.value=''
-                why.value=''
-                this.props.onSubmit()
-            })
-            .catch(this.context.setError)*/
     }
 
     componentDidMount=()=>{
@@ -131,11 +52,7 @@ export default class CommentForm extends Component{
                 <img className='userImg' src={UsersService.getProfileImg()} alt='user profile'/> 
             )
         }
-        /*else{
-            return(
-                <div className='userImg customIcon'><p>{this.context.usersName.charAt(0).toUpperCase()}</p></div>
-            )
-        }*/
+
     }
 
     signOut=()=>{
@@ -173,12 +90,7 @@ export default class CommentForm extends Component{
                         {this.renderLogoutLink()}
                     </div>
                     <form className='commentForm' onSubmit={this.handleSubmit}>
-                        {/*<div>
-                            <label htmlFor='username'>Username *</label>
-                            <input className='inputArea' type="text" name='username' id='username' required='require'/>
-                        </div>*/}
                         <div>
-                            {/*<label htmlFor='content'>JOIN THE CONVERSATION</label>*/}
                             <textarea className='inputArea' rows={3} name='content' id='content' required='require' placeholder='Join the conversation...'/>
                         </div>
                         <input className='submitCommentButton' type='submit' value='Submit'/>
@@ -194,7 +106,6 @@ export default class CommentForm extends Component{
                         <Google onSuccess={this.handleSignin}
                         />
                         <Facebook onSuccess={this.handleSignin}
-                            //handleSignin={this.props.handleSignin}
                         />
                     </div>
                     <Link to='/privacy-policy'>Privacy Policy</Link>
@@ -206,8 +117,6 @@ export default class CommentForm extends Component{
     }
 
     render(){
-
-        //console.log(this.context.usersName, this.context.usersEmail)
 
         return(    
             <div className='commentFormContainer'>

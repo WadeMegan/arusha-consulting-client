@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
-//import { Link } from 'react-router-dom'
 import './PostsList.css'
 import PostsApiService from '../../services/posts-api-service'
 import SponsorApiService from '../../services/sponsor-api-service'
 import PostsListContext from '../../contexts/PostsListContext'
 import PostItem from '../PostItem/PostItem'
-//import { Container, Row, Col } from 'react-grid-system';
 import { trackPromise } from 'react-promise-tracker';
 import { usePromiseTracker } from "react-promise-tracker";
 import Loader from 'react-loader-spinner';
@@ -32,11 +30,6 @@ export default class PostsList extends Component{
 
         trackPromise(
             PostsApiService.getPosts()
-            /*.then(value=>new Promise(resolve=>{
-                setTimeout(() => {
-                    resolve(value);
-                }, 1000);
-            }))*/
             .then(res=>{
 
                 this.context.setPostsList(res.items)
@@ -52,14 +45,6 @@ export default class PostsList extends Component{
             })
             .catch(this.context.setError)
         )
-
-        /*SponsorApiService.getSponsor()
-            .then(res=>{
-                this.context.setFeaturedSponsor(res.items[0])
-            })
-            .catch(this.context.setError)*/
-
-        
     }
 
     componentDidMount=()=>{
@@ -92,9 +77,6 @@ export default class PostsList extends Component{
 
 
     renderImage=()=>{
-
-        //console.log(this.context.assetsList)
-        //console.log(this.props.post.fields.featuredImage.sys.id)
 
         if(this.context.sponsorMedia){
             
@@ -130,7 +112,6 @@ export default class PostsList extends Component{
                 <a target='_blank' rel="noopener noreferrer" href={this.context.featuredSponsor.fields.sponsorWebsite}>
                     <div className='postItem'>
                         {this.renderImage()}
-                        {/*<p>{fullDate}</p>*/}
                         <h2>SPONSORED BY {this.context.featuredSponsor.fields.sponsorName.toUpperCase()}</h2>
                     </div>    
                 </a>
@@ -143,7 +124,6 @@ export default class PostsList extends Component{
             <>
             <div className='postsContainer'>
                 <LoadingIndicator/>
-                {/*this.renderFeaturedSponsor()*/}   
                 {this.renderPosts()} 
             </div>            
             </>

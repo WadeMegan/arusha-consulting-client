@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import './CommentLikeButton.css'
 import CommentsApiService from '../../services/comments-api-service'
 import PostsListContext from '../../contexts/PostsListContext'
-//import CommentForm from '../../components/CommentForm/CommentForm'
-//import CommentReplyThread from '../CommentReplyThread/CommentReplyThread'
 import UsersService from '../../services/users-service'
 
 

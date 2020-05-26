@@ -27,18 +27,12 @@ export default class CommentsList extends Component{
   
                 
                 let commentsList = res.items.filter(comment=>
-                    //console.log(this.context.currentPost.sys.id)
                     comment.fields.postId===this.context.currentPost.sys.id
                 )
                 this.context.setCommentsList(commentsList)
             })
             .catch(this.context.setError)
-        }
-
-        /*CommentsApiService.postComment(this.context.currentPost.id)
-            .then(res=>console.log(res))
-            .catch()*/
-        
+        }        
     }
 
     componentDidMount=()=>{
@@ -47,8 +41,6 @@ export default class CommentsList extends Component{
 
 
     renderComments=()=>{
-
-        //console.log(this.context.commentsList)
 
         if(this.context.commentsList){
             
@@ -65,24 +57,8 @@ export default class CommentsList extends Component{
                 commentsItems = comments.map(comment=>{
                 
                     if(!comment.fields.replyingTo){
-                        /*let date = new Date(comment.fields.date)
-                        let dateString = date.toString()
-                        let splitDate = dateString.split(' ')
-                        let month = splitDate[1]
-                        let day = splitDate[2]
-                        let year = splitDate[3]
-                        let fullDate=`${month} ${day}, ${year}`.toUpperCase()*/
                         
                         return (
-                            /*<div key={comment.sys.id}>
-                                <div className='commentItem'>
-                                    <p>{comment.fields.username.toUpperCase()}</p>
-                                    <p>{fullDate}</p>
-                                    <p>{comment.fields.content}</p>
-                                    <button onClick={this.openReply} className='replyButton'>Reply</button>
-                                </div>
-                                <CommentReplyThread replyOpen={this.state.replyOpen} replyingId={comment.sys.id}/>
-                            </div>*/
                             <CommentItem key={comment.sys.id} comment={comment} />
                             
                         )
@@ -114,7 +90,6 @@ export default class CommentsList extends Component{
         CommentsApiService.getAllComments(this.context.currentPost.id)
             .then(res=>{
                 let commentsList = res.items.filter(comment=>
-                    //console.log(this.context.currentPost.sys.id)
                     comment.fields.postId===this.context.currentPost.sys.id
                 )
                 this.context.setCommentsList(commentsList)

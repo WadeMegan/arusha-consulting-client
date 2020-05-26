@@ -44,17 +44,12 @@
     background-color: grey;
 }
 
-/*.dropdown:hover .navLinksDropdown{
-    display: block;
-}*/
-
 .navLinks{
     display:none;
     font-size: 18px;
 }
 
 .indivNavLink{
-    /*color:#FA8006;*/
     color:white;
     font-family: avenir;
     font-size: 18px;

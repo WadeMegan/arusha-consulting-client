@@ -5,9 +5,7 @@ import PostsListContext from '../../contexts/PostsListContext'
 import PostsApiService from '../../services/posts-api-service'
 import NavLinks from '../../components/NavLinks/NavLinks'
 import CommentsList from '../../components/CommentsList/CommentsList'
-import MarkdownView from 'react-showdown';
-//import { GoogleLogin } from 'react-google-login'
-//import { GoogleLogout } from "react-google-login";
+import MarkdownView from 'react-showdown'
 import Error from '../../components/Error/Error'
 
 export default class IndividualPostPage extends Component{
@@ -42,32 +40,16 @@ export default class IndividualPostPage extends Component{
 
             this.context.setCurrentPost(currentPost)
 
-            //console.log(this.context.assetsList)
-
             if(this.context.assetsList){
                 let featuredImg = this.context.assetsList.find(asset=>
                     asset.sys.id === currentPost.fields.featuredImage.sys.id
                 )
                 this.setState({
                     mediaUrl: featuredImg.fields.file.url,
-                    //sponsorImg: sponsorImg.fields.file.url
                 })
             }
             
-
-            /*let sponsorImg
-
-            console.log(currentPost.fields.sponsorImg.sys.id)
-            console.log(this.context.assetsList)
-
-            if(currentPost.fields.sponsorImg){
-                sponsorImg = this.context.assetsList.find(asset=>
-                    asset.sys.id === currentPost.fields.sponsorImg.sys.id
-                )
-            }*/
             
-            
-
         }
         else{
 
@@ -86,28 +68,8 @@ export default class IndividualPostPage extends Component{
             })
             .catch(this.context.setError)
 
-            /*
-            PostsApiService.getPosts()
-                .then(this.context.setCurrentPost)
-                .catch(this.context.setError)*/
         }
 
-
-        /*PostsApiService.getPostById(this.props.match.params.id)
-            .then(res=>{
-                this.context.setCurrentPost(res)
-                
-                PostsApiService.getPostFeaturedImage(res.featured_media)
-                    .then(res=>{
-                        this.setState({
-                            mediaUrl: res.guid.rendered
-                        })
-                    })
-                    .catch()
-            
-            })
-            .catch())*/
-        
     }
 
     componentDidMount=()=>{
@@ -128,14 +90,7 @@ export default class IndividualPostPage extends Component{
                     })
                 })
                 .catch(this.context.setError)
-            /*let featuredImg = this.context.assetsList.find(asset=>
-                asset.sys.id === currentPost.fields.featuredImage.sys.id
-            )
-    
-            this.setState({
-                mediaUrl: featuredImg.fields.file.url
-            })*/
-
+        
         }   
             let style={
                 backgroundImage:`url(${this.state.mediaUrl})`
@@ -145,7 +100,6 @@ export default class IndividualPostPage extends Component{
                  <div className='featuredImgPost' style={style}>
 
                  </div>
-                /*<img src={this.state.mediaUrl} className='featuredImgPost' alt='featured image'></img>*/
              )
  
          }     
@@ -173,26 +127,13 @@ export default class IndividualPostPage extends Component{
         this.context.setCurrentPost([])
     }
 
-    /*createMarkup=()=>{
-        if(this.context.currentPost.content){
-            return {__html: `${this.context.currentPost.content.rendered}`}
-        }
-    }*/
-
     renderContent = () => {
-        //let html = this.createMarkup()
 
         if(this.context.currentPost && this.context.currentPost.fields){
 
-
-            //var converter = new showdown.Converter()
-            //let html = converter.makeHtml(this.context.currentPost.fields.content)
-            //console.log(html)
             return(
                 <div className='contentContainer'>
-                {/*<div>{html}</div>*/}
                 <MarkdownView markdown={this.context.currentPost.fields.content} />
-                {/*<div className='postContent' dangerouslySetInnerHTML={html}/>*/}
                 </div>
             )
         }
@@ -274,42 +215,11 @@ export default class IndividualPostPage extends Component{
         
         if(this.context.currentPost && this.context.currentPost.fields){
             return(
-                <CommentsList /*postId={this.context.currentPost.id}*//>
+                <CommentsList/>
             )
         }
     }
-
-    /*onSignIn=(googleUser)=> {
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-      }*/
-        
-
-      /*responseGoogle = response => {
-          console.log('hi')
-        this.setState({ userDetails: response.profileObj, isUserLoggedIn: true });
-      };
     
-      logout = () => {
-        console.log('goodbye')
-        this.setState({isUserLoggedIn: false})
-      };*/
-
-
-      /*onSignIn=(googleUser)=>{
-        console.log('onSignIn ran')
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-      }*/
-
-    
-
     renderSponsorAnchor=()=>{
         
 
@@ -318,9 +228,6 @@ export default class IndividualPostPage extends Component{
                 <a className='sponsorAnchorLink' target='_blank' rel="noopener noreferrer" href={this.context.currentPost.fields.sponsorLink}>
                     <div className='sponsorAnchor'>
                         {this.renderSponsorImg()}
-
-                        {/*this.renderImage()*/}
-                        {/*<p>{fullDate}</p>*/}
                         <h2>Sponsored By {this.context.currentPost.fields.sponsorName}</h2>
                     </div>    
                 </a>
@@ -329,21 +236,6 @@ export default class IndividualPostPage extends Component{
     }
 
     render(){
-
-        /*if(this.context.currentPost){
-            let content = this.context.currentPost.content
-        } else {
-            let content = null
-        }*/
-        
-        /*function onSignIn(googleUser){
-            console.log('onSignIn ran')
-            var profile = googleUser.getBasicProfile();
-            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-            console.log('Name: ' + profile.getName());
-            console.log('Image URL: ' + profile.getImageUrl());
-            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-          }*/
 
         return(    
             <>

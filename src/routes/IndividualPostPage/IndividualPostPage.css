@@ -23,7 +23,6 @@
     display:flex;
     height:100%;
     font-family: avenir;
-    /*background-color: #F6B277;*/
 }
 
 .sponsorAnchor h2{
@@ -31,7 +30,6 @@
     height:100%;
     display: flex;
     justify-content: center;
-    /*align-items: flex-end;*/
     padding:0px 0px 0px 10px !important;
     font-size:20px;
     text-align: center;
@@ -39,7 +37,6 @@
 
 .sponsorAnchorLink{
     text-decoration: none;
-    /*margin-right:5px;*/
     display:inline-block;
 }
 
@@ -101,26 +98,6 @@
     color:grey;
 }
 
-/*.featuredImgPost{
-    width:100%;
-    margin-top:10px;
-    margin-bottom:10px;
-    max-height:250px;
-    border:1px solid red;
-    height:250px;
-}*/
-
-/*.featuredImgPost{
-    width:100%;
-    margin-top:10px;
-    margin-bottom:10px;
-    height:0;
-    background-size: contain;
-    background-position: 35% 100%;
-    padding-top: 66.64%;
-    background-repeat: no-repeat;
-}*/
-
 .featuredImgPost{
     width:100%;
     margin-top:10px;
@@ -130,7 +107,6 @@
     background-repeat: no-repeat;
     background-position: 50% 100%;
     background-color:#dedede;
-    /*background-color:transparent;*/
 }
 
 /*styling content*/
@@ -138,13 +114,6 @@
 .contentContainer{
     font-family:avenir;
 }
-
-/*.contentContainer h1{
-    font-style: normal;
-    text-align: left;
-    font-size:24px;
-    line-height: 24px;
-}*/
 
 .contentContainer h1{
     font-size: 24px;
@@ -199,31 +168,6 @@ pre code{
 .contentContainer a{
     color:#600060;
 }
-
-/*
-.postContent{
-    font-family: avenir;
-}
-
-.postContent p{
-    margin-bottom:10px;
-    margin-top:10px;
-}
-
-.postContent ul li{
-    margin-left: 2rem;
-
-}
-
-.has-large-font-size{
-    font-size:50px;
-}
-
-.has-text-align-center{
-    text-align: center;
-}*/
-
-/*Media Queries*/
 
 @media(min-width: 480px) {
     .postContentSection{
@@ -281,37 +225,3 @@ pre code{
         height:400px;
     }
 }
-
-/*
-@media(min-width: 900px) {
-    .postContentSection{
-        padding-left:150px;
-        padding-right:150px;
-    }
-}
-
-@media(min-width: 1024px) {
-    .postContentSection{
-        padding-left:200px;
-        padding-right:200px;
-    }
-}
-
-@media(min-width: 1200px) {
-    .postContentSection{
-        padding-left:300px;
-        padding-right:300px;
-    }
-}*/
-
-
-
-/*
-320px
-480px
-600px
-768px
-900px
-1024px
-1200px
-*/

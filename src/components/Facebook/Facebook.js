@@ -10,36 +10,16 @@ export default class Facebook extends Component{
 
     static contextType = PostsListContext
 
-    componentClicked=ev=>{
-       
-    }
-
     responseFacebook=(response)=>{
 
-        /*this.setState({
-            isLoggedIn: true,
-            userId: response.userID,
-            name: response.name,
-            email:response.email,
-            picture: response.picture.data.url
-        })*/
         if(!response.name){
             console.log('error')
         }else{
-            //console.log(response)
-            //this.context.setUserLoggedIn()
-            /*this.context.setUsersName(response.name)
-            this.context.setUsersProfileImg(response.picture.data.url)
-            this.context.setUsersEmail(response.email)
-            this.context.setUsersId(response.id)*/
-
             UsersService.saveName(response.name)
             UsersService.saveProfileImg(response.picture.data.url)
             UsersService.saveEmail(response.email)
             UsersService.saveUserId(response.id)
             this.props.onSuccess()
-            //this.props.handleSignin()
-
         }
         
     }
@@ -55,17 +35,7 @@ export default class Facebook extends Component{
                 </div>
             )
         } else {
-            fbContent = /*(<FacebookLogin
-                appId="285368999287154"
-                icon={<i class="fab fa-facebook fa-2x"></i>}
-                textButton = ""
-                cssClass="facebookButton"
-                autoLoad={true}
-                fields="name,email,picture"
-                onClick={this.componentClicked}
-                callback={this.responseFacebook}
-                //icon="fa-facebook"
-                />)*/
+            fbContent = 
                ( <FacebookLogin socialId="285368999287154"
                        language="en_US"
                        scope="public_profile,email"

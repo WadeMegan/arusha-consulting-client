@@ -10,22 +10,7 @@ export default class CommentReplyThread extends Component{
     
     static contextType = PostsListContext
 
-    /*componentWillMount() {
-
-       CommentsApiService.getAllComments(this.context.currentPost.id)
-            .then(res=>{
-                let commentsList = res.items.filter(comment=>
-                    comment.fields.postId===this.context.currentPost.sys.id
-                )
-                this.context.setCommentsList(commentsList)
-            })
-            .catch()
-        
-    }*/
-
     renderReplies=()=>{
-
-        //console.log(this.context.commentsList)
         
         let replyItems = this.context.commentsList.map(comment=>{
                 
@@ -43,18 +28,7 @@ export default class CommentReplyThread extends Component{
                 return (
                     
                     <CommentItem comment={comment} key={comment.sys.id}/>
-
-                    /*<div className='commentItem'>
-                        <p>{comment.fields.username.toUpperCase()}<span> • {fullDate}</span></p>
-                        <p>{comment.fields.content}</p>
-                        <div className='commentInteractionBox'>
-                            <em>1 Like</em>
-                            <p>•</p>
-                            <i class="fas fa-thumbs-up"></i>
-                        </div>
-                    </div>    */
                     
-
                 )
             }
         })
@@ -81,7 +55,6 @@ export default class CommentReplyThread extends Component{
         CommentsApiService.getAllComments(this.context.currentPost.id)
             .then(res=>{
                 let commentsList = res.items.filter(comment=>
-                    //console.log(this.context.currentPost.sys.id)
                     comment.fields.postId===this.context.currentPost.sys.id
                 )
                 this.context.setCommentsList(commentsList)

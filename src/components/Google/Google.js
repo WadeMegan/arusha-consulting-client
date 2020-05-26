@@ -18,19 +18,7 @@ export default class Google extends Component{
     }
 
     responseGoogle=(response)=>{
-        /*this.setState({
-            isLoggedIn: true,
-            userId: response.profileObj.googleId,
-            name: response.profileObj.name,
-            email:response.profileObj.email,
-            picture: response.profileObj.imageUrl
-        })*/
 
-        /*this.context.setUserLoggedIn()
-        this.context.setUsersName(response.profileObj.name)
-        this.context.setUsersProfileImg(response.profileObj.imageUrl)
-        this.context.setUsersEmail(response.profileObj.email)
-        this.context.setUsersId(response.profileObj.googleId)*/
         UsersService.saveName(response.profileObj.name)
         UsersService.saveProfileImg(response.profileObj.imageUrl)
         UsersService.saveEmail(response.profileObj.email)
@@ -62,16 +50,6 @@ export default class Google extends Component{
                 cookiePolicy={'single_host_origin'}
                 
               /> )
-            
-            /*(<GoogleLogin
-                className='googleButton'
-                clientId="376742085814-of2ob321fhiprllfiephu05cm3s1qram.apps.googleusercontent.com"
-                buttonText="LOGIN WITH GOOGLE"
-                onSuccess={this.responseGoogle}
-                onFailure={this.responseGoogle}
-                cookiePolicy={'single_host_origin'}
-                
-              /> )*/
 
         }
 

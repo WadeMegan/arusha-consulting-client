@@ -122,7 +122,6 @@
 }
 
 .aboutFairground h2{
-    /*font-family: 'Playfair Display', serif;*/
     font-family: hightower;
     margin-bottom:20px;
     font-size: 35px;
@@ -189,20 +188,16 @@
 }
 
 .aboutFairground button:hover{
-    /*background-color:#2d5caf;*/
     opacity:1;
 }
 
 .resourcesSection{
-    /*background-color: #2d2c2d;*/
-    /*background-color: #31363b;*/
     background-color:#8E8E8E;
     color: white;
     padding:35px;
 }
 
 .resourcesSection h2{
-    /*font-family: 'Playfair Display', serif;*/
     font-family: brushwell;
     margin-bottom:20px;
     font-size: 34px;
@@ -213,14 +208,6 @@
     font-family: 'Open Sans', sans-serif;
     margin-bottom:35px;
 }
-
-/*footer{
-    padding:35px;
-    background-color: #feffef;
-    font-family: avenir;
-    border-top:15px solid #ff914d;
-
-}*/
 
 footer h3{
     font-size:16px;
@@ -236,12 +223,6 @@ footer a{
     color:#600060;
 }
 
-@media(min-width: 400px) {
-    /*.title h1 p{
-        right:-160px;
-    }*/
-}
-
 @media(min-width: 600px) {
     .title h1{
         margin-left:auto;
@@ -254,18 +235,7 @@ footer a{
     .title h2{
         font-size: 30px;
         line-height: 30px;
-        /*margin-top:20px;*/
     }
-    /*.heroImage{
-        z-index:2;
-        background: url('../../images/fairground.jpg') no-repeat;
-        background-position: bottom 100%;
-        background-size: cover;
-        position:absolute;
-        width:100%;
-        height:100%;
-        background-color: white;
-    }*/
 }
 
 @media(min-width: 768px) {
@@ -282,16 +252,3 @@ footer a{
 }
 
 
-
-
-
-
-/*
-320px
-480px
-600px
-768px
-900px
-1024px
-1200px
-*/

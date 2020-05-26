@@ -80,24 +80,12 @@ export default class CommentItem extends Component{
 
     renderLikeButtons=()=>{
         if(this.context.currentLikesList){
-            /*console.log('RenderLikeButtons RAN')
-
-            let isCorrectComment = this.context.currentLikesList.find(like=>like.comment_id==this.props.comment.sys.id)
-            console.log(isCorrectComment)*/
-
-            /*let didUserLike =[]
-            if(isCorrectComment && isCorrectComment.length!==0){
-                didUserLike = isCorrectComment.find(like=>like.user_id==this.context.usersId)
-            }
-            */
-
-            //console.log(didUserLike)
 
             let didUserLike = this.context.currentLikesList.filter(like=>like.user_id==UsersService.getUserId() && like.comment_id==this.props.comment.sys.id)
 
     
             if(UsersService.getName()){
-                //comment is liked by user
+        
                 if(didUserLike.length!==0){
                     return(
                         <CommentUnlikeButton comment={this.props.comment} handleLikeButtonClicked={this.handleLikeButtonClicked}/>

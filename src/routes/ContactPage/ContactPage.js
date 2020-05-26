@@ -29,7 +29,6 @@ export default class ContactPage extends Component{
                <p className='phoneContactInfo'>c: <a href="tel:773-991-1194">773.991.1194</a></p>
                <p className='phoneContactInfo'>e: <a href={"mailto:Heather@arushainc"}> heather@arushainc.com</a></p>
 
-               {/*<p className='compContactInfo'>p: 872.239.8839 | c: 773.991.1194 | e: heather@arushainc.com</p>*/}
                <div>
                    <a target='_blank' rel="noopener noreferrer" href="https://www.facebook.com/arushaconsulting"><img className='contactSocial' src={facebookLogo} alt='facebook logo'/></a>
 
@@ -40,32 +39,6 @@ export default class ContactPage extends Component{
                    <a target='_blank' rel="noopener noreferrer" href="https://www.linkedin.com/company/arusha-consulting-inc"><img className='contactSocial' src={linkedInLogo} alt='linkedin logo'/></a>
 
                </div>
-
-
-
-
-                {/*<a className='unsubscribeButton' target='_blank' rel="noopener noreferrer" href='https://arushainc.us18.list-manage.com/unsubscribe?u=f5a80641987afaa0a68101adf&id=084100a8da'>Unsubscribe</a>*/}
-
-
-
-{/*<div id="mc_embed_signup">
-    <form action="https://arushainc.us18.list-manage.com/subscribe/post?u=f5a80641987afaa0a68101adf&amp;id=084100a8da" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-            <label for="mce-EMAIL">Join Email List</label>
-            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required/>
-        </div>
-        
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f5a80641987afaa0a68101adf_084100a8da" tabindex="-1" value=""/>
-
-        </div>
-        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"/>
-        </div>
-    </form>
-        </div>*/}
-
-
-
-
 
             </section>   
             <footer className='aboutPageFooter'>

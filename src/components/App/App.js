@@ -27,7 +27,6 @@ class App extends Component {
               <Route path={'/about'} component={AboutPage}/>
               <Route path={'/contact'} component={ContactPage}/>
               <Route path={'/privacy-policy'} component={PrivacyPolicyPage}/>
-              {/*<Route path={"*"} component={FairgroundAssetsPage} />*/}
             </Switch>
         </main>    
         </>  

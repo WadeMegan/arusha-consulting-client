@@ -1,15 +1,9 @@
 import React, { Component } from 'react'
 import './AboutPage.css'
 import { Link } from 'react-router-dom'
-//import PostsApiService from '../../services/posts-api-service'
-//import PostsList from '../../components/PostsList/PostsList'
-//import NavLinks from '../../components/NavLinks/NavLinks'
 import heatherHeadshot from '../../images/heatherHeadshot.png'
-//import arushaMeetHeatherLogo from '../../images/arushaMeetHeatherLogo.jpg'
-//import NavBar from '../../components/NavBar/NavBar'
 import friendsOfPrenticeLogo from '../../images/friendsOfPrentice.png'
 import grouponLogo from '../../images/groupon.png'
-//import loyolaLogo from '../../images/loyola.png'
 import macLogo from '../../images/mac.png'
 import westsideJusticeCenterLogo from '../../images/westsideJusticeCenter.png'
 import { Slide } from 'react-slideshow-image';
@@ -35,7 +29,7 @@ export default class AboutPage extends Component{
             arrows: true, //change to true if want arrows
             pauseOnHover: true,
             onChange: (oldIndex, newIndex) => {
-              //console.log(`slide transition from ${oldIndex} to ${newIndex}`);
+              
             }
           }
 
@@ -63,7 +57,6 @@ export default class AboutPage extends Component{
                     <div>
                         <img src={friendsOfPrenticeLogo} alt='friends of prentice logo'/>
                         <img src={grouponLogo} alt='groupon logo'/>
-                        {/*<img src={loyolaLogo}/>*/}
                         <img src={macLogo} alt='mac logo'/>
                         <img src={westsideJusticeCenterLogo} alt='westside justice center logo'/>
                     </div>

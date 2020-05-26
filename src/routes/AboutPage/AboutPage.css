@@ -24,68 +24,6 @@
     background: #600060 !important;
 }
 
-
-
-/*.slide-container {
-    width: 70%;
-    margin: auto; }
-  
-  h3 {
-    text-align: center; }*/
-  
-  /*.each-slide > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    height: 300px;
-  }*/
-  /*
-  .each-slide span {
-    padding: 20px;
-    font-size: 20px;
-    background: black;
-    text-align: center;
-  }
-  
-  .each-fade {
-    display: flex;
-  }
-  
-  .each-fade .image-container {
-    width: 75%;
-    overflow: hidden;
-  }
-  
-  .each-fade .image-container img {
-    width: 100%;
-  }
-  
-  .each-fade h2 {
-    width: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    background: #adceed;
-  }
-*/
-/*
-.each-slide span {
-    padding: 20px;
-    font-size: 20px;
-    background: black;
-    text-align: center;
-    color:black;
-  }*/
-
-
-
-/*.react-slideshow-container .nav{
-    color:black;
-    background-color: black;
-}*/
-
 .each-slide{
     width:80%;
     margin-left:10%;
@@ -96,10 +34,7 @@
     width:100%;
 }
 
-
-
 .clientsContainer{
-    /*background-color: #feffef;*/
     border-top:15px solid #600060;
     border-bottom:15px solid #600060;
     background-color:#feffef;
@@ -141,13 +76,8 @@
     color:#ff914d;
 }
 
-
-
 .boldAboutParagraph{
     height:200px;
-    /*background: url('../../images/brushstrokes.png') no-repeat;
-    background-position: 50% 50%;
-    background-size: 85%;*/
     text-align: center;
     position:relative;
     margin-top:20px;
@@ -156,15 +86,6 @@
 .boldAboutParagraph div{
     padding-top:0px !important;
     font-weight:900;
-    /*font-weight:900;
-    padding-top:0px !important;
-    position:absolute;
-    top:0;
-    text-align: left !important;
-    border:1px solid green;*/
-    /*position:absolute;
-    top:0;
-    display:inline-block;*/
     display:flex;
     justify-content: center;
     align-items: center;
@@ -217,10 +138,6 @@
 .meetHeather .computerView .rightP{
     padding-left:35px;
 }
-
-/*.meetHeather .computerView .row p{
-    padding-top:30px;
-}*/
 
 .meetHeather .computerView .firstRow .leftColumn{
     width:50%;
@@ -288,8 +205,6 @@
     .meetHeather .computerView{
         display:flex;
         flex-direction: column;
-        /*padding-left:25px;
-        padding-right:25px;*/
         width:650px;
         margin-left:auto;
         margin-right:auto;
@@ -317,13 +232,3 @@
         margin-right:15px;
     }
 }
-
-/*
-320px
-480px
-600px
-768px
-900px
-1024px
-1200px
-*/

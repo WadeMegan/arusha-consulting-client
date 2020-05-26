@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import './BlogPage.css'
 import { Link } from 'react-router-dom'
-//import PostsApiService from '../../services/posts-api-service'
 import PostsList from '../../components/PostsList/PostsList'
-//import NavLinks from '../../components/NavLinks/NavLinks'
-//import fairgroundBanner from '../../images/fairgroundBanner.png'
 
 export default class BlogPage extends Component{
     componentWillMount(){
@@ -17,8 +14,6 @@ export default class BlogPage extends Component{
             <div className='fairgroundBannerContainer' name='blogPage'>
                 
                 <div className='fairgroundBannerImgBox'></div>
-
-                {/*<img className='fairgroundBannerImg' src={fairgroundBanner}></img>*/}
 
             </div>
             <section className='postsListSection'>

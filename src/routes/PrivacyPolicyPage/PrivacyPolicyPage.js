@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom'
 
 export default class PrivacyPolicyPage extends Component{    
 
-    //static contextType = PostsListContext
-
     componentWillMount(){
         window.scrollTo(0, 0)
     }

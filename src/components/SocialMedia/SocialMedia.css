@@ -1,19 +1,12 @@
 .socialBar {
     position: fixed;
-    /*top:50%;
-    right:0;*/
     bottom:0px;
     right:0px;
-    /*-webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);*/
     color:black;
     z-index: 10;
-    
     display:flex;
   }
   
-  /* Style the icon bar links */
   .socialBar a {
     display: block;
     text-align: center;
@@ -27,8 +20,7 @@
     align-items: center;
     text-decoration: none;
   }
-  
-  /* Style the social media icons with color, if you want */
+
   .socialBar a:hover {
     background-color: #000;
   }

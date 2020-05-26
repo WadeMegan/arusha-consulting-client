@@ -1,13 +1,3 @@
-/*.heroImageNav{
-    z-index:2;
-    background: url('../../images/blogHero.jpg') no-repeat bottom center;
-    background-size: cover;
-    position:absolute;
-    width:100%;
-    height:100%;
-    background-color: white;
-}*/
-
 .postsListSection h1{
     padding:0px;
     margin-top:0px;
@@ -30,7 +20,6 @@
     background: url('../../images/fairgroundBanner.png') no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    /*background-image: linear-gradient(to right, #6E274E , #430146);*/
 }
 
 .fairgroundBannerImg{
@@ -54,15 +43,6 @@
     background-image: linear-gradient(to right, #6E274E , #430146);
 }
 
-/*@media(min-width: 600px) {
-    .fairgroundBannerImg{
-        width:80%;
-        padding-left:10%;
-        padding-right:10%;
-        background-color: transparent;
-    }
-}*/
-
 @media(min-width: 768px) {
     .fairgroundBannerContainer{
         height:350px;
@@ -73,16 +53,6 @@
         background: url('../../images/fairgroundBanner.png') no-repeat;
         background-position: 50% 50%;
         background-size: auto 100%;
-        /*background-image: linear-gradient(to right, #6E274E , #430146);*/
     }
 }
 
-/*@media(min-width: 1100px) {
-    .fairgroundBannerImgBox{
-        height:100%;
-        padding:0px;
-        background: url('../../images/fairgroundBanner.png') no-repeat;
-        background-position: 50% 50%;
-        background-size: auto 100%;
-    }
-}*/
