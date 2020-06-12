@@ -23,7 +23,8 @@
     "react-scripts": "3.4.1",
     "react-scroll": "^1.7.16",
     "react-showdown": "^2.0.3",
-    "react-slideshow-image": "^1.4.2"
+    "react-slideshow-image": "^1.4.2",
+    "websocket-extensions": "^0.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
