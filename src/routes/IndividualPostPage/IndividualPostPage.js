@@ -129,6 +129,7 @@ export default class IndividualPostPage extends Component{
 
     renderContent = () => {
 
+        //any links not pointing to arushainc.com will open new tab
         let links=document.links
 
         for (var i = 0, linksLength = links.length; i < linksLength; i++) {

@@ -209,6 +209,19 @@
     margin-bottom:35px;
 }
 
+.howToUseBox h4{
+    font-family: hightower;
+    font-size:20px;
+}
+
+.howToUseBox .video{
+    margin-top:10px;
+    margin-bottom:20px;
+    outline:none;
+    width:100%;
+    height:200px;
+}
+
 footer h3{
     font-size:16px;
     margin-bottom:20px;
@@ -238,6 +251,19 @@ footer a{
     }
 }
 
+@media(min-width: 650px) {
+    .videoContainer{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    .howToUseBox .video{
+        width:560px;
+        height:315px;
+    }
+}
+
 @media(min-width: 768px) {
     .heroBanner{
         height:350px;
@@ -245,9 +271,20 @@ footer a{
     
 }
 
+
+
 @media(min-width: 1000px) {
     .heroImage{
         background-position: 35% 70%;
+    }
+    .howToUseBox h4{
+        text-align: center;
+    }
+    .howToUseBox .video{
+        /*width:60%;
+        margin-left:20%;
+        margin-right:20%;*/
+        outline:none;
     }
 }
 

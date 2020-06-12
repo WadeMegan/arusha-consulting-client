@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './FairgroundAssetsPage.css'
 import {Link as LinkRouter} from 'react-router-dom'
 import { Link } from 'react-scroll'
-
+import heatherHeadshot from '../../images/heatherHeadshot.png'
 
 export default class FairgroundAssetsPage extends Component{
 
@@ -50,6 +50,11 @@ export default class FairgroundAssetsPage extends Component{
                 <p>Jump right in by using the table below or find out more about Fairground Assets and the Fairground community by clicking these links.</p>
                 <ul>
                     <li className="assetNavItem" >
+                    <Link to="howToUseBox" spy={true} smooth={true} offset={-60} duration={500} onSetActive={this.handleSetActive}>
+                    How Do I Use Fairground Assets?
+                    </Link> 
+                    </li>
+                    <li className="assetNavItem" >
                     <Link to="whyImportantBox" spy={true} smooth={true} offset={-60} duration={500} onSetActive={this.handleSetActive}>
                     Why is Fairground Assets Important?
                     </Link> 
@@ -67,6 +72,27 @@ export default class FairgroundAssetsPage extends Component{
                 </ul>
                 <div className="airtableContainer">
                     <iframe title='assets table' className="airtable-embed" src="https://airtable.com/embed/shruUGrq2VMRvuu5P?backgroundColor=blue&viewControls=on" frameBorder="0" width="100%" height="533"></iframe>
+                </div>
+                <div name='howToUseBox' className='howToUseBox'>
+                    <h3>How Do I Use Fairground Assets?</h3>
+                    
+                    <div className='videoContainer'>
+                        <h4>Navigating Fairground Assets</h4>
+                        <iframe className='video' src="https://www.youtube.com/embed/0bQwJorNgmE?rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        <h4>Submitting an Asset or a Tag</h4>
+                        <iframe className='video' src="https://www.youtube.com/embed/JkBskv_t1eI?rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </div>
+
+                    {/*<iframe width="420" height="315"
+                    src="https://youtube.com/embed/sVGimBeGoM0">
+                    </iframe>
+                    <Player
+                        playsInline
+                        poster={heatherHeadshot}
+                        src="https://youtube.com/embed/sVGimBeGoM0"
+        />*/}
                 </div>
                 <div name='whyImportantBox'>
                     <h3>Why is Fairground Assets Important?</h3>
