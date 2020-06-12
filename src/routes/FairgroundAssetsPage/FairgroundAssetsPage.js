@@ -78,10 +78,10 @@ export default class FairgroundAssetsPage extends Component{
                     
                     <div className='videoContainer'>
                         <h4>Navigating Fairground Assets</h4>
-                        <iframe className='video' src="https://www.youtube.com/embed/0bQwJorNgmE?rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe className='video' src="https://www.youtube.com/embed/0bQwJorNgmE?rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
                         <h4>Submitting an Asset or a Tag</h4>
-                        <iframe className='video' src="https://www.youtube.com/embed/JkBskv_t1eI?rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe className='video' src="https://www.youtube.com/embed/JkBskv_t1eI?rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
                     </div>
 
