@@ -102,7 +102,6 @@
     width:100%;
     margin-top:10px;
     margin-bottom:10px;
-    height:200px;
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: 50% 100%;
@@ -188,9 +187,6 @@ pre code{
     .sponsorAnchor h2{
         padding:10px 0px 0px 0px !important;
     }
-    .featuredImgPost{
-        height:300px;
-    }
 }
 
 /*switch to anchor on the left*/
@@ -220,8 +216,5 @@ pre code{
     }
     .sponsorAnchorImg{
         width:100%;
-    }
-    .featuredImgPost{
-        height:400px;
     }
 }

@@ -7,6 +7,7 @@ import NavLinks from '../../components/NavLinks/NavLinks'
 import CommentsList from '../../components/CommentsList/CommentsList'
 import MarkdownView from 'react-showdown'
 import Error from '../../components/Error/Error'
+import $ from 'jquery'
 
 export default class IndividualPostPage extends Component{
 
@@ -91,7 +92,17 @@ export default class IndividualPostPage extends Component{
                 })
                 .catch(this.context.setError)
         
-        }   
+        }  
+
+        //jquery used to make height of .featuredImgPost exactly 1/2 of width to accomodate 2:1 images
+        var width = $(".featuredImgPost").width();
+        $(".featuredImgPost").height(width * 0.5);
+
+        $(window).resize(function () {
+            var width = $(".featuredImgPost").width();
+            $(".featuredImgPost").height(width * 0.5);
+        });
+
             let style={
                 backgroundImage:`url(${this.state.mediaUrl})`
             }
