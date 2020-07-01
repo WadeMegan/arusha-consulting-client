@@ -150,7 +150,7 @@ export default class IndividualPostPage extends Component{
          }
 
         if(this.context.currentPost && this.context.currentPost.fields){
-
+            //console.log(this.context.currentPost.fields.content)
             return(
                 <div className='contentContainer'>
                 <MarkdownView markdown={this.context.currentPost.fields.content} />

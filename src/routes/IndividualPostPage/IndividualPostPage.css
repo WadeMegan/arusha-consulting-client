@@ -1,3 +1,8 @@
+hr{
+    margin-top:15px;
+    border-top:1px solid black;
+}
+
 .individualPostPageSection{
     padding-top:50px;
     background-color: #feffef;

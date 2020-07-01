@@ -11,7 +11,6 @@ import testimonial1 from '../../images/testimonial1.png'
 import testimonial2 from '../../images/testimonial2.png'
 import brushstrokes from '../../images/brushstrokes.png'
 
-
 export default class AboutPage extends Component{
 
     componentWillMount(){
