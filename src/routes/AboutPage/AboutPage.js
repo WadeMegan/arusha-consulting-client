@@ -10,6 +10,8 @@ import { Slide } from 'react-slideshow-image';
 import testimonial1 from '../../images/testimonial1.png'
 import testimonial2 from '../../images/testimonial2.png'
 import brushstrokes from '../../images/brushstrokes.png'
+import coachingLogo1 from '../../images/coachingLogo1.png'
+import coachingLogo2 from '../../images/coachingLogo2.png'
 
 export default class AboutPage extends Component{
 
@@ -103,9 +105,13 @@ export default class AboutPage extends Component{
                         </div>
                         <div className='thirdRow row'>
                             <p className='leftP'>A graduate of Georgetown University, Heather received a Master of Science degree in Public Service Management from DePaul University. For nearly a decade, she taught human resources management as an adjunct instructor for DePaul University’s Graduate School of Public Service Management and All Hallows College in Dublin, Ireland.</p>
-                            <p className='rightP'>Heather is a Gold Status Tiara International Certified Coach and just days away from becoming a Certified Diversity Coach through Coach Diversity Institute. She is currently pursuing the International Coaching Federation’s Professional Coaching Certification.</p>
+                            <p className='rightP'>Heather is a Gold Status Tiara International Certified Coach and a Certified Diversity Coach through Coach Diversity Institute. She is currently pursuing the International Coaching Federation’s Professional Coaching Certification.</p>
                         </div>
                     </div>
+                </div>
+                <div className='coachingLogosBox'>
+                    <img className='coachingLogo1' src={coachingLogo1} alt='heather headshot'/>
+                    <img className='coachingLogo2' src={coachingLogo2} alt='heather headshot'/>
                 </div>
                 
             </section>

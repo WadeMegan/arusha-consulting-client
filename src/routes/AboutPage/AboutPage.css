@@ -167,6 +167,24 @@
     background-color:#feffef;
 }
 
+.coachingLogosBox{
+    width:100%;
+    padding-left:35px;
+    padding-right:35px;
+    padding-bottom:35px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coachingLogo1{
+    height:175px;
+}
+
+.coachingLogo2{
+    width:100%;
+}
+
 @media(min-width: 500px) {
     .meetHeather .phoneView img{
         width:60%;
@@ -215,6 +233,10 @@
         margin-bottom:20px;
         margin-left:15px;
         margin-right:15px;
+    }
+    .coachingLogo2{
+        width:auto;
+        height:120px;
     }
 }
 
