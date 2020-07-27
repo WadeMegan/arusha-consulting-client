@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './HomePage.css'
 import { Link } from 'react-router-dom'
-import arushaMeetHeatherLogo from '../../images/arushaMeetHeatherLogo.jpg'
+import arushaBanner from '../../images/arushaBanner.png'
 
 
 export default class HomePage extends Component{
@@ -15,7 +15,7 @@ export default class HomePage extends Component{
             <>
     
             <section className='homePageSection'>
-                <img className='homePageImage' src={arushaMeetHeatherLogo} alt='Arusha Logo'/>
+                <img className='homePageImage' src={arushaBanner} alt='Arusha Logo'/>
                 <p>Arusha Consulting is a boutique consulting and coaching firm dedicated to inspiring awareness and igniting action for the greatest good. On the consulting side, we focus on leadership, people management, and diversity and inclusion. On the coaching side, we specialize in helping people gain clarity about their values, strengths, desires, resources, relationships, fears, and obstacles to help them pursue their best lives.</p>
                 <p>Our ability to help individuals explore their own relationship to issues of diversity, inclusion, and equity helps distinguish us from other consulting/coaching groups.</p>
             </section>

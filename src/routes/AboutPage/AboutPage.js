@@ -9,6 +9,10 @@ import westsideJusticeCenterLogo from '../../images/westsideJusticeCenter.png'
 import { Slide } from 'react-slideshow-image';
 import testimonial1 from '../../images/testimonial1.png'
 import testimonial2 from '../../images/testimonial2.png'
+import testimonial3 from '../../images/testimonial3.png'
+import testimonial4 from '../../images/testimonial4.png'
+import testimonial5 from '../../images/testimonial5.png'
+import testimonial6 from '../../images/testimonial6.png'
 import brushstrokes from '../../images/brushstrokes.png'
 import coachingLogo1 from '../../images/coachingLogo1.png'
 import coachingLogo2 from '../../images/coachingLogo2.png'
@@ -48,6 +52,18 @@ export default class AboutPage extends Component{
                         </div>
                         <div className="each-slide">
                             <img src={testimonial2} alt='testimonial 2'/>
+                        </div>
+                        <div className="each-slide">
+                            <img src={testimonial3} alt='testimonial 3'/>
+                        </div>
+                        <div className="each-slide">
+                            <img src={testimonial4} alt='testimonial 4'/>
+                        </div>
+                        <div className="each-slide">
+                            <img src={testimonial5} alt='testimonial 5'/>
+                        </div>
+                        <div className="each-slide">
+                            <img src={testimonial6} alt='testimonial 6'/>
                         </div>
                         </Slide>
                     </div>

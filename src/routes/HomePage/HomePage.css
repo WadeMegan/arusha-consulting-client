@@ -21,7 +21,11 @@
 }
 
 .homePageImage{
-    width:100%;
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+    margin-top:20px;
+    margin-bottom:20px;
 }
 
 footer{
@@ -54,9 +58,9 @@ footer .copyrightContainer a{
 
 @media(min-width: 768px) {
     .homePageImage{
-        width:70%;
-        margin-left:15%;
-        margin-right:15%;
+        width:50%;
+        margin-left:25%;
+        margin-right:25%;
     }
     .homePageSection h1,.homePageSection p{
         width:60%;
