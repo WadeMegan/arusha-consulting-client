@@ -10,6 +10,7 @@ import NavBar from '../NavBar/NavBar'
 import ContactPage from '../../routes/ContactPage/ContactPage'
 import HomePage from '../../routes/HomePage/HomePage'
 import PrivacyPolicyPage from '../../routes/PrivacyPolicyPage/PrivacyPolicyPage'
+import GsCoachesPage from '../../routes/GsCoachesPage/GsCoachesPage'
 
 class App extends Component {
   render(){
@@ -27,6 +28,8 @@ class App extends Component {
               <Route path={'/about'} component={AboutPage}/>
               <Route path={'/contact'} component={ContactPage}/>
               <Route path={'/privacy-policy'} component={PrivacyPolicyPage}/>
+              <Route path={'/privacy-policy'} component={PrivacyPolicyPage}/>
+              <Route path={'/GSCoaches'} component={GsCoachesPage}/>
             </Switch>
         </main>    
         </>  

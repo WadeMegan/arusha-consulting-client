@@ -1,0 +1,85 @@
+.gsCoachesSection {
+    padding-top: 25px;
+    font-family: avenir;
+}
+
+.gsCoachesSection p {
+    padding-bottom: 15px;
+}
+
+.gsCoachesSection a {
+    color: #600060;
+}
+
+.introContainer {
+    padding: 25px;
+}
+
+.linkContainer {
+    padding: 0px 25px 25px 25px;
+}
+
+.linkContainer h2 {
+    padding-bottom: 15px;
+}
+
+.linkContainer a {
+    cursor: pointer;
+}
+
+.linkContainer img {
+    margin-right: 10px;
+}
+
+.linkedHeadshots {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 20px solid #d1bbcd;
+}
+
+.profileContainer {
+    background-color:#ff914d;
+    padding: 25px;
+    border-bottom: 15px solid #feffef;
+}
+
+.profileContainer:last-of-type {
+    border-bottom: 0px;
+}
+
+.profileContainer h2 {
+    padding-bottom: 15px;
+    color: white;
+}
+
+.testimonialContainer {
+    color: white;
+}
+
+.footer {
+    border: 0;
+    padding: 25px;
+}
+
+.footer p {
+    font-size: 16px !important;
+}
+
+.footer a {
+    font-size: 16px !important;
+}
+
+@media(min-width: 800px) {
+    .profileContainer {
+        display: flex;
+    }
+    .linkedHeadshots {
+        height: 200px;
+        width: 200px;
+        border: 25px solid #d1bbcd;
+    }
+    .profileContainer img{
+        margin-right: 40px;
+    }
+}
