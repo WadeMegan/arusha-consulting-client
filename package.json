@@ -8,10 +8,6 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.1",
-<<<<<<< HEAD
-=======
-    "babel-loader": "^8.2.2",
->>>>>>> db5e60542c9e3d691a3040ed70b4080e95517010
     "contentful": "^7.14.3",
     "jquery": "^3.5.1",
     "react": "^16.14.0",
