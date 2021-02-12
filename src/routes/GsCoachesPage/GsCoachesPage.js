@@ -49,8 +49,8 @@ export default class GSCoachesPage extends Component{
                                 <p>Her grasp of the coach approach to inclusion, its potency and the nuances involved in delivering the best possible coaching interactions ensure that clients interested in transformational coaching will find success with her....</p>
                                 <p>With an entire academic and professional career dedicated to equity and social justice, I believe that Heather’s role as a certified diversity coach is having the deepest and most wide-spread impact. We are proud to have her in the CoachDiversity family."</p>
                                 <p>- Dr. Towanna Burrrous, Founder & President, CoachDiversity Institute</p>
-                                <p>Availability: 9:00am-9:00pm Mon-Fri</p>
                             </div>
+                            <p>Availability: 9:00am-9:00pm Mon-Fri</p>
                         </div>
                     </div>
                     <div name='victorProfile' className='profileContainer'>
@@ -62,8 +62,8 @@ export default class GSCoachesPage extends Component{
                             <div className='testimonialContainer'>
                                 <p>“I completely endorse the coaching that I received from Victor Ruiz. The sessions have helped me to understand and identify opportunities to change my perspective, to tap into my strengths to create a vision for my success, and to develop tactical plans to take action steps to accomplish my goals. Victor facilitates our sessions with encouragement and thought provoking questions to help me to strategize for my own journey. He does not direct or control the conversation, and creates a safe and comfortable environment, allowing me to be candid and transparent about myself.”</p>
                                 <p>- Stacey M.</p>
-                                <p>Availability: 8:00 am to 8 pm Mon-Fri</p>
                             </div>
+                            <p>Availability: 8:00 am to 8 pm Mon-Fri</p>
                         </div>
                     </div>
                     <div name='amaraProfile' className='profileContainer'>
@@ -82,8 +82,8 @@ export default class GSCoachesPage extends Component{
                                 <p>I especially appreciate Amara's passion for equity. Maintaining the highest standards of fairness, justice, and inclusiveness are so at her core that they resonate organically and without tension.</p>
                                 <p>The world would be a far better place if everyone had Amara to accompany them."</p>
                                 <p>- Consulting Firm Founder</p>
-                                <p>Availability: 8:00-9:00am, 1:00-3:30pm, 7:30-9:30pm Mon-Fri</p>
                             </div>
+                            <p>Availability: 8:00-9:00am, 1:00-3:30pm, 7:30-9:30pm Mon-Fri</p>
                         </div>
                     </div>
                 </div>
