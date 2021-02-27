@@ -8,6 +8,7 @@ import CommentsList from '../../components/CommentsList/CommentsList'
 import MarkdownView from 'react-showdown'
 import Error from '../../components/Error/Error'
 import $ from 'jquery'
+let marked = require("marked");
 
 export default class IndividualPostPage extends Component{
 
@@ -56,7 +57,7 @@ export default class IndividualPostPage extends Component{
 
             PostsApiService.getPosts()
             .then(res=>{ 
-
+                
                 this.context.setPostsList(res.items)
 
                 let currentPost = res.items.find(post=>
@@ -150,10 +151,9 @@ export default class IndividualPostPage extends Component{
          }
 
         if(this.context.currentPost && this.context.currentPost.fields){
-            //console.log(this.context.currentPost.fields.content)
             return(
-                <div className='contentContainer'>
-                <MarkdownView markdown={this.context.currentPost.fields.content} />
+                <div className='contentContainer' 
+                    dangerouslySetInnerHTML={{__html: marked(this.context.currentPost.fields.content),}}>
                 </div>
             )
         }

@@ -27,9 +27,9 @@ export default class CommentItem extends Component{
     componentWillMount(){
 
     
-
+        console.log(this.context.currentPost.sys)
         if(this.context.currentPost.sys){        
-        CommentsApiService.getLikesByPostId(this.context.currentPost.sys.id)
+        CommentsApiService.getLikesByPostId(this.context.currentPost.id)
             .then(res=>{
                 this.context.setCurrentLikesList(res)
             })
@@ -73,7 +73,7 @@ export default class CommentItem extends Component{
             return(
                 <>
                 <button onClick={this.openReply} className='replyButton'>Reply</button>
-                <p>•</p>
+                {/* <p>•</p> */}
                 </>
             )
         }
@@ -81,7 +81,7 @@ export default class CommentItem extends Component{
 
     renderLikeButtons=()=>{
         if(this.context.currentLikesList){
-
+            console.log('hello')
             let didUserLike = this.context.currentLikesList.filter(like=>like.user_id==UsersService.getUserId() && like.comment_id==this.props.comment.sys.id)
 
     
@@ -103,8 +103,9 @@ export default class CommentItem extends Component{
     }
 
     renderLikeCount=()=>{
-
+        console.log(this.context.currentLikesList)
         if(this.context.currentLikesList){
+            console.log(this.context.currentLikesList)
             let count=this.context.currentLikesList.filter(like=>like.comment_id==this.props.comment.sys.id)
 
 
@@ -124,9 +125,6 @@ export default class CommentItem extends Component{
     }
 
     render(){
-
-
-
         let date = new Date(this.props.comment.fields.date)
         let dateString = date.toString()
         let splitDate = dateString.split(' ')
@@ -151,8 +149,8 @@ export default class CommentItem extends Component{
                     <p className='commentContent'>{this.props.comment.fields.content}</p>
                     <div className='commentInteractionBox'>
                         {this.renderReplyButton()}
-                        {this.renderLikeCount()}
-                        {this.renderLikeButtons()}
+                        {/* {this.renderLikeCount()} */}
+                        {/* {this.renderLikeButtons()} */}
                     </div>
                 </div>
                 
